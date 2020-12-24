@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PassGuard
+namespace PassGuard.UserControls
 {
-    public partial class Form1 : Form
+    public partial class PageNotImplemented : UserControl
     {
-        public Form1()
+        public PageNotImplemented()
         {
             InitializeComponent();
         }
-
-
     }
 }
