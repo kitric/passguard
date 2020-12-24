@@ -1,2 +1,2 @@
-# passguard
+# PassGuard
 An encrypted password manager
