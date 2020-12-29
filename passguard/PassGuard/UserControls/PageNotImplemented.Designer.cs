@@ -49,11 +49,11 @@ namespace PassGuard.UserControls
             this.h2.AutoSize = true;
             this.h2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.h2.ForeColor = System.Drawing.Color.White;
-            this.h2.Location = new System.Drawing.Point(309, 103);
+            this.h2.Location = new System.Drawing.Point(295, 103);
             this.h2.Name = "h2";
-            this.h2.Size = new System.Drawing.Size(275, 16);
+            this.h2.Size = new System.Drawing.Size(291, 16);
             this.h2.TabIndex = 1;
-            this.h2.Text = "\"Wait, you must. Trust the Force, you will.\"";
+            this.h2.Text = "\"Wait, you will. Trust in the Force, you must.\"";
             // 
             // PageNotImplemented
             // 
