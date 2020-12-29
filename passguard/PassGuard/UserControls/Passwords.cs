@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PassGuard.UserControls.Components;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace PassGuard.UserControls
 {
     public partial class Passwords : UserControl
     {
-        public Passwords()
+        MainScreen mainScreen;
+
+        public Passwords(MainScreen ms)
         {
             InitializeComponent();
+
+            this.mainScreen = ms;
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            mainScreen.Add_AddPasswordScreen();
         }
     }
 }

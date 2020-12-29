@@ -52,6 +52,7 @@ namespace PassGuard.UserControls
             this.YourPasswords.TabIndex = 1;
             this.YourPasswords.Text = "Your Passwords";
             this.YourPasswords.UseVisualStyleBackColor = false;
+            this.YourPasswords.Click += new System.EventHandler(this.YourPasswords_Click);
             // 
             // GenerateAPassword
             // 
@@ -67,16 +68,17 @@ namespace PassGuard.UserControls
             this.GenerateAPassword.TabIndex = 2;
             this.GenerateAPassword.Text = "Generate a Password";
             this.GenerateAPassword.UseVisualStyleBackColor = false;
+            this.GenerateAPassword.Click += new System.EventHandler(this.GenerateAPassword_Click);
             // 
             // Time
             // 
             this.Time.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Time.Font = new System.Drawing.Font("Century Gothic", 7F, System.Drawing.FontStyle.Bold);
+            this.Time.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.Time.ForeColor = System.Drawing.Color.White;
-            this.Time.Location = new System.Drawing.Point(0, 428);
+            this.Time.Location = new System.Drawing.Point(0, 421);
             this.Time.Name = "Time";
-            this.Time.Size = new System.Drawing.Size(640, 14);
+            this.Time.Size = new System.Drawing.Size(640, 21);
             this.Time.TabIndex = 3;
             this.Time.Text = "time";
             this.Time.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
