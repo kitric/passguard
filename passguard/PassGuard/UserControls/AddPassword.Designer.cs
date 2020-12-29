@@ -31,13 +31,13 @@ namespace PassGuard.UserControls
         {
             this.title = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nameTB = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.passwordTB = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.urlTB = new System.Windows.Forms.TextBox();
             this.icon = new System.Windows.Forms.PictureBox();
             this.changeButton = new System.Windows.Forms.Button();
-            this.nameTB = new System.Windows.Forms.TextBox();
-            this.passwordTB = new System.Windows.Forms.TextBox();
-            this.urlTB = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,6 +67,21 @@ namespace PassGuard.UserControls
             this.panel1.Size = new System.Drawing.Size(582, 28);
             this.panel1.TabIndex = 2;
             // 
+            // nameTB
+            // 
+            this.nameTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nameTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.nameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nameTB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTB.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.nameTB.Location = new System.Drawing.Point(3, 7);
+            this.nameTB.Name = "nameTB";
+            this.nameTB.Size = new System.Drawing.Size(576, 14);
+            this.nameTB.TabIndex = 0;
+            this.nameTB.Text = "Name...";
+            this.nameTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.nameTB_MouseClick);
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -78,6 +93,19 @@ namespace PassGuard.UserControls
             this.panel2.Size = new System.Drawing.Size(582, 28);
             this.panel2.TabIndex = 3;
             // 
+            // passwordTB
+            // 
+            this.passwordTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.passwordTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordTB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTB.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.passwordTB.Location = new System.Drawing.Point(3, 7);
+            this.passwordTB.Name = "passwordTB";
+            this.passwordTB.Size = new System.Drawing.Size(576, 14);
+            this.passwordTB.TabIndex = 1;
+            this.passwordTB.Text = "Password...";
+            this.passwordTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.passwordTB_MouseClick);
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -88,6 +116,21 @@ namespace PassGuard.UserControls
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(582, 28);
             this.panel3.TabIndex = 4;
+            // 
+            // urlTB
+            // 
+            this.urlTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.urlTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.urlTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.urlTB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urlTB.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.urlTB.Location = new System.Drawing.Point(3, 7);
+            this.urlTB.Name = "urlTB";
+            this.urlTB.Size = new System.Drawing.Size(576, 14);
+            this.urlTB.TabIndex = 2;
+            this.urlTB.Text = "URL...";
+            this.urlTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.urlTB_MouseClick);
             // 
             // icon
             // 
@@ -114,45 +157,6 @@ namespace PassGuard.UserControls
             this.changeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.changeButton.UseVisualStyleBackColor = false;
             // 
-            // nameTB
-            // 
-            this.nameTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
-            this.nameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nameTB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTB.ForeColor = System.Drawing.Color.White;
-            this.nameTB.Location = new System.Drawing.Point(3, 7);
-            this.nameTB.Name = "nameTB";
-            this.nameTB.Size = new System.Drawing.Size(576, 14);
-            this.nameTB.TabIndex = 0;
-            // 
-            // passwordTB
-            // 
-            this.passwordTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
-            this.passwordTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordTB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTB.ForeColor = System.Drawing.Color.White;
-            this.passwordTB.Location = new System.Drawing.Point(3, 7);
-            this.passwordTB.Name = "passwordTB";
-            this.passwordTB.Size = new System.Drawing.Size(576, 14);
-            this.passwordTB.TabIndex = 1;
-            // 
-            // urlTB
-            // 
-            this.urlTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.urlTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
-            this.urlTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.urlTB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urlTB.ForeColor = System.Drawing.Color.White;
-            this.urlTB.Location = new System.Drawing.Point(3, 7);
-            this.urlTB.Name = "urlTB";
-            this.urlTB.Size = new System.Drawing.Size(576, 14);
-            this.urlTB.TabIndex = 2;
-            // 
             // saveButton
             // 
             this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -169,6 +173,7 @@ namespace PassGuard.UserControls
             this.saveButton.Text = "Save";
             this.saveButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // AddPassword
             // 

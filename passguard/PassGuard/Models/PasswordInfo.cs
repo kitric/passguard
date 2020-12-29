@@ -1,16 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PassGuard.Models
 {
     /// <summary>
     /// Like, you gotta store that password in this class, man
     /// </summary>
+    /// 
+    [Serializable]
     public class PasswordInfo
     {
+
+        public PasswordInfo(string passwdAfterEncrypt, string name, string url, string image="")
+        {
+            this.PasswordAfterEncrypt = passwdAfterEncrypt;
+            this.Name = name;
+            this.Image = image;
+            this.LoginURL = url;
+        }
+
         // The password after its been encrypted, dumbo
         public string PasswordAfterEncrypt { get; set; }
 

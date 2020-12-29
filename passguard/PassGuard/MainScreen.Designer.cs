@@ -35,8 +35,8 @@ namespace PassGuard
             this.GeneratePassword = new System.Windows.Forms.Button();
             this.Passwords = new System.Windows.Forms.Button();
             this.Home = new System.Windows.Forms.Button();
-            this.Content = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Content = new System.Windows.Forms.Panel();
             this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,18 +88,18 @@ namespace PassGuard
             this.Home.UseVisualStyleBackColor = false;
             this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
-            // Content
-            // 
-            resources.ApplyResources(this.Content, "Content");
-            this.Content.BackColor = System.Drawing.Color.Transparent;
-            this.Content.Name = "Content";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PassGuard.Properties.Resources.logo_white_small;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            // 
+            // Content
+            // 
+            resources.ApplyResources(this.Content, "Content");
+            this.Content.BackColor = System.Drawing.Color.Transparent;
+            this.Content.Name = "Content";
             // 
             // MainScreen
             // 
@@ -110,6 +110,7 @@ namespace PassGuard
             this.Controls.Add(this.Sidebar);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "MainScreen";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainScreen_FormClosed);
             this.Sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

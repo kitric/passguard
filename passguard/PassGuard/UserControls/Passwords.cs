@@ -1,12 +1,6 @@
-﻿using PassGuard.UserControls.Components;
+﻿using PassGuard.Models;
+using PassGuard.UserControls.Components;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls
@@ -20,6 +14,17 @@ namespace PassGuard.UserControls
             InitializeComponent();
 
             this.mainScreen = ms;
+
+            DeserializeList();
+        }
+
+        private void DeserializeList()
+        {
+            foreach (PasswordInfo info in MainScreen.passwords)
+            {
+                PasswordButton btn = new PasswordButton(info);
+                content.Controls.Add(btn);
+            }
         }
 
         private void addButton_Click(object sender, EventArgs e)
