@@ -9,6 +9,9 @@ namespace PassGuard.UserControls
         {
             InitializeComponent();
 
+            GlobalFunctions.RoundCorners(YourPasswords, 15);
+            GlobalFunctions.RoundCorners(GenerateAPassword, 15);
+
             Timer.Tick += UpdateTime;
 
             this.Time.Text = DateTime.Now.ToString("t");

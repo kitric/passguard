@@ -43,13 +43,13 @@ namespace PassGuard
             // 
             // Sidebar
             // 
+            resources.ApplyResources(this.Sidebar, "Sidebar");
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(69)))));
             this.Sidebar.Controls.Add(this.About);
             this.Sidebar.Controls.Add(this.GeneratePassword);
             this.Sidebar.Controls.Add(this.Passwords);
             this.Sidebar.Controls.Add(this.Home);
             this.Sidebar.Controls.Add(this.pictureBox1);
-            resources.ApplyResources(this.Sidebar, "Sidebar");
             this.Sidebar.Name = "Sidebar";
             // 
             // About
@@ -90,13 +90,13 @@ namespace PassGuard
             // 
             // Content
             // 
-            this.Content.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.Content, "Content");
+            this.Content.BackColor = System.Drawing.Color.Transparent;
             this.Content.Name = "Content";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PassGuard.Properties.Resources.pwt;
+            this.pictureBox1.Image = global::PassGuard.Properties.Resources.logo_white_small;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
@@ -109,7 +109,6 @@ namespace PassGuard
             this.Controls.Add(this.Content);
             this.Controls.Add(this.Sidebar);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainScreen";
             this.Sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

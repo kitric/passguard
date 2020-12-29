@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalFunctions.cs" />
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +67,12 @@
     <Compile Include="UserControls\PageNotImplemented.Designer.cs">
       <DependentUpon>PageNotImplemented.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Passwords.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Passwords.Designer.cs">
+      <DependentUpon>Passwords.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +92,9 @@
     <EmbeddedResource Include="UserControls\PageNotImplemented.resx">
       <DependentUpon>PageNotImplemented.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Passwords.resx">
+      <DependentUpon>Passwords.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,6 +113,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pwtBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeScreenImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_white_small.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
