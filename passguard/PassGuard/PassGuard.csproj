@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Encryptor.cs" />
+    <Compile Include="EncryptionManager.cs" />
     <Compile Include="GlobalFunctions.cs" />
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>

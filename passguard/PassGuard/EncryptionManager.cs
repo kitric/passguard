@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PassGuard
 {
-    public static class Encryptor
+    public static class EncryptionManager
     {
         private static readonly MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
 
@@ -24,7 +24,7 @@ namespace PassGuard
 
                 //A key is like a password required for decrypting a string after encrypting it.
                 tdes.Key = result;
-                tdes.Mode = CipherMode.CBC; //Still unsure if CipherMode.CBC will work, mantaining it for now.
+                tdes.Mode = CipherMode.ECB; //CipherMode.CBC didn't work, but ECB works.
                 tdes.Padding = PaddingMode.PKCS7;
 
                 //The actual encryptor.
@@ -45,12 +45,12 @@ namespace PassGuard
         /// <param name="cipher"></param>
         /// <param name="key"></param>
         /// <returns></returns>
-        public static string Decryptor(string cipher, byte[] key)
+        public static string Decrypt(string cipher, byte[] key)
         {
             using (var tdes = new TripleDESCryptoServiceProvider())
             {
                 tdes.Key = key;
-                tdes.Mode = CipherMode.CBC; //Still unsure if CipherMode.CBC will work, mantaining it for now.
+                tdes.Mode = CipherMode.ECB; //CipherMode.CBC didn't work, but ECB works.
                 tdes.Padding = PaddingMode.PKCS7;
 
                 //Performs the actualy decryption.

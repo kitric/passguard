@@ -10,11 +10,12 @@ namespace PassGuard.Models
     public class PasswordInfo
     {
 
-        public PasswordInfo(string passwdAfterEncrypt, string name, string url, string image="")
+        public PasswordInfo(string passwdAfterEncrypt, string name, string url, byte[] key, string image="")
         {
             this.PasswordAfterEncrypt = passwdAfterEncrypt;
             this.Name = name;
             this.Image = image;
+            this.Key = key;
             this.LoginURL = url;
         }
 
@@ -29,5 +30,7 @@ namespace PassGuard.Models
 
         // The url of the website, preferably for to the login page
         public string LoginURL { get; set; }
+
+        public byte[] Key { get; set; }
     }
 }

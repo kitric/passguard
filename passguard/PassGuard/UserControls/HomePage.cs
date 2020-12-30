@@ -5,7 +5,7 @@ namespace PassGuard.UserControls
 {
     public partial class HomePage : UserControl
     {
-        MainScreen mainScreen;
+        internal static MainScreen mainScreen;
 
         public HomePage(MainScreen ms)
         {
@@ -17,7 +17,7 @@ namespace PassGuard.UserControls
             Timer.Tick += UpdateTime;
 
             this.Time.Text = DateTime.Now.ToString("t");
-            this.mainScreen = ms;
+            mainScreen = ms;
         }
 
         private void UpdateTime(object sender, EventArgs e)

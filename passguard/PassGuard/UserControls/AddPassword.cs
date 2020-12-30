@@ -1,6 +1,8 @@
 ﻿using PassGuard.Models;
 using System;
 using System.Drawing;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls
@@ -52,9 +54,16 @@ namespace PassGuard.UserControls
 
             if (validName && validPassword && validURL) //just works, bud
             {
-                string encryptedPassword = Encryptor.Encrypt(passwordTB.Text);
-                PasswordInfo passwd = new PasswordInfo(encryptedPassword, nameTB.Text, urlTB.Text, validURL ? $"https://logo.clearbit.com/{urlTB.Text}?size=25" : "");
-                MainScreen.passwords.Add(passwd);
+                string encryptedPassword = EncryptionManager.Encrypt(passwordTB.Text);
+
+                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider()) 
+                {
+                    byte[] key = md5.ComputeHash(Encoding.UTF8.GetBytes(passwordTB.Text));
+
+                    PasswordInfo passwd = new PasswordInfo(encryptedPassword, nameTB.Text, urlTB.Text, key, validURL ? $"https://logo.clearbit.com/{urlTB.Text}?size=25" : "");
+                    MainScreen.passwords.Add(passwd);
+                    HomePage.mainScreen.AddPasswordScreen();
+                }
                 
             } else
             {
@@ -72,14 +81,7 @@ namespace PassGuard.UserControls
         private void icon_LoadCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
         {
             //If the image was found, do not let the user change it, otherwise let him do whatever he wants.
-            if (icon.Image != icon.ErrorImage)
-            {
-                this.changeButton.Enabled = false;
-            }
-            else
-            {
-                this.changeButton.Enabled = true;
-            }
+            this.changeButton.Enabled = this.icon.Image == this.icon.ErrorImage;
         }
     }
 }
