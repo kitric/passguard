@@ -29,18 +29,19 @@ namespace PassGuard.UserControls.Components
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.icon = new System.Windows.Forms.PictureBox();
             this.nameBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // icon
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(57, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.icon.InitialImage = null;
+            this.icon.Location = new System.Drawing.Point(57, 16);
+            this.icon.Name = "icon";
+            this.icon.Size = new System.Drawing.Size(25, 25);
+            this.icon.TabIndex = 1;
+            this.icon.TabStop = false;
             // 
             // nameBtn
             // 
@@ -63,16 +64,16 @@ namespace PassGuard.UserControls.Components
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(69)))));
             this.Controls.Add(this.nameBtn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.icon);
             this.Name = "PasswordButton";
             this.Size = new System.Drawing.Size(141, 92);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox icon;
         private System.Windows.Forms.Button nameBtn;
     }
 }

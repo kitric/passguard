@@ -1,12 +1,6 @@
 ﻿using PassGuard.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls
@@ -59,12 +53,32 @@ namespace PassGuard.UserControls
             if (validName && validPassword && validURL) //just works, bud
             {
                 string encryptedPassword = Encryptor.Encrypt(passwordTB.Text);
-                PasswordInfo passwd = new PasswordInfo(encryptedPassword, nameTB.Text, urlTB.Text);
+                PasswordInfo passwd = new PasswordInfo(encryptedPassword, nameTB.Text, urlTB.Text, validURL ? $"https://logo.clearbit.com/{urlTB.Text}?size=25" : "");
                 MainScreen.passwords.Add(passwd);
                 
             } else
             {
                 MessageBox.Show("Invalid fields!\nMake sure you've entered your name, password and url correctly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void urlTB_Leave(object sender, EventArgs e)
+        {
+            string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
+
+            icon.LoadAsync(actualURL);            
+        }
+
+        private void icon_LoadCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
+        {
+            //If the image was found, do not let the user change it, otherwise let him do whatever he wants.
+            if (icon.Image != icon.ErrorImage)
+            {
+                this.changeButton.Enabled = false;
+            }
+            else
+            {
+                this.changeButton.Enabled = true;
             }
         }
     }

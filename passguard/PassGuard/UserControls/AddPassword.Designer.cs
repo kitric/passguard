@@ -131,15 +131,17 @@ namespace PassGuard.UserControls
             this.urlTB.TabIndex = 2;
             this.urlTB.Text = "URL...";
             this.urlTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.urlTB_MouseClick);
+            this.urlTB.Leave += new System.EventHandler(this.urlTB_Leave);
             // 
             // icon
             // 
             this.icon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
-            this.icon.Location = new System.Drawing.Point(30, 223);
+            this.icon.Location = new System.Drawing.Point(30, 247);
             this.icon.Name = "icon";
             this.icon.Size = new System.Drawing.Size(100, 100);
             this.icon.TabIndex = 5;
             this.icon.TabStop = false;
+            this.icon.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.icon_LoadCompleted);
             // 
             // changeButton
             // 
@@ -149,7 +151,7 @@ namespace PassGuard.UserControls
             this.changeButton.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeButton.ForeColor = System.Drawing.Color.White;
             this.changeButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.changeButton.Location = new System.Drawing.Point(145, 223);
+            this.changeButton.Location = new System.Drawing.Point(145, 247);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(79, 28);
             this.changeButton.TabIndex = 6;
