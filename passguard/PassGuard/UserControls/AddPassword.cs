@@ -83,5 +83,16 @@ namespace PassGuard.UserControls
             //If the image was found, do not let the user change it, otherwise let him do whatever he wants.
             this.changeButton.Enabled = this.icon.Image == this.icon.ErrorImage;
         }
+
+        private void changeButton_Click(object sender, EventArgs e)
+        {
+            FileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "png files (*.png)|*.png|jpg files (*.jpg)|*.jpg";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                icon.Image = Image.FromFile(dialog.FileName);
+            }
+        }
     }
 }

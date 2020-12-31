@@ -61,6 +61,7 @@ namespace PassGuard.UserControls
             this.saveButton.Text = "Save";
             this.saveButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // changeButton
             // 
@@ -77,6 +78,7 @@ namespace PassGuard.UserControls
             this.changeButton.Text = "Change";
             this.changeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.changeButton.UseVisualStyleBackColor = false;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // panel3
             // 
@@ -103,6 +105,7 @@ namespace PassGuard.UserControls
             this.urlTB.Size = new System.Drawing.Size(576, 14);
             this.urlTB.TabIndex = 2;
             this.urlTB.Text = "URL...";
+            this.urlTB.Leave += new System.EventHandler(this.urlTB_Leave);
             // 
             // panel2
             // 
@@ -155,6 +158,7 @@ namespace PassGuard.UserControls
             this.showPassword.Text = "Show Password";
             this.showPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.showPassword.UseVisualStyleBackColor = false;
+            this.showPassword.Click += new System.EventHandler(this.showPassword_Click);
             // 
             // editButton
             // 
@@ -172,6 +176,7 @@ namespace PassGuard.UserControls
             this.editButton.TabIndex = 16;
             this.editButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // icon
             // 

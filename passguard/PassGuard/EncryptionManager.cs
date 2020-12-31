@@ -38,6 +38,11 @@ namespace PassGuard
             }
         }
 
+        public static byte[] GetKey(string str)
+        {
+            return md5.ComputeHash(Encoding.UTF8.GetBytes(str));
+        }
+
 
         /// <summary>
         /// Returns the decrypted string from its cipher (value returned by Encrypt) and its key, dummy.

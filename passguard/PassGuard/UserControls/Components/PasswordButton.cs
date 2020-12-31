@@ -22,9 +22,9 @@ namespace PassGuard.UserControls.Components
 
             nameBtn.Text = password.Name;
 
-            if (!string.IsNullOrEmpty(password.Image))
+            if (!string.IsNullOrEmpty(password.ImageURL))
             {
-                icon.LoadAsync(password.Image);
+                icon.LoadAsync(password.ImageURL);
             }
         }
 

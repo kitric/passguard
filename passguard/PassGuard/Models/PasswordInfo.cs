@@ -2,10 +2,6 @@
 
 namespace PassGuard.Models
 {
-    /// <summary>
-    /// Like, you gotta store that password in this class, man
-    /// </summary>
-    /// 
     [Serializable]
     public class PasswordInfo
     {
@@ -14,7 +10,7 @@ namespace PassGuard.Models
         {
             this.PasswordAfterEncrypt = passwdAfterEncrypt;
             this.Name = name;
-            this.Image = image;
+            this.ImageURL = image;
             this.Key = key;
             this.LoginURL = url;
         }
@@ -26,7 +22,7 @@ namespace PassGuard.Models
         public string Name { get; set; }
 
         // Either Image url, or the image file name, idk
-        public string Image { get; set; }
+        public string ImageURL { get; set; }
 
         // The url of the website, preferably for to the login page
         public string LoginURL { get; set; }
