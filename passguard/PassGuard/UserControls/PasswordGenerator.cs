@@ -18,5 +18,10 @@ namespace PassGuard.UserControls
 
             GlobalFunctions.RoundCorners(generate, 15);
         }
+
+        private void generate_Click(object sender, EventArgs e)
+        {
+            this.generatedPassTB.Text = PasswordGeneration.GeneratePassword(16);
+        }
     }
 }

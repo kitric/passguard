@@ -59,6 +59,7 @@ namespace PassGuard.UserControls
             this.generate.TabIndex = 5;
             this.generate.Text = "GENERATE!";
             this.generate.UseVisualStyleBackColor = false;
+            this.generate.Click += new System.EventHandler(this.generate_Click);
             // 
             // generatedPassTB
             // 
