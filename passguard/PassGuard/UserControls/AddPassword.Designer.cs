@@ -36,9 +36,9 @@ namespace PassGuard.UserControls
             this.passwordTB = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.urlTB = new System.Windows.Forms.TextBox();
-            this.icon = new System.Windows.Forms.PictureBox();
             this.changeButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
+            this.icon = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -133,16 +133,6 @@ namespace PassGuard.UserControls
             this.urlTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.urlTB_MouseClick);
             this.urlTB.Leave += new System.EventHandler(this.urlTB_Leave);
             // 
-            // icon
-            // 
-            this.icon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
-            this.icon.Location = new System.Drawing.Point(30, 247);
-            this.icon.Name = "icon";
-            this.icon.Size = new System.Drawing.Size(100, 100);
-            this.icon.TabIndex = 5;
-            this.icon.TabStop = false;
-            this.icon.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.icon_LoadCompleted);
-            // 
             // changeButton
             // 
             this.changeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
@@ -176,6 +166,16 @@ namespace PassGuard.UserControls
             this.saveButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // icon
+            // 
+            this.icon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.icon.Location = new System.Drawing.Point(30, 247);
+            this.icon.Name = "icon";
+            this.icon.Size = new System.Drawing.Size(100, 100);
+            this.icon.TabIndex = 5;
+            this.icon.TabStop = false;
+            this.icon.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.icon_LoadCompleted);
             // 
             // AddPassword
             // 

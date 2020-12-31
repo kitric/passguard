@@ -57,6 +57,7 @@ namespace PassGuard.UserControls.Components
             this.nameBtn.TabIndex = 3;
             this.nameBtn.Text = "Home";
             this.nameBtn.UseVisualStyleBackColor = false;
+            this.nameBtn.Click += new System.EventHandler(this.nameBtn_Click);
             // 
             // PasswordButton
             // 

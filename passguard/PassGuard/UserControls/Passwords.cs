@@ -13,6 +13,8 @@ namespace PassGuard.UserControls
         {
             InitializeComponent();
 
+            GlobalFunctions.HideScrollbars(content);
+
             this.mainScreen = ms;
 
             DeserializeList();
@@ -22,7 +24,7 @@ namespace PassGuard.UserControls
         {
             foreach (PasswordInfo info in MainScreen.passwords)
             {
-                PasswordButton btn = new PasswordButton(info);
+                PasswordButton btn = new PasswordButton(info, mainScreen);
                 content.Controls.Add(btn);
             }
         }

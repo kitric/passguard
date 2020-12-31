@@ -106,13 +106,13 @@ namespace PassGuard
             Control topControl = Content.Controls[0];
 
             //Since the page is yet to be created, it'll only verify if the page being shown is of type PageNotImplemented.
-            if (topControl.GetType() != typeof(PageNotImplemented))
+            if (topControl.GetType() != typeof(PasswordGenerator))
             {
                 foreach (Control control in topControl.Controls) { control.Dispose(); }
                 topControl.Dispose();
 
                 Content.Controls.Clear();
-                Content.Controls.Add(new PageNotImplemented() { Dock = DockStyle.Fill });
+                Content.Controls.Add(new PasswordGenerator() { Dock = DockStyle.Fill });
             }
         }
 
@@ -128,6 +128,21 @@ namespace PassGuard
 
                 Content.Controls.Clear();
                 Content.Controls.Add(new AddPassword() { Dock = DockStyle.Fill });
+            }
+        }
+
+        public void AddPasswordViewerScreen(PasswordInfo password)
+        {
+            Control topControl = Content.Controls[0];
+
+            //Since the page is yet to be created, it'll only verify if the page being shown is of type PageNotImplemented.
+            if (topControl.GetType() != typeof(PasswordScreen))
+            {
+                foreach (Control control in topControl.Controls) { control.Dispose(); }
+                topControl.Dispose();
+
+                Content.Controls.Clear();
+                Content.Controls.Add(new PasswordScreen(password) { Dock = DockStyle.Fill });
             }
         }
         #endregion

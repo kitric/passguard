@@ -81,11 +81,23 @@
     <Compile Include="UserControls\PageNotImplemented.Designer.cs">
       <DependentUpon>PageNotImplemented.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\PasswordGenerator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PasswordGenerator.Designer.cs">
+      <DependentUpon>PasswordGenerator.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Passwords.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\Passwords.Designer.cs">
       <DependentUpon>Passwords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PasswordScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PasswordScreen.Designer.cs">
+      <DependentUpon>PasswordScreen.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
@@ -112,8 +124,14 @@
     <EmbeddedResource Include="UserControls\PageNotImplemented.resx">
       <DependentUpon>PageNotImplemented.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PasswordGenerator.resx">
+      <DependentUpon>PasswordGenerator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Passwords.resx">
       <DependentUpon>Passwords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PasswordScreen.resx">
+      <DependentUpon>PasswordScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -145,6 +163,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_gen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
