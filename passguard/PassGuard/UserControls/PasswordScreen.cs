@@ -23,7 +23,7 @@ namespace PassGuard.UserControls
 
             urlTB.Text = password.LoginURL;
             
-            if (this.Passwd.LoginURL != null)
+            if (!string.IsNullOrEmpty(this.Passwd.ImageURL))
             {
                 string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
                 this.icon.LoadAsync(actualURL);
@@ -38,6 +38,7 @@ namespace PassGuard.UserControls
             this.passwordTB.ReadOnly = areContentsLocked;
             this.urlTB.ReadOnly = areContentsLocked;
             this.saveButton.Enabled = !areContentsLocked;
+            this.changeButton.Enabled = !areContentsLocked;
         }
 
         private void showPassword_Click(object sender, EventArgs e)
@@ -61,13 +62,16 @@ namespace PassGuard.UserControls
         private void urlTB_Leave(object sender, EventArgs e)
         {
             string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
+
             this.icon.LoadAsync(actualURL);
         }
 
         private void changeButton_Click(object sender, EventArgs e)
         {
-            FileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "png files (*.png)|*.png|jpg files (*.jpg)|*.jpg";
+            FileDialog dialog = new OpenFileDialog
+            {
+                Filter = "png files (*.png)|*.png|jpg files (*.jpg)|*.jpg"
+            };
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
@@ -81,6 +85,7 @@ namespace PassGuard.UserControls
             this.Passwd.Key = EncryptionManager.GetKey(this.passwordTB.Text);
 
             this.Passwd.LoginURL = urlTB.Text;
+            this.Passwd.ImageURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
         }
     }
 }

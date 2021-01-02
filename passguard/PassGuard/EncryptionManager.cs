@@ -38,7 +38,7 @@ namespace PassGuard
             }
         }
 
-        public static byte[] GetKey(string str)
+        internal static byte[] GetKey(string str)
         {
             return md5.ComputeHash(Encoding.UTF8.GetBytes(str));
         }

@@ -66,6 +66,7 @@ namespace PassGuard.UserControls
             // changeButton
             // 
             this.changeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.changeButton.Enabled = false;
             this.changeButton.FlatAppearance.BorderSize = 0;
             this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeButton.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
