@@ -89,7 +89,6 @@ namespace PassGuard
         {
             Control topControl = Content.Controls[0];
 
-            //Since the page is yet to be created, it'll only verify if the page being shown is of type PageNotImplemented.
             if (topControl.GetType() != typeof(Passwords))
             {
                 foreach (Control control in topControl.Controls) { control.Dispose(); }
@@ -105,7 +104,6 @@ namespace PassGuard
         {
             Control topControl = Content.Controls[0];
 
-            //Since the page is yet to be created, it'll only verify if the page being shown is of type PageNotImplemented.
             if (topControl.GetType() != typeof(PasswordGeneration))
             {
                 foreach (Control control in topControl.Controls) { control.Dispose(); }
@@ -120,7 +118,6 @@ namespace PassGuard
         {
             Control topControl = Content.Controls[0];
 
-            //Since the page is yet to be created, it'll only verify if the page being shown is of type PageNotImplemented.
             if (topControl.GetType() != typeof(AddPassword))
             {
                 foreach (Control control in topControl.Controls) { control.Dispose(); }
@@ -135,7 +132,6 @@ namespace PassGuard
         {
             Control topControl = Content.Controls[0];
 
-            //Since the page is yet to be created, it'll only verify if the page being shown is of type PageNotImplemented.
             if (topControl.GetType() != typeof(PasswordScreen))
             {
                 foreach (Control control in topControl.Controls) { control.Dispose(); }

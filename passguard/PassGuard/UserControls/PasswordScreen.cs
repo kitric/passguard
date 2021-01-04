@@ -85,7 +85,7 @@ namespace PassGuard.UserControls
             this.Passwd.Key = EncryptionManager.GetKey(this.passwordTB.Text);
 
             this.Passwd.LoginURL = urlTB.Text;
-            this.Passwd.ImageURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
+            this.Passwd.ImageURL = $"https://logo.clearbit.com/{urlTB.Text}?size=25";
         }
     }
 }

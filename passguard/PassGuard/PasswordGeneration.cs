@@ -36,7 +36,8 @@ namespace PassGuard
         }
         private static void AddNumbers(StringBuilder passwd)
         {
-            //Determines a random number between 3 (inclusive) and 7 (exclusive).
+            //Determines a random number between half of the password length - 3 (inclusive)
+            //and half of the password length + 1 (exclusive)
             int numberAmount = randGenerator.Next(passwd.Length / 2 - 3, passwd.Length / 2 + 1);
 
             for (int i = 0; i < numberAmount; i++)

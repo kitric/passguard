@@ -5,16 +5,6 @@ namespace PassGuard.Models
     [Serializable]
     public class PasswordInfo
     {
-
-        public PasswordInfo(string passwdAfterEncrypt, string name, string url, byte[] key, string image="")
-        {
-            this.PasswordAfterEncrypt = passwdAfterEncrypt;
-            this.Name = name;
-            this.ImageURL = image;
-            this.Key = key;
-            this.LoginURL = url;
-        }
-
         // The password after its been encrypted, dumbo
         public string PasswordAfterEncrypt { get; set; }
 
@@ -28,5 +18,15 @@ namespace PassGuard.Models
         public string LoginURL { get; set; }
 
         public byte[] Key { get; set; }
+
+
+        public PasswordInfo(string passwdAfterEncrypt, string name, string url, byte[] key, string imageURL="")
+        {
+            this.PasswordAfterEncrypt = passwdAfterEncrypt;
+            this.Name = name;
+            this.ImageURL = imageURL;
+            this.Key = key;
+            this.LoginURL = url;
+        }
     }
 }

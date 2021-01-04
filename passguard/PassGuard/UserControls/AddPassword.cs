@@ -37,7 +37,7 @@ namespace PassGuard.UserControls
 
         private void urlTB_MouseClick(object sender, MouseEventArgs e)
         {
-            //Password... is the placeholder text for passwordTB.
+            //URL... is the placeholder text for passwordTB.
             if (e.Button == MouseButtons.Left && (!string.IsNullOrEmpty(urlTB.Text) && urlTB.Text == "URL..."))
             {
                 urlTB.Clear();
