@@ -6,14 +6,26 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Drive.v3;
+using Google.Apis.Drive.v3.Data;
+using Google.Apis.Services;
+using Google.Apis.Util.Store;
+using System.Threading;
 
 namespace PassGuard
 {
     public partial class MainScreen : Form
     {
+        private static string[] Scopes = { DriveService.Scope.DriveAppdata };
+        private static string ApplicationName = "Rocketeer";
+        public static DriveService driveService = new DriveService();
+
         const int roundDiameter = 15;
 
         public static List<PasswordInfo> passwords;
+
+        bool loggedIn = false;
 
         public MainScreen()
         {
@@ -24,7 +36,20 @@ namespace PassGuard
             GlobalFunctions.RoundCorners(GeneratePassword, roundDiameter);
             GlobalFunctions.RoundCorners(About, roundDiameter);
 
-            this.Content.Controls.Add(new HomePage(this) { Dock = DockStyle.Fill });
+            DisableTabs();
+
+            //this.Content.Controls.Add(new HomePage(this) { Dock = DockStyle.Fill });
+            //If the user is logged in then load pages normally
+            if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json\\Google.Apis.Auth.OAuth2.Responses.TokenResponse-user")))
+            {
+                // Already signed in with gdrive
+                LoginAccount();
+            }
+            else
+            {
+                // Show the login screen
+                this.Content.Controls.Add(new Login(this) { Dock = DockStyle.Fill });
+            }
         }
 
         // Static constructor: used to instantiate static fields and to run code that must be executed ONLY once.
@@ -84,6 +109,24 @@ namespace PassGuard
 
 
         #region switch pages
+        //Turns all the tabs to disabled
+        public void DisableTabs()
+        {
+            Home.Enabled = false;
+            Passwords.Enabled = false;
+            GeneratePassword.Enabled = false;
+            About.Enabled = false;
+        }
+
+        //Turns all the tabs to enabled
+        public void EnableTabs()
+        {
+            Home.Enabled = true;
+            Passwords.Enabled = true;
+            GeneratePassword.Enabled = true;
+            About.Enabled = true;
+        }
+
         // Shows the password page
         public void AddPasswordScreen()
         {
@@ -141,6 +184,34 @@ namespace PassGuard
                 Content.Controls.Add(new PasswordScreen(password) { Dock = DockStyle.Fill });
             }
         }
+
+        public void AddMasterPasswordScreen()
+        {
+            Control topControl = Content.Controls[0];
+
+            if (topControl.GetType() != typeof(MasterPassword))
+            {
+                foreach (Control control in topControl.Controls) { control.Dispose(); }
+                topControl.Dispose();
+
+                Content.Controls.Clear();
+                Content.Controls.Add(new MasterPassword() { Dock = DockStyle.Fill });
+            }
+        }
+
+        public void AddSetMasterPasswordScreen()
+        {
+            Control topControl = Content.Controls[0];
+
+            if (topControl.GetType() != typeof(SetMasterPassword))
+            {
+                foreach (Control control in topControl.Controls) { control.Dispose(); }
+                topControl.Dispose();
+
+                Content.Controls.Clear();
+                Content.Controls.Add(new SetMasterPassword(this) { Dock = DockStyle.Fill });
+            }
+        }
         #endregion
 
 
@@ -160,7 +231,7 @@ namespace PassGuard
         private static void DeserializePasswordInfos()
         {
             string fpath = Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard");
-            if (File.Exists(fpath))
+            if (System.IO.File.Exists(fpath))
             {
                 using (FileStream fs = new FileStream(fpath, FileMode.Open))
                 {
@@ -168,9 +239,56 @@ namespace PassGuard
                     passwords = (List<PasswordInfo>)formatter.Deserialize(fs);
                 }
 
-            } else // If the file doesn't exist, there's nothing to be deserialized, so a new instance is created.
+            }
+            else // If the file doesn't exist, there's nothing to be deserialized, so a new instance is created.
             {
                 passwords = new List<PasswordInfo>();
+            }
+        }
+        #endregion
+
+        #region gdrive
+        /// <summary>
+        /// Logs in to the Google Drive using the token.json file.
+        /// </summary>
+        public void LoginAccount()
+        {
+            UserCredential credential;
+
+            using (var stream = new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+            {
+                // The file token.json stores the user's access and refresh tokens, and is created
+                // automatically when the authorization flow completes for the first time.
+                string credPath = Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json");
+                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+                    GoogleClientSecrets.Load(stream).Secrets,
+                    Scopes,
+                    "user",
+                    CancellationToken.None,
+                    new FileDataStore(credPath, true)).Result;
+                Console.WriteLine("Credential file saved to: " + credPath);
+            }
+
+            // Create Drive API service.
+            driveService = new DriveService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential,
+                ApplicationName = ApplicationName
+            });
+
+            loggedIn = true;
+
+            // Show master password screen
+            if (Properties.Settings.Default.MasterPassword == "")
+            {
+                // Set master pw
+                Content.Controls.Clear();
+                this.Content.Controls.Add(new SetMasterPassword(this) { Dock = DockStyle.Fill });
+            }
+            else
+            {
+                // Show master pw screen
+                this.Content.Controls.Add(new MasterPassword() { Dock = DockStyle.Fill });
             }
         }
         #endregion
