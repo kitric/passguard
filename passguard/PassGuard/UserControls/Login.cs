@@ -18,7 +18,7 @@ namespace PassGuard.UserControls
         {
             InitializeComponent();
 
-            GlobalFunctions.RoundCorners(loginButton, 15);
+            GlobalFunctions.RoundCorners(loginButton);
 
             this.mainScreen = ms;
         }

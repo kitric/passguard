@@ -11,8 +11,8 @@ namespace PassGuard.UserControls
         {
             InitializeComponent();
 
-            GlobalFunctions.RoundCorners(YourPasswords, 15);
-            GlobalFunctions.RoundCorners(GenerateAPassword, 15);
+            GlobalFunctions.RoundCorners(YourPasswords);
+            GlobalFunctions.RoundCorners(GenerateAPassword);
 
             Timer.Tick += UpdateTime;
 

@@ -6,8 +6,8 @@ namespace PassGuard.UserControls.Components
     public partial class PasswordButton : UserControl
     {
         // This is only here to access the AddToScreen functions, if there is a better way to do this, then feel free to change it.
-        readonly MainScreen mainScreen;
-        readonly PasswordInfo passwordInfo;
+        private readonly MainScreen mainScreen;
+        private readonly PasswordInfo passwordInfo;
 
         public PasswordButton(PasswordInfo password, MainScreen ms)
         {
@@ -16,8 +16,8 @@ namespace PassGuard.UserControls.Components
             this.mainScreen = ms;
             this.passwordInfo = password;
 
-            GlobalFunctions.RoundCorners(this, 15);
-            GlobalFunctions.RoundCorners(nameBtn, 15);
+            GlobalFunctions.RoundCorners(this);
+            GlobalFunctions.RoundCorners(nameBtn);
 
             nameBtn.Text = password.Name;
 

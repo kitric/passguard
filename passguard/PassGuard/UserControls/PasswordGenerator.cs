@@ -16,7 +16,7 @@ namespace PassGuard.UserControls
         {
             InitializeComponent();
 
-            GlobalFunctions.RoundCorners(generate, 15);
+            GlobalFunctions.RoundCorners(generate);
         }
 
         private void generate_Click(object sender, EventArgs e)

@@ -2,13 +2,11 @@
 using PassGuard.UserControls;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
-using Google.Apis.Drive.v3.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using System.Threading;
@@ -21,20 +19,16 @@ namespace PassGuard
         private static string ApplicationName = "Rocketeer";
         public static DriveService driveService = new DriveService();
 
-        const int roundDiameter = 15;
-
         public static List<PasswordInfo> passwords;
-
-        bool loggedIn = false;
 
         public MainScreen()
         {
             InitializeComponent();
 
-            GlobalFunctions.RoundCorners(Home, roundDiameter);
-            GlobalFunctions.RoundCorners(Passwords, roundDiameter);
-            GlobalFunctions.RoundCorners(GeneratePassword, roundDiameter);
-            GlobalFunctions.RoundCorners(About, roundDiameter);
+            GlobalFunctions.RoundCorners(Home);
+            GlobalFunctions.RoundCorners(Passwords);
+            GlobalFunctions.RoundCorners(GeneratePassword);
+            GlobalFunctions.RoundCorners(About);
 
             DisableTabs();
 
@@ -142,6 +136,21 @@ namespace PassGuard
             }
         }
 
+        public void AddHomePageScreen()
+        {
+            Control topControl = Content.Controls[0];
+
+            if (topControl.GetType() != typeof(HomePage))
+            {
+                foreach (Control control in topControl.Controls) { control.Dispose(); }
+                topControl.Dispose();
+
+                Content.Controls.Clear();
+                Content.Controls.Add(new HomePage(this) { Dock = DockStyle.Fill });
+            }
+        }
+
+
         // Shows generator page
         public void AddGeneratorScreen()
         {
@@ -195,7 +204,7 @@ namespace PassGuard
                 topControl.Dispose();
 
                 Content.Controls.Clear();
-                Content.Controls.Add(new MasterPassword() { Dock = DockStyle.Fill });
+                Content.Controls.Add(new MasterPassword(this) { Dock = DockStyle.Fill });
             }
         }
 
@@ -276,9 +285,7 @@ namespace PassGuard
                 ApplicationName = ApplicationName
             });
 
-            loggedIn = true;
 
-            // Show master password screen
             if (Properties.Settings.Default.MasterPassword == "")
             {
                 // Set master pw
@@ -288,7 +295,7 @@ namespace PassGuard
             else
             {
                 // Show master pw screen
-                this.Content.Controls.Add(new MasterPassword() { Dock = DockStyle.Fill });
+                this.Content.Controls.Add(new MasterPassword(this) { Dock = DockStyle.Fill });
             }
         }
         #endregion

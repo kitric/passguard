@@ -30,7 +30,7 @@
         {
             this.title = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.MasterPasswordTB = new System.Windows.Forms.TextBox();
             this.goButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -58,18 +58,18 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Set a master password:";
             // 
-            // textBox1
+            // MasterPasswordTB
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(197, 254);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 16);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MasterPasswordTB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MasterPasswordTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.MasterPasswordTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MasterPasswordTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.MasterPasswordTB.ForeColor = System.Drawing.Color.White;
+            this.MasterPasswordTB.Location = new System.Drawing.Point(197, 254);
+            this.MasterPasswordTB.Name = "MasterPasswordTB";
+            this.MasterPasswordTB.Size = new System.Drawing.Size(242, 16);
+            this.MasterPasswordTB.TabIndex = 5;
+            this.MasterPasswordTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // goButton
             // 
@@ -85,6 +85,7 @@
             this.goButton.TabIndex = 6;
             this.goButton.Text = "Go!";
             this.goButton.UseVisualStyleBackColor = false;
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // SetMasterPassword
             // 
@@ -92,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
             this.Controls.Add(this.goButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.MasterPasswordTB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.title);
             this.Name = "SetMasterPassword";
@@ -106,7 +107,7 @@
 
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox MasterPasswordTB;
         private System.Windows.Forms.Button goButton;
     }
 }

@@ -9,12 +9,14 @@ namespace PassGuard
 {
     public static class GlobalFunctions
     {
+        public const int ROUND_DIAMETER = 15;
+
         /// <summary>
         /// Round all them corners boi
         /// </summary>
         /// <param name="c">Control to round</param>
         /// <param name="diameter">The diameter of the roundness</param>
-        public static void RoundCorners(Control c, int diameter)
+        public static void RoundCorners(Control c, int diameter=ROUND_DIAMETER)
         {
             Rectangle r = new Rectangle(0, 0, c.Width, c.Height);
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
