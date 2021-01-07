@@ -59,7 +59,6 @@ namespace PassGuard.UserControls
             this.saveButton.Size = new System.Drawing.Size(79, 28);
             this.saveButton.TabIndex = 14;
             this.saveButton.Text = "Save";
-            this.saveButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 

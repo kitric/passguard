@@ -15,8 +15,7 @@ namespace PassGuard
 {
     public partial class MainScreen : Form
     {
-        private static string[] Scopes = { DriveService.Scope.DriveAppdata };
-        private static string ApplicationName = "Rocketeer";
+        private readonly static string[] Scopes = { DriveService.Scope.DriveAppdata };
         public static DriveService driveService = new DriveService();
 
         public static List<PasswordInfo> passwords;
@@ -193,34 +192,6 @@ namespace PassGuard
                 Content.Controls.Add(new PasswordScreen(password) { Dock = DockStyle.Fill });
             }
         }
-
-        public void AddMasterPasswordScreen()
-        {
-            Control topControl = Content.Controls[0];
-
-            if (topControl.GetType() != typeof(MasterPassword))
-            {
-                foreach (Control control in topControl.Controls) { control.Dispose(); }
-                topControl.Dispose();
-
-                Content.Controls.Clear();
-                Content.Controls.Add(new MasterPassword(this) { Dock = DockStyle.Fill });
-            }
-        }
-
-        public void AddSetMasterPasswordScreen()
-        {
-            Control topControl = Content.Controls[0];
-
-            if (topControl.GetType() != typeof(SetMasterPassword))
-            {
-                foreach (Control control in topControl.Controls) { control.Dispose(); }
-                topControl.Dispose();
-
-                Content.Controls.Clear();
-                Content.Controls.Add(new SetMasterPassword(this) { Dock = DockStyle.Fill });
-            }
-        }
         #endregion
 
 
@@ -282,7 +253,7 @@ namespace PassGuard
             driveService = new DriveService(new BaseClientService.Initializer()
             {
                 HttpClientInitializer = credential,
-                ApplicationName = ApplicationName
+                ApplicationName = GlobalFunctions.ApplicationName
             });
 
 

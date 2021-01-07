@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 
@@ -10,6 +9,8 @@ namespace PassGuard
     public static class GlobalFunctions
     {
         public const int ROUND_DIAMETER = 15;
+        public const string ApplicationName = "Rocketeer";
+
 
         /// <summary>
         /// Round all them corners boi
@@ -19,7 +20,7 @@ namespace PassGuard
         public static void RoundCorners(Control c, int diameter=ROUND_DIAMETER)
         {
             Rectangle r = new Rectangle(0, 0, c.Width, c.Height);
-            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+            GraphicsPath gp = new GraphicsPath();
             // Create an arc in the bottom left
             gp.AddArc(r.X, r.Y, diameter, diameter, 180, 90);
             // Create an arc in the top left
@@ -45,37 +46,6 @@ namespace PassGuard
             p.AutoScroll = false;
             p.HorizontalScroll.Visible = false;
             p.AutoScroll = true;
-        }
-
-        /// <summary>
-        /// Resize the image to the specified width and height.
-        /// </summary>
-        /// <param name="image">The image to resize.</param>
-        /// <param name="width">The width to resize to.</param>
-        /// <param name="height">The height to resize to.</param>
-        /// <returns>The resized image.</returns>
-        public static Bitmap ResizeImage(Image image, int width, int height)
-        {
-            var destRect = new Rectangle(0, 0, width, height);
-            var destImage = new Bitmap(width, height);
-
-            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
-
-            using (var graphics = Graphics.FromImage(destImage))
-            {
-                graphics.CompositingMode = CompositingMode.SourceCopy;
-                graphics.CompositingQuality = CompositingQuality.HighQuality;
-                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                graphics.SmoothingMode = SmoothingMode.HighQuality;
-                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
-
-                using (var wrapMode = new ImageAttributes())
-                {
-                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
-                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
-                }
-            }
-            return destImage;
         }
     }
 }
