@@ -258,6 +258,7 @@ namespace PassGuard
             else
             {
                 // Show master pw screen
+                Content.Controls.Clear();
                 this.Content.Controls.Add(new MasterPassword(this) { Dock = DockStyle.Fill });
             }
 
