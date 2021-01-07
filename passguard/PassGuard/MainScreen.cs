@@ -31,6 +31,7 @@ namespace PassGuard
             GlobalFunctions.RoundCorners(GeneratePassword);
             GlobalFunctions.RoundCorners(About);
 
+
             DisableTabs();
 
             //this.Content.Controls.Add(new HomePage(this) { Dock = DockStyle.Fill });
@@ -50,7 +51,6 @@ namespace PassGuard
         // Static constructor: used to instantiate static fields and to run code that must be executed ONLY once.
         static MainScreen()
         {
-
             Directory.CreateDirectory(GlobalFunctions.GetAppdataFolder());
         }
 
