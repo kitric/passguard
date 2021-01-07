@@ -50,7 +50,7 @@ namespace PassGuard
         // Static constructor: used to instantiate static fields and to run code that must be executed ONLY once.
         static MainScreen()
         {
-            DeserializePasswordInfos();
+
             Directory.CreateDirectory(GlobalFunctions.GetAppdataFolder());
         }
 
@@ -177,22 +177,24 @@ namespace PassGuard
                     request.Fields = "id";
                     request.Upload();
                 }
+
+                System.IO.File.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"));
             }
         }
 
         // Deserializes stuff from a .guard file, of course xD
-        private static async void DeserializePasswordInfos()
+        private static void DeserializePasswordInfos()
         {
             // Download the file
             if (loggedIn)
             {
-                var file = GlobalFunctions.GetGDriveFile("passwd.gaurd");
+                var file = GetGDriveFile("passwd.guard");
                 if (file != null)
                 {
                     using (Stream stream = new FileStream(GlobalFunctions.GetAppdataFolder() + "\\passwd.guard", FileMode.Create, FileAccess.Write))
                     {
                         var req = driveService.Files.Get(file.Id);
-                        await req.DownloadAsync(stream);
+                        req.Download(stream);
                     }
                 }
             }
@@ -211,6 +213,8 @@ namespace PassGuard
             {
                 passwords = new List<PasswordInfo>();
             }
+
+            System.IO.File.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"));
         }
         #endregion
 
@@ -256,6 +260,31 @@ namespace PassGuard
                 // Show master pw screen
                 this.Content.Controls.Add(new MasterPassword(this) { Dock = DockStyle.Fill });
             }
+
+            DeserializePasswordInfos();
+        }
+
+        /// <summary>
+        /// Gets a file from g drive if it exists.
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public static Google.Apis.Drive.v3.Data.File GetGDriveFile(string fileName)
+        {
+            var request = driveService.Files.List();
+            request.Spaces = "appDataFolder";
+            request.Fields = "nextPageToken, files(id, name)";
+            request.PageSize = 10;
+            var result = request.Execute();
+            foreach (var file in result.Files)
+            {
+                Console.WriteLine(file.Name);
+                if (file.Name == fileName)
+                {
+                    return file;
+                }
+            }
+            return null;
         }
         #endregion
 

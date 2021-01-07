@@ -47,27 +47,5 @@ namespace PassGuard
             p.HorizontalScroll.Visible = false;
             p.AutoScroll = true;
         }
-
-        /// <summary>
-        /// Gets a file from g drive if it exists.
-        /// </summary>
-        /// <param name="fileName"></param>
-        /// <returns></returns>
-        public static Google.Apis.Drive.v3.Data.File GetGDriveFile(string fileName)
-        {
-            var request = MainScreen.driveService.Files.List();
-            request.Spaces = "appDataFolder";
-            request.Fields = "nextPageToken, files(id, name)";
-            request.PageSize = 10;
-            var result = request.Execute();
-            foreach (var file in result.Files)
-            {
-                if (file.Name == fileName)
-                {
-                    return file;
-                }
-            }
-            return null;
-        }
     }
 }

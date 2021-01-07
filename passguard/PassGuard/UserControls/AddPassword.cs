@@ -56,16 +56,17 @@ namespace PassGuard.UserControls
             {
                 string encryptedPassword = EncryptionManager.Encrypt(passwordTB.Text);
 
-                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider()) 
+                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
                 {
                     byte[] key = md5.ComputeHash(Encoding.UTF8.GetBytes(passwordTB.Text));
 
                     PasswordInfo passwd = new PasswordInfo(encryptedPassword, nameTB.Text, urlTB.Text, key, validURL ? $"https://logo.clearbit.com/{urlTB.Text}?size=25" : "");
                     MainScreen.passwords.Add(passwd);
-                    HomePage.mainScreen.SwitchTo<PasswordScreen>();
+                    HomePage.mainScreen.SwitchTo<PasswordScreen>(args: new object[] { passwd });
                 }
-                
-            } else
+
+            }
+            else
             {
                 MessageBox.Show("Invalid fields!\nMake sure you've entered your name, password and url correctly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -75,7 +76,7 @@ namespace PassGuard.UserControls
         {
             string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
 
-            icon.LoadAsync(actualURL);            
+            icon.LoadAsync(actualURL);
         }
 
         private void icon_LoadCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
