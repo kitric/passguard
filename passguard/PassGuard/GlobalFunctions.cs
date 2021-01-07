@@ -34,7 +34,7 @@ namespace PassGuard
 
         public static string GetAppdataFolder()
         {
-            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "passguard\");
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "passguard");
         }
 
         /// <summary>
