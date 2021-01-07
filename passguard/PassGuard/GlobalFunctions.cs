@@ -17,7 +17,7 @@ namespace PassGuard
         /// </summary>
         /// <param name="c">Control to round</param>
         /// <param name="diameter">The diameter of the roundness</param>
-        public static void RoundCorners(Control c, int diameter=ROUND_DIAMETER)
+        public static void RoundCorners(Control c, int diameter = ROUND_DIAMETER)
         {
             Rectangle r = new Rectangle(0, 0, c.Width, c.Height);
             GraphicsPath gp = new GraphicsPath();
@@ -34,7 +34,7 @@ namespace PassGuard
 
         public static string GetAppdataFolder()
         {
-            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "passguard");
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "passguard\");
         }
 
         /// <summary>
@@ -46,6 +46,28 @@ namespace PassGuard
             p.AutoScroll = false;
             p.HorizontalScroll.Visible = false;
             p.AutoScroll = true;
+        }
+
+        /// <summary>
+        /// Gets a file from g drive if it exists.
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public static Google.Apis.Drive.v3.Data.File GetGDriveFile(string fileName)
+        {
+            var request = MainScreen.driveService.Files.List();
+            request.Spaces = "appDataFolder";
+            request.Fields = "nextPageToken, files(id, name)";
+            request.PageSize = 10;
+            var result = request.Execute();
+            foreach (var file in result.Files)
+            {
+                if (file.Name == fileName)
+                {
+                    return file;
+                }
+            }
+            return null;
         }
     }
 }

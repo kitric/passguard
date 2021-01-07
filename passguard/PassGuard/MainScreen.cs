@@ -20,6 +20,8 @@ namespace PassGuard
 
         public static List<PasswordInfo> passwords;
 
+        private static bool loggedIn = false;
+
         public MainScreen()
         {
             InitializeComponent();
@@ -125,7 +127,7 @@ namespace PassGuard
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="args"></param>
-        public void SwitchTo<T>(object[] args=null) where T : UserControl
+        public void SwitchTo<T>(object[] args = null) where T : UserControl
         {
             Control topControl = Content.Controls[0];
 
@@ -145,7 +147,6 @@ namespace PassGuard
         }
         #endregion
 
-
         #region serialization
         // Serializes stuff to a .guard file, of course xD
         private static void SerializePasswordInfos()
@@ -156,11 +157,46 @@ namespace PassGuard
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(fs, passwords);
             }
+
+            // if file exists, upload it.
+            if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard")))
+            {
+                //Upload to drive
+                var fileMetadata = new Google.Apis.Drive.v3.Data.File()
+                {
+                    Name = "passwd.guard",
+                    Parents = new List<string>()
+                    {
+                        "appDataFolder"
+                    }
+                };
+                FilesResource.CreateMediaUpload request;
+                using (var stream = new System.IO.FileStream(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"), System.IO.FileMode.Open))
+                {
+                    request = driveService.Files.Create(fileMetadata, stream, "application/json");
+                    request.Fields = "id";
+                    request.Upload();
+                }
+            }
         }
 
         // Deserializes stuff from a .guard file, of course xD
-        private static void DeserializePasswordInfos()
+        private static async void DeserializePasswordInfos()
         {
+            // Download the file
+            if (loggedIn)
+            {
+                var file = GlobalFunctions.GetGDriveFile("passwd.gaurd");
+                if (file != null)
+                {
+                    using (Stream stream = new FileStream(GlobalFunctions.GetAppdataFolder() + "\\passwd.guard", FileMode.Create, FileAccess.Write))
+                    {
+                        var req = driveService.Files.Get(file.Id);
+                        await req.DownloadAsync(stream);
+                    }
+                }
+            }
+
             string fpath = Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard");
             if (System.IO.File.Exists(fpath))
             {
@@ -207,6 +243,7 @@ namespace PassGuard
                 ApplicationName = GlobalFunctions.ApplicationName
             });
 
+            loggedIn = true;
 
             if (Properties.Settings.Default.MasterPassword == "")
             {
