@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PassGuard.Models;
+using System;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls
@@ -21,7 +22,7 @@ namespace PassGuard.UserControls
             if (MasterPasswordTB.Text == Properties.Settings.Default.MasterPassword)
             {
                 MainScreen.EnableTabs();
-                MainScreen.AddHomePageScreen();
+                MainScreen.SwitchTo<HomePage>();
             }
 
             WrongPasswordLB.Visible = !(MasterPasswordTB.Text == Properties.Settings.Default.MasterPassword);

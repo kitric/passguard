@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PassGuard.Models;
+using System;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls
@@ -33,12 +34,12 @@ namespace PassGuard.UserControls
 
         private void YourPasswords_Click(object sender, EventArgs e)
         {
-            mainScreen.AddPasswordScreen();
+            mainScreen.SwitchTo<Passwords>();
         }
 
         private void GenerateAPassword_Click(object sender, EventArgs e)
         {
-            mainScreen.AddGeneratorScreen();
+            mainScreen.SwitchTo<PasswordGenerator>(args: new object[] { });
         }
     }
 }

@@ -62,7 +62,7 @@ namespace PassGuard.UserControls
 
                     PasswordInfo passwd = new PasswordInfo(encryptedPassword, nameTB.Text, urlTB.Text, key, validURL ? $"https://logo.clearbit.com/{urlTB.Text}?size=25" : "");
                     MainScreen.passwords.Add(passwd);
-                    HomePage.mainScreen.AddPasswordScreen();
+                    HomePage.mainScreen.SwitchTo<PasswordScreen>();
                 }
                 
             } else

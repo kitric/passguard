@@ -71,12 +71,12 @@ namespace PassGuard
 
         private void Passwords_Click(object sender, System.EventArgs e)
         {
-            AddPasswordScreen();
+            SwitchTo<Passwords>();
         }
 
         private void GeneratePassword_Click(object sender, System.EventArgs e)
         {
-            AddGeneratorScreen();
+            SwitchTo<PasswordGenerator>(args: new object[] { });
         }
 
         private void About_Click(object sender, System.EventArgs e)
@@ -120,76 +120,27 @@ namespace PassGuard
             About.Enabled = true;
         }
 
-        // Shows the password page
-        public void AddPasswordScreen()
+        /// <summary>
+        /// I FUCKING MADE IT. Now, you only need one function for switching windows.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="args"></param>
+        public void SwitchTo<T>(object[] args=null) where T : UserControl
         {
             Control topControl = Content.Controls[0];
 
-            if (topControl.GetType() != typeof(Passwords))
+            //Creates a new UserControl from T. 
+            UserControl control = (UserControl)Activator.CreateInstance(typeof(T), args == null ? new object[] { this } : args);
+            control.Dock = DockStyle.Fill;
+
+            // If the window on the top is different:
+            if (topControl.GetType() != control.GetType())
             {
-                foreach (Control control in topControl.Controls) { control.Dispose(); }
+                foreach (Control x in topControl.Controls) { x.Dispose(); }
                 topControl.Dispose();
 
                 Content.Controls.Clear();
-                Content.Controls.Add(new Passwords(this) { Dock = DockStyle.Fill });
-            }
-        }
-
-        public void AddHomePageScreen()
-        {
-            Control topControl = Content.Controls[0];
-
-            if (topControl.GetType() != typeof(HomePage))
-            {
-                foreach (Control control in topControl.Controls) { control.Dispose(); }
-                topControl.Dispose();
-
-                Content.Controls.Clear();
-                Content.Controls.Add(new HomePage(this) { Dock = DockStyle.Fill });
-            }
-        }
-
-
-        // Shows generator page
-        public void AddGeneratorScreen()
-        {
-            Control topControl = Content.Controls[0];
-
-            if (topControl.GetType() != typeof(PasswordGeneration))
-            {
-                foreach (Control control in topControl.Controls) { control.Dispose(); }
-                topControl.Dispose();
-
-                Content.Controls.Clear();
-                Content.Controls.Add(new PasswordGenerator() { Dock = DockStyle.Fill });
-            }
-        }
-
-        public void Add_AddPasswordScreen()
-        {
-            Control topControl = Content.Controls[0];
-
-            if (topControl.GetType() != typeof(AddPassword))
-            {
-                foreach (Control control in topControl.Controls) { control.Dispose(); }
-                topControl.Dispose();
-
-                Content.Controls.Clear();
-                Content.Controls.Add(new AddPassword() { Dock = DockStyle.Fill });
-            }
-        }
-
-        public void AddPasswordViewerScreen(PasswordInfo password)
-        {
-            Control topControl = Content.Controls[0];
-
-            if (topControl.GetType() != typeof(PasswordScreen))
-            {
-                foreach (Control control in topControl.Controls) { control.Dispose(); }
-                topControl.Dispose();
-
-                Content.Controls.Clear();
-                Content.Controls.Add(new PasswordScreen(password) { Dock = DockStyle.Fill });
+                Content.Controls.Add(control);
             }
         }
         #endregion

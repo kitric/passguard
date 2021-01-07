@@ -31,7 +31,7 @@ namespace PassGuard.UserControls
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            mainScreen.Add_AddPasswordScreen();
+            mainScreen.SwitchTo<AddPassword>();
         }
     }
 }

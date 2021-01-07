@@ -29,7 +29,7 @@ namespace PassGuard.UserControls.Components
 
         private void nameBtn_Click(object sender, System.EventArgs e)
         {
-            mainScreen.AddPasswordViewerScreen(passwordInfo);
+            mainScreen.SwitchTo<PasswordScreen>(args: new object[] { passwordInfo });
         }
     }
 }
