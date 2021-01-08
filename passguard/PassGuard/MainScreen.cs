@@ -10,6 +10,7 @@ using Google.Apis.Drive.v3;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace PassGuard
 {
@@ -83,22 +84,12 @@ namespace PassGuard
 
         private void About_Click(object sender, System.EventArgs e)
         {
-            Control topControl = Content.Controls[0];
-
-            //Since the page is yet to be created, it'll only verify if the page being shown is of type PageNotImplemented.
-            if (topControl.GetType() != typeof(PageNotImplemented))
-            {
-                foreach (Control control in topControl.Controls) { control.Dispose(); }
-                topControl.Dispose();
-
-                Content.Controls.Clear();
-                Content.Controls.Add(new PageNotImplemented() { Dock = DockStyle.Fill });
-            }
+            SwitchTo<PageNotImplemented>(args: new object[] { });
         }
 
-        private void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
+        private async void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
-            SerializePasswordInfos();
+            await SerializePasswordInfos();
         }
         #endregion
 
@@ -149,7 +140,7 @@ namespace PassGuard
 
         #region serialization
         // Serializes stuff to a .guard file, of course xD
-        private static void SerializePasswordInfos()
+        private static async Task SerializePasswordInfos()
         {
             string fpath = Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard");
             using (FileStream fs = new FileStream(fpath, FileMode.OpenOrCreate))
@@ -158,8 +149,8 @@ namespace PassGuard
                 formatter.Serialize(fs, passwords);
             }
 
-            // if file exists, upload it.
-            if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard")))
+            // if the file exists, upload it.
+            if (File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard")))
             {
                 //Upload to drive
                 var fileMetadata = new Google.Apis.Drive.v3.Data.File()
@@ -171,14 +162,14 @@ namespace PassGuard
                     }
                 };
                 FilesResource.CreateMediaUpload request;
-                using (var stream = new System.IO.FileStream(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"), System.IO.FileMode.Open))
+                using (var stream = new FileStream(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"), FileMode.Open))
                 {
                     request = driveService.Files.Create(fileMetadata, stream, "application/json");
                     request.Fields = "id";
-                    request.Upload();
+                    await request.UploadAsync();
                 }
 
-                System.IO.File.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"));
+                File.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"));
             }
         }
 
