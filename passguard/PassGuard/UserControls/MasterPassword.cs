@@ -19,13 +19,13 @@ namespace PassGuard.UserControls
 
         private void goButton_Click(object sender, EventArgs e)
         {
-            if (MasterPasswordTB.Text == Properties.Settings.Default.MasterPassword)
+            if (MasterPasswordTB.Text == MainScreen.Data.MasterPassword)
             {
                 MainScreen.EnableTabs();
                 MainScreen.SwitchTo<HomePage>();
             }
 
-            WrongPasswordLB.Visible = !(MasterPasswordTB.Text == Properties.Settings.Default.MasterPassword);
+            WrongPasswordLB.Visible = !(MasterPasswordTB.Text == MainScreen.Data.MasterPassword);
         }
     }
 }

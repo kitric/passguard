@@ -61,7 +61,7 @@ namespace PassGuard.UserControls
                     byte[] key = md5.ComputeHash(Encoding.UTF8.GetBytes(passwordTB.Text));
 
                     PasswordInfo passwd = new PasswordInfo(encryptedPassword, nameTB.Text, urlTB.Text, key, validURL ? $"https://logo.clearbit.com/{urlTB.Text}?size=25" : "");
-                    MainScreen.passwords.Add(passwd);
+                    MainScreen.Data.passwords.Add(passwd);
                     HomePage.mainScreen.SwitchTo<Passwords>();
                 }
 

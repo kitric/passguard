@@ -18,6 +18,7 @@ namespace PassGuard.UserControls
         public Login(MainScreen ms)
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
 
             GlobalFunctions.RoundCorners(loginButton);
 

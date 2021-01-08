@@ -19,8 +19,7 @@ namespace PassGuard
         private readonly static string[] Scopes = { DriveService.Scope.DriveAppdata };
         public static DriveService driveService = new DriveService();
 
-        public static List<PasswordInfo> passwords;
-
+        public static UserData Data = new UserData();
         private static bool loggedIn = false;
 
         public MainScreen()
@@ -37,10 +36,13 @@ namespace PassGuard
 
             //this.Content.Controls.Add(new HomePage(this) { Dock = DockStyle.Fill });
             //If the user is logged in then load pages normally
-            if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json\\Google.Apis.Auth.OAuth2.Responses.TokenResponse-user")))
+            if (File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json\\Google.Apis.Auth.OAuth2.Responses.TokenResponse-user")))
             {
                 // Already signed in with gdrive
                 LoginAccount();
+                DeserializePasswordInfos();
+
+                SetOrEnterMasterPassword();
             }
             else
             {
@@ -48,6 +50,7 @@ namespace PassGuard
                 this.Content.Controls.Add(new Login(this) { Dock = DockStyle.Fill });
             }
         }
+
 
         // Static constructor: used to instantiate static fields and to run code that must be executed ONLY once.
         static MainScreen()
@@ -95,6 +98,17 @@ namespace PassGuard
 
 
         #region switch pages
+
+        public void SetOrEnterMasterPassword()
+        {
+
+            this.Content.Controls.Clear();
+            UserControl control = string.IsNullOrEmpty(Data.MasterPassword) ? (UserControl)new SetMasterPassword(this) { Dock = DockStyle.Fill } :
+                new MasterPassword(this) { Dock = DockStyle.Fill };
+
+            this.Content.Controls.Add(control);
+        }
+
         //Turns all the tabs to disabled
         public void DisableTabs()
         {
@@ -146,7 +160,7 @@ namespace PassGuard
             using (FileStream fs = new FileStream(fpath, FileMode.OpenOrCreate))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(fs, passwords);
+                formatter.Serialize(fs, Data);
             }
 
             // if the file exists, upload it.
@@ -174,7 +188,7 @@ namespace PassGuard
         }
 
         // Deserializes stuff from a .guard file, of course xD
-        private static void DeserializePasswordInfos()
+        private void DeserializePasswordInfos()
         {
             // Download the file
             if (loggedIn)
@@ -196,13 +210,13 @@ namespace PassGuard
                 using (FileStream fs = new FileStream(fpath, FileMode.Open))
                 {
                     BinaryFormatter formatter = new BinaryFormatter();
-                    passwords = (List<PasswordInfo>)formatter.Deserialize(fs);
+                    Data = (UserData)formatter.Deserialize(fs);
                 }
 
             }
             else // If the file doesn't exist, there's nothing to be deserialized, so a new instance is created.
             {
-                passwords = new List<PasswordInfo>();
+                Data = new UserData();
             }
 
             System.IO.File.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"));
@@ -239,21 +253,6 @@ namespace PassGuard
             });
 
             loggedIn = true;
-
-            if (Properties.Settings.Default.MasterPassword == "")
-            {
-                // Set master pw
-                Content.Controls.Clear();
-                this.Content.Controls.Add(new SetMasterPassword(this) { Dock = DockStyle.Fill });
-            }
-            else
-            {
-                // Show master pw screen
-                Content.Controls.Clear();
-                this.Content.Controls.Add(new MasterPassword(this) { Dock = DockStyle.Fill });
-            }
-
-            DeserializePasswordInfos();
         }
 
         /// <summary>

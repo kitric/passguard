@@ -20,11 +20,9 @@ namespace PassGuard.UserControls
         {
             if (!string.IsNullOrEmpty(MasterPasswordTB.Text))
             {
-                Properties.Settings.Default.MasterPassword = MasterPasswordTB.Text;
+                MainScreen.Data.MasterPassword = MasterPasswordTB.Text;
                 MainScreen.EnableTabs();
                 MainScreen.SwitchTo<HomePage>();
-
-                Properties.Settings.Default.Save();
             }
         }
     }

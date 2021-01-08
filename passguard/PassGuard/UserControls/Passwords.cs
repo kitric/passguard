@@ -22,7 +22,7 @@ namespace PassGuard.UserControls
 
         private void DeserializeList()
         {
-            foreach (PasswordInfo info in MainScreen.passwords)
+            foreach (PasswordInfo info in MainScreen.Data.passwords)
             {
                 PasswordButton btn = new PasswordButton(info, mainScreen);
                 content.Controls.Add(btn);
