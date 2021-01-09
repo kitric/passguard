@@ -62,7 +62,7 @@ namespace PassGuard.UserControls
             this.GenerateAPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GenerateAPassword.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
             this.GenerateAPassword.ForeColor = System.Drawing.Color.White;
-            this.GenerateAPassword.Location = new System.Drawing.Point(327, 300);
+            this.GenerateAPassword.Location = new System.Drawing.Point(329, 300);
             this.GenerateAPassword.Name = "GenerateAPassword";
             this.GenerateAPassword.Size = new System.Drawing.Size(123, 28);
             this.GenerateAPassword.TabIndex = 2;

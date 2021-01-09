@@ -1,16 +1,16 @@
-﻿using PassGuard.Models;
+﻿using Google.Apis.Auth.OAuth2;
+using Google.Apis.Drive.v3;
+using Google.Apis.Services;
+using Google.Apis.Util.Store;
+using PassGuard.Models;
 using PassGuard.UserControls;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Windows.Forms;
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Drive.v3;
-using Google.Apis.Services;
-using Google.Apis.Util.Store;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PassGuard
 {
@@ -26,11 +26,13 @@ namespace PassGuard
         {
             InitializeComponent();
 
-            GlobalFunctions.RoundCorners(Home);
-            GlobalFunctions.RoundCorners(Passwords);
-            GlobalFunctions.RoundCorners(GeneratePassword);
-            GlobalFunctions.RoundCorners(About);
-
+            foreach (Control x in this.Sidebar.Controls)
+            {
+                if (x.GetType() != typeof(PictureBox))
+                {
+                    GlobalFunctions.RoundCorners(x);
+                }
+            }
 
             DisableTabs();
 
@@ -128,7 +130,7 @@ namespace PassGuard
         }
 
         /// <summary>
-        /// I FUCKING MADE IT. Now, you only need one function for switching windows.
+        /// Now, you only need one function for switching windows.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="args"></param>
@@ -137,7 +139,7 @@ namespace PassGuard
             Control topControl = Content.Controls[0];
 
             //Creates a new UserControl from T. 
-            UserControl control = (UserControl)Activator.CreateInstance(typeof(T), args == null ? new object[] { this } : args);
+            UserControl control = (UserControl)Activator.CreateInstance(typeof(T), args ?? (new object[] { this }));
             control.Dock = DockStyle.Fill;
 
             // If the window on the top is different:
@@ -205,7 +207,7 @@ namespace PassGuard
             }
 
             string fpath = Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard");
-            if (System.IO.File.Exists(fpath))
+            if (File.Exists(fpath))
             {
                 using (FileStream fs = new FileStream(fpath, FileMode.Open))
                 {
@@ -225,7 +227,7 @@ namespace PassGuard
 
         #region gdrive
         /// <summary>
-        /// Logs in to the Google Drive using the token.json file.
+        /// Logs in to Google Drive using the token.json file.
         /// </summary>
         public void LoginAccount()
         {
@@ -256,7 +258,7 @@ namespace PassGuard
         }
 
         /// <summary>
-        /// Gets a file from g drive if it exists.
+        /// Gets a file from Google Drive if it exists.
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns></returns>

@@ -7,7 +7,7 @@ namespace PassGuard.UserControls
 {
     public partial class Passwords : UserControl
     {
-        MainScreen mainScreen;
+        readonly MainScreen mainScreen;
 
         public Passwords(MainScreen ms)
         {

@@ -1,8 +1,6 @@
 ﻿using PassGuard.Models;
 using System;
 using System.Drawing;
-using System.IO;
-using System.Net;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls
@@ -22,12 +20,12 @@ namespace PassGuard.UserControls
             title.Text += $" {Passwd.Name}";
 
             urlTB.Text = password.LoginURL;
-            
+
             if (!string.IsNullOrEmpty(this.Passwd.ImageURL))
             {
                 string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
                 this.icon.LoadAsync(actualURL);
-            }  
+            }
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -49,8 +47,9 @@ namespace PassGuard.UserControls
                 this.passwordTB.PasswordChar = '\0';
 
                 this.showPassword.Text = "Hide Password";
-            
-            } else //Text not hidden.
+
+            }
+            else //Text not hidden.
             {
                 this.passwordTB.Text = "password";
                 this.passwordTB.PasswordChar = '*';

@@ -9,7 +9,7 @@ namespace PassGuard.Models
         public List<PasswordInfo> passwords;
         public string MasterPassword;
 
-        public  UserData()
+        public UserData()
         {
             MasterPassword = "";
             passwords = new List<PasswordInfo>();

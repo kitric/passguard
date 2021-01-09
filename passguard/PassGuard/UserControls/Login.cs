@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using PassGuard.Models;
 
 namespace PassGuard.UserControls
 {
     public partial class Login : UserControl
     {
-        MainScreen mainScreen;
+        readonly MainScreen mainScreen;
 
         public Login(MainScreen ms)
         {

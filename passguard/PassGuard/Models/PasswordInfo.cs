@@ -20,7 +20,7 @@ namespace PassGuard.Models
         public byte[] Key { get; set; }
 
 
-        public PasswordInfo(string passwdAfterEncrypt, string name, string url, byte[] key, string imageURL="")
+        public PasswordInfo(string passwdAfterEncrypt, string name, string url, byte[] key, string imageURL = "")
         {
             this.PasswordAfterEncrypt = passwdAfterEncrypt;
             this.Name = name;

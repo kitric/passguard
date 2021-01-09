@@ -1,5 +1,4 @@
-﻿using PassGuard.Models;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls
@@ -26,7 +25,7 @@ namespace PassGuard.UserControls
             string currentTime = DateTime.Now.ToString("t");
 
             //If currentTime is different than the one registered on the label
-            if (currentTime != this.Time.Text) 
+            if (currentTime != this.Time.Text)
             {
                 this.Time.Text = currentTime;
             }

@@ -17,7 +17,7 @@ namespace PassGuard
         {
 
             //The object used to encrypt/decrypt md5 hashes.
-            using(var tdes = new TripleDESCryptoServiceProvider())
+            using (var tdes = new TripleDESCryptoServiceProvider())
             {
 
                 byte[] result = md5.ComputeHash(Encoding.UTF8.GetBytes(originalString));

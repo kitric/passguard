@@ -87,8 +87,10 @@ namespace PassGuard.UserControls
 
         private void changeButton_Click(object sender, EventArgs e)
         {
-            FileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "png files (*.png)|*.png|jpg files (*.jpg)|*.jpg";
+            FileDialog dialog = new OpenFileDialog
+            {
+                Filter = "png files (*.png)|*.png|jpg files (*.jpg)|*.jpg"
+            };
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
