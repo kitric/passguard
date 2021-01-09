@@ -90,6 +90,7 @@
             // 
             // WrongPasswordLB
             // 
+            this.WrongPasswordLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.WrongPasswordLB.AutoSize = true;
             this.WrongPasswordLB.ForeColor = System.Drawing.Color.Red;
             this.WrongPasswordLB.Location = new System.Drawing.Point(197, 274);

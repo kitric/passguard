@@ -9,12 +9,14 @@ namespace PassGuard.UserControls
         {
             InitializeComponent();
 
-            GlobalFunctions.RoundCorners(generate);
+            GlobalFunctions.RoundCorners(generateBtn);
         }
 
         private void generate_Click(object sender, EventArgs e)
         {
+            this.generateBtn.Enabled = false;
             this.generatedPassTB.Text = PasswordGeneration.GeneratePassword(16);
+            this.generateBtn.Enabled = true;
         }
     }
 }

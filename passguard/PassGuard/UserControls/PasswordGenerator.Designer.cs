@@ -30,7 +30,7 @@ namespace PassGuard.UserControls
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.generate = new System.Windows.Forms.Button();
+            this.generateBtn = new System.Windows.Forms.Button();
             this.generatedPassTB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,21 +45,21 @@ namespace PassGuard.UserControls
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // generate
+            // generateBtn
             // 
-            this.generate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.generate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
-            this.generate.FlatAppearance.BorderSize = 0;
-            this.generate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.generate.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
-            this.generate.ForeColor = System.Drawing.Color.White;
-            this.generate.Location = new System.Drawing.Point(259, 261);
-            this.generate.Name = "generate";
-            this.generate.Size = new System.Drawing.Size(123, 28);
-            this.generate.TabIndex = 5;
-            this.generate.Text = "GENERATE!";
-            this.generate.UseVisualStyleBackColor = false;
-            this.generate.Click += new System.EventHandler(this.generate_Click);
+            this.generateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.generateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.generateBtn.FlatAppearance.BorderSize = 0;
+            this.generateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generateBtn.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
+            this.generateBtn.ForeColor = System.Drawing.Color.White;
+            this.generateBtn.Location = new System.Drawing.Point(259, 261);
+            this.generateBtn.Name = "generateBtn";
+            this.generateBtn.Size = new System.Drawing.Size(123, 28);
+            this.generateBtn.TabIndex = 5;
+            this.generateBtn.Text = "GENERATE!";
+            this.generateBtn.UseVisualStyleBackColor = false;
+            this.generateBtn.Click += new System.EventHandler(this.generate_Click);
             // 
             // generatedPassTB
             // 
@@ -82,7 +82,7 @@ namespace PassGuard.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
             this.Controls.Add(this.generatedPassTB);
-            this.Controls.Add(this.generate);
+            this.Controls.Add(this.generateBtn);
             this.Controls.Add(this.pictureBox1);
             this.Name = "PasswordGenerator";
             this.Size = new System.Drawing.Size(640, 450);
@@ -95,7 +95,7 @@ namespace PassGuard.UserControls
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button generate;
+        private System.Windows.Forms.Button generateBtn;
         private System.Windows.Forms.TextBox generatedPassTB;
     }
 }

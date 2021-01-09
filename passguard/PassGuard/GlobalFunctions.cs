@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace PassGuard
@@ -10,6 +11,7 @@ namespace PassGuard
     {
         public const int ROUND_DIAMETER = 15;
         public const string ApplicationName = "Rocketeer";
+        private static readonly RNGCryptoServiceProvider csp = new RNGCryptoServiceProvider();
 
 
         /// <summary>
@@ -35,6 +37,35 @@ namespace PassGuard
         public static string GetAppdataFolder()
         {
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "passguard");
+        }
+
+        public static int Rand(int minValue, int maxExclusiveValue)
+        {
+            if (minValue >= maxExclusiveValue)
+                throw new ArgumentOutOfRangeException("minValue must be lower than maxExclusiveValue");
+
+            long diff = (long)maxExclusiveValue - minValue;
+            long upperBound = uint.MaxValue / diff * diff;
+
+            uint ui;
+            do
+            {
+                ui = GetRandomUInt();
+            } while (ui >= upperBound);
+            return (int)(minValue + (ui % diff));
+        }
+
+        private static uint GetRandomUInt()
+        {
+            var randomBytes = GenerateRandomBytes(sizeof(uint));
+            return BitConverter.ToUInt32(randomBytes, 0);
+        }
+
+        private static byte[] GenerateRandomBytes(int bytesNumber)
+        {
+            byte[] buffer = new byte[bytesNumber];
+            csp.GetBytes(buffer);
+            return buffer;
         }
 
         /// <summary>
