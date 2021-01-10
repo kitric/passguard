@@ -27,9 +27,6 @@ namespace PassGuard.UserControls
                 this.icon.LoadAsync(actualURL);
             }
 
-            Console.WriteLine(f"{string.Join("," arr)}");
-
-
             this.passwordTB.Text = EncryptionManager.Decrypt(Passwd.PasswordAfterEncrypt, Passwd.Key);
         }
 
