@@ -39,6 +39,7 @@ namespace PassGuard.UserControls
             this.showPassword = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
             this.icon = new System.Windows.Forms.PictureBox();
+            this.PasswordNameTB = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
@@ -187,11 +188,27 @@ namespace PassGuard.UserControls
             this.icon.TabIndex = 12;
             this.icon.TabStop = false;
             // 
+            // PasswordNameTB
+            // 
+            this.PasswordNameTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.PasswordNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordNameTB.Font = new System.Drawing.Font("Century Gothic", 17.7F);
+            this.PasswordNameTB.ForeColor = System.Drawing.Color.White;
+            this.PasswordNameTB.Location = new System.Drawing.Point(153, 20);
+            this.PasswordNameTB.Name = "PasswordNameTB";
+            this.PasswordNameTB.Size = new System.Drawing.Size(38, 29);
+            this.PasswordNameTB.TabIndex = 17;
+            this.PasswordNameTB.Text = "YO";
+            this.PasswordNameTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PasswordNameTB.TextChanged += new System.EventHandler(this.PasswordNameTB_TextChanged);
+            this.PasswordNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordNameTB_KeyDown);
+            // 
             // PasswordScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.Controls.Add(this.PasswordNameTB);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.showPassword);
             this.Controls.Add(this.saveButton);
@@ -224,5 +241,6 @@ namespace PassGuard.UserControls
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Button showPassword;
         private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.TextBox PasswordNameTB;
     }
 }
