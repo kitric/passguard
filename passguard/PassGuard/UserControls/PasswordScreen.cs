@@ -36,7 +36,7 @@ namespace PassGuard.UserControls
         {
             contentsLocked = !contentsLocked;
 
-
+            this.PasswordNameTB.ReadOnly = contentsLocked;
             this.passwordTB.ReadOnly = contentsLocked;
             this.urlTB.ReadOnly = contentsLocked;
             this.saveButton.Enabled = !contentsLocked;
@@ -89,6 +89,13 @@ namespace PassGuard.UserControls
 
             this.Passwd.LoginURL = urlTB.Text;
             this.Passwd.ImageURL = $"https://logo.clearbit.com/{urlTB.Text}?size=25";
+
+            if (this.PasswordNameTB.Text != "")
+            {
+                this.Passwd.Name = this.PasswordNameTB.Text;
+            }
+
+            this.InvalidNameLB.Visible = this.PasswordNameTB.Text == "";
         }
 
         private void PasswordNameTB_TextChanged(object sender, EventArgs e)
@@ -106,25 +113,8 @@ namespace PassGuard.UserControls
             // Rendered text size.
             int rtSize = TextRenderer.MeasureText(this.PasswordNameTB.Text, this.PasswordNameTB.Font).Width;
 
-            this.PasswordNameTB.Width = rtSize + 2; 
-            
-        }
+            this.PasswordNameTB.Width = rtSize + 2;
 
-        /// <summary>
-        /// If pressed key is enter, and name isn't an empty string, rename the password.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void PasswordNameTB_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (this.PasswordNameTB.Text != "")
-                {
-                    this.Passwd.Name = this.PasswordNameTB.Text;
-                    this.title.Focus();
-                }
-            }
         }
     }
 }

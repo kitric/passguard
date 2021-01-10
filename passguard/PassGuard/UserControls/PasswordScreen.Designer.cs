@@ -40,6 +40,7 @@ namespace PassGuard.UserControls
             this.editButton = new System.Windows.Forms.Button();
             this.icon = new System.Windows.Forms.PictureBox();
             this.PasswordNameTB = new System.Windows.Forms.TextBox();
+            this.InvalidNameLB = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
@@ -194,20 +195,34 @@ namespace PassGuard.UserControls
             this.PasswordNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordNameTB.Font = new System.Drawing.Font("Century Gothic", 17.7F);
             this.PasswordNameTB.ForeColor = System.Drawing.Color.White;
-            this.PasswordNameTB.Location = new System.Drawing.Point(153, 20);
+            this.PasswordNameTB.Location = new System.Drawing.Point(148, 20);
             this.PasswordNameTB.Name = "PasswordNameTB";
+            this.PasswordNameTB.ReadOnly = true;
             this.PasswordNameTB.Size = new System.Drawing.Size(38, 29);
             this.PasswordNameTB.TabIndex = 17;
             this.PasswordNameTB.Text = "YO";
             this.PasswordNameTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PasswordNameTB.TextChanged += new System.EventHandler(this.PasswordNameTB_TextChanged);
-            this.PasswordNameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordNameTB_KeyDown);
+            // 
+            // InvalidNameLB
+            // 
+            this.InvalidNameLB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.InvalidNameLB.AutoSize = true;
+            this.InvalidNameLB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidNameLB.ForeColor = System.Drawing.Color.Red;
+            this.InvalidNameLB.Location = new System.Drawing.Point(33, 54);
+            this.InvalidNameLB.Name = "InvalidNameLB";
+            this.InvalidNameLB.Size = new System.Drawing.Size(81, 16);
+            this.InvalidNameLB.TabIndex = 18;
+            this.InvalidNameLB.Text = "Invalid name";
+            this.InvalidNameLB.Visible = false;
             // 
             // PasswordScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.Controls.Add(this.InvalidNameLB);
             this.Controls.Add(this.PasswordNameTB);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.showPassword);
@@ -242,5 +257,6 @@ namespace PassGuard.UserControls
         private System.Windows.Forms.Button showPassword;
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.TextBox PasswordNameTB;
+        private System.Windows.Forms.Label InvalidNameLB;
     }
 }
