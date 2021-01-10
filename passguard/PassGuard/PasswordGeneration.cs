@@ -26,9 +26,19 @@ namespace PassGuard
         {
             StringBuilder passwd = new StringBuilder(len);
 
+            int prev = -1; // Keeps track of the previously generated random number.
             for (int i = 0; i < passwd.Capacity; i++) //Fills the stringBuilder entirely with letters.
             {
-                passwd.Append(LETTERS[GlobalFunctions.Rand(0, LETTERS.Length)]);
+                int rand = GlobalFunctions.Rand(0, LETTERS.Length);
+                
+                // Generate a random number till that number is different than the previous one.
+                while (rand == prev)
+                {
+                    rand = GlobalFunctions.Rand(0, LETTERS.Length);
+                }
+
+                passwd.Append(LETTERS[rand]);
+                prev = rand;
             }
 
             return passwd;
@@ -50,12 +60,20 @@ namespace PassGuard
         {
             int charAmount = GlobalFunctions.Rand(passwd.Length / 4, passwd.Length / 2 + 1);
 
+            int prev = -1;
             for (int i = 0; i < charAmount; i++)
             {
-                char rand = NON_ALPHANUM_CHARACTERS[GlobalFunctions.Rand(0, NON_ALPHANUM_CHARACTERS.Length)];
+                int rand = GlobalFunctions.Rand(0, NON_ALPHANUM_CHARACTERS.Length);
 
-                //Generating a random index, then replacing the character at that index with rand.
-                passwd[i] = rand;
+                // Generate a random number till that number is different than the previous one.
+                while (rand == prev)
+                {
+                    rand = GlobalFunctions.Rand(0, NON_ALPHANUM_CHARACTERS.Length);
+                }
+
+                // Generating a random index, then replacing the character at that index with rand.
+                passwd[i] = NON_ALPHANUM_CHARACTERS[rand];
+                prev = rand;
             }
         }
 

@@ -8,7 +8,6 @@ namespace PassGuard.UserControls
         public PasswordGenerator()
         {
             InitializeComponent();
-
             GlobalFunctions.RoundCorners(generateBtn);
         }
 

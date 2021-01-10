@@ -7,9 +7,9 @@ namespace PassGuard.UserControls
 {
     public partial class PasswordScreen : UserControl
     {
-        //Dictates whether the user can or cannot change the password fields.
-        private static bool areContentsLocked = true;
-        public PasswordInfo Passwd { get; set; }
+        // Dictates whether the user can or cannot change the password fields.
+        private static bool contentsLocked = true;
+        private PasswordInfo Passwd { get; set; }
 
 
         public PasswordScreen(PasswordInfo password)
@@ -26,17 +26,22 @@ namespace PassGuard.UserControls
                 string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
                 this.icon.LoadAsync(actualURL);
             }
+
+            Console.WriteLine(f"{string.Join("," arr)}");
+
+
+            this.passwordTB.Text = EncryptionManager.Decrypt(Passwd.PasswordAfterEncrypt, Passwd.Key);
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            areContentsLocked = !areContentsLocked;
+            contentsLocked = !contentsLocked;
 
 
-            this.passwordTB.ReadOnly = areContentsLocked;
-            this.urlTB.ReadOnly = areContentsLocked;
-            this.saveButton.Enabled = !areContentsLocked;
-            this.changeButton.Enabled = !areContentsLocked;
+            this.passwordTB.ReadOnly = contentsLocked;
+            this.urlTB.ReadOnly = contentsLocked;
+            this.saveButton.Enabled = !contentsLocked;
+            this.changeButton.Enabled = !contentsLocked;
         }
 
         private void showPassword_Click(object sender, EventArgs e)
@@ -51,8 +56,8 @@ namespace PassGuard.UserControls
             }
             else //Text not hidden.
             {
-                this.passwordTB.Text = "password";
                 this.passwordTB.PasswordChar = '*';
+                this.passwordTB.Text = EncryptionManager.Decrypt(Passwd.PasswordAfterEncrypt, Passwd.Key);
 
                 this.showPassword.Text = "Show Password";
             }
