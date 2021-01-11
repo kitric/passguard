@@ -28,6 +28,7 @@ namespace PassGuard.UserControls
             if (!string.IsNullOrEmpty(this.Passwd.ImageURL))
             {
                 // This logo database sucks, we must find a better one later (or should we make our own?).
+                // WE SHOULD MAKE OUR OWN - crxssed
                 string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
                 this.icon.LoadAsync(actualURL);
             }

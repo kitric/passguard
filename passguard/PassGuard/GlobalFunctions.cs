@@ -78,5 +78,13 @@ namespace PassGuard
             p.HorizontalScroll.Visible = false;
             p.AutoScroll = true;
         }
+
+        public static void HideScrollbars(UserControl uc)
+        {
+            uc.VerticalScroll.Maximum = 0;
+            uc.AutoScroll = false;
+            uc.HorizontalScroll.Visible = false;
+            uc.AutoScroll = true;
+        }
     }
 }

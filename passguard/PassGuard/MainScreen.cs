@@ -90,7 +90,7 @@ namespace PassGuard
 
         private void About_Click(object sender, System.EventArgs e)
         {
-            SwitchTo<PageNotImplemented>(args: new object[] { });
+            SwitchTo<About>(args: new object[] { });
         }
 
         private async void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
