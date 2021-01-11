@@ -121,10 +121,44 @@
   <data name="Sidebar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
-  <data name="About.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="settings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="settings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 7.5pt, style=Bold</value>
+  </data>
+  <data name="settings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="settings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 420</value>
+  </data>
+  <data name="settings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 17</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="settings.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="settings.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;settings.Name" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="&gt;&gt;settings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;settings.Parent" xml:space="preserve">
+    <value>Sidebar</value>
+  </data>
+  <data name="&gt;&gt;settings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="About.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="About.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 7.5pt, style=Bold</value>
   </data>
@@ -137,7 +171,6 @@
   <data name="About.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 28</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="About.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -157,7 +190,7 @@
     <value>Sidebar</value>
   </data>
   <data name="&gt;&gt;About.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="GeneratePassword.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -193,7 +226,7 @@
     <value>Sidebar</value>
   </data>
   <data name="&gt;&gt;GeneratePassword.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Passwords.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -229,7 +262,7 @@
     <value>Sidebar</value>
   </data>
   <data name="&gt;&gt;Passwords.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Home.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -265,7 +298,7 @@
     <value>Sidebar</value>
   </data>
   <data name="&gt;&gt;Home.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -292,7 +325,7 @@
     <value>Sidebar</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="Sidebar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -2231,6 +2264,9 @@
         AEshI39LISOATR8nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPw/AAD4HwAA8A8AAOAHAADBgwAAg8EA
         AIJBAACAAQAAgAEAAIpRAACP8QAAj/EAAIABAACAAQAAgAEAAPw/AAA=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>816, 489</value>
