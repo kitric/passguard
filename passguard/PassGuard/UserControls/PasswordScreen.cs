@@ -102,6 +102,15 @@ namespace PassGuard.UserControls
             }
 
             this.InvalidNameLB.Visible = this.PasswordNameTB.Text == "";
+
+            // Disable edit mode
+            contentsLocked = !contentsLocked;
+
+            this.PasswordNameTB.ReadOnly = contentsLocked;
+            this.passwordTB.ReadOnly = contentsLocked;
+            this.urlTB.ReadOnly = contentsLocked;
+            this.saveButton.Enabled = !contentsLocked;
+            this.changeButton.Enabled = !contentsLocked;
         }
 
         private void PasswordNameTB_TextChanged(object sender, EventArgs e)
