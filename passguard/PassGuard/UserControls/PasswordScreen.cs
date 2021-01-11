@@ -12,6 +12,10 @@ namespace PassGuard.UserControls
         private PasswordInfo Passwd { get; set; }
 
 
+        /// <summary>
+        /// This constructor is called from somewhere else! :eyes:
+        /// </summary>
+        /// <param name="password"></param>
         public PasswordScreen(PasswordInfo password)
         {
             InitializeComponent();
@@ -23,6 +27,7 @@ namespace PassGuard.UserControls
 
             if (!string.IsNullOrEmpty(this.Passwd.ImageURL))
             {
+                // This logo database sucks, we must find a better one later (or should we make our own?).
                 string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
                 this.icon.LoadAsync(actualURL);
             }
@@ -45,7 +50,7 @@ namespace PassGuard.UserControls
 
         private void showPassword_Click(object sender, EventArgs e)
         {
-            if (this.passwordTB.PasswordChar != '\0') //Text hidden
+            if (this.passwordTB.PasswordChar != '\0') // Text hidden
             {
                 this.passwordTB.Text = EncryptionManager.Decrypt(Passwd.PasswordAfterEncrypt, Passwd.Key);
                 this.passwordTB.PasswordChar = '\0';
@@ -53,7 +58,7 @@ namespace PassGuard.UserControls
                 this.showPassword.Text = "Hide Password";
 
             }
-            else //Text not hidden.
+            else // Text not hidden.
             {
                 this.passwordTB.PasswordChar = '*';
                 this.passwordTB.Text = EncryptionManager.Decrypt(Passwd.PasswordAfterEncrypt, Passwd.Key);

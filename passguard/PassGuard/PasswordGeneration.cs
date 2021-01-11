@@ -43,6 +43,7 @@ namespace PassGuard
 
             return passwd;
         }
+        
         private static void AddNumbers(StringBuilder passwd)
         {
             //Determines a random number between half of the password length - 3 (inclusive)
@@ -56,6 +57,7 @@ namespace PassGuard
                 passwd[i] = (char)rand;
             }
         }
+
         private static void AddSpecialCharacters(StringBuilder passwd)
         {
             int charAmount = GlobalFunctions.Rand(passwd.Length / 4, passwd.Length / 2 + 1);
@@ -76,7 +78,6 @@ namespace PassGuard
                 prev = rand;
             }
         }
-
 
         private static void FlushPassword(StringBuilder passwd)
         {
