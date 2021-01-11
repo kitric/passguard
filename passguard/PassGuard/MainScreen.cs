@@ -52,6 +52,8 @@ namespace PassGuard
                 // Show the login screen
                 this.Content.Controls.Add(new Login(this) { Dock = DockStyle.Fill });
             }
+
+            SetupTheme();
         }
 
 
@@ -59,6 +61,19 @@ namespace PassGuard
         static MainScreen()
         {
             Directory.CreateDirectory(GlobalFunctions.GetAppdataFolder());
+        }
+
+
+        // Properly implement this in the future.
+        private void SetupTheme()
+        {
+            switch (Data.ThemeName)
+            {
+                case Theme.DARK: break; // Insert code for dark theme.
+                case Theme.LIGHT: break; // Insert code for light theme.
+
+                // Add more themes in the future...
+            }
         }
 
         #region events
