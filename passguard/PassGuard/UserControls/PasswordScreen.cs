@@ -11,6 +11,7 @@ namespace PassGuard.UserControls
         private static bool contentsLocked = true;
         private PasswordInfo Passwd { get; set; }
 
+        #region events
 
         /// <summary>
         /// This constructor is called from somewhere else! :eyes:
@@ -119,6 +120,7 @@ namespace PassGuard.UserControls
             AdjustPasswordNameTBWidth();
         }
 
+        #endregion
 
         /// <summary>
         /// Resizes the textbox automatically.

@@ -64,7 +64,9 @@ namespace PassGuard
         }
 
 
-        // Properly implement this in the future.
+        /// <summary>
+        /// This method will take care of changing the look of the app according to the selected theme. 
+        /// </summary>
         private void SetupTheme()
         {
             switch (Data.ThemeName)

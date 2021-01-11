@@ -121,12 +121,6 @@
     <Compile Include="UserControls\MasterPassword.Designer.cs">
       <DependentUpon>MasterPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\PageNotImplemented.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\PageNotImplemented.Designer.cs">
-      <DependentUpon>PageNotImplemented.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\PasswordGenerator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,9 +175,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MasterPassword.resx">
       <DependentUpon>MasterPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\PageNotImplemented.resx">
-      <DependentUpon>PageNotImplemented.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PasswordGenerator.resx">
       <DependentUpon>PasswordGenerator.cs</DependentUpon>

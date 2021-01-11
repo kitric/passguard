@@ -9,6 +9,7 @@ namespace PassGuard
     /// <summary>
     /// Will be used to implement themes in the future.
     /// </summary>
+    
     public struct Theme
     {
         public const string DEFAULT = "DEFAULT";

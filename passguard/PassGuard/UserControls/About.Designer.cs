@@ -119,8 +119,9 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(315, 124);
             this.label1.TabIndex = 7;
-            this.label1.Text = "PassGuard is a simple encrypted\r\npassword manager.\r\nThe project is open-source, a" +
-    "vailable\r\non the Kitric Github page.\r\n\r\nv0.1";
+            this.label1.Text = "PassGuard is a simple password manager made for those who want to keep their pass" +
+    "words safe.\r\nThe project is open-source and is available\r\non the Kitric Github p" +
+    "age.\r\n\r\nv0.1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // spacer
