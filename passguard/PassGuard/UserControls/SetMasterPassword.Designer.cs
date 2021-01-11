@@ -67,6 +67,7 @@
             this.MasterPasswordTB.ForeColor = System.Drawing.Color.White;
             this.MasterPasswordTB.Location = new System.Drawing.Point(197, 254);
             this.MasterPasswordTB.Name = "MasterPasswordTB";
+            this.MasterPasswordTB.PasswordChar = '*';
             this.MasterPasswordTB.Size = new System.Drawing.Size(242, 16);
             this.MasterPasswordTB.TabIndex = 5;
             this.MasterPasswordTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
