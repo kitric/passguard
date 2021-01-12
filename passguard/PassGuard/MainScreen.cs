@@ -136,7 +136,7 @@ namespace PassGuard
             Passwords.Enabled = false;
             GeneratePassword.Enabled = false;
             About.Enabled = false;
-            settings.Enabled = false;
+            settingsBtn.Enabled = false;
         }
 
         //Turns all the tabs to enabled
@@ -146,7 +146,7 @@ namespace PassGuard
             Passwords.Enabled = true;
             GeneratePassword.Enabled = true;
             About.Enabled = true;
-            settings.Enabled = true;
+            settingsBtn.Enabled = true;
         }
 
         /// <summary>

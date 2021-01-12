@@ -121,39 +121,42 @@
   <data name="Sidebar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
-  <data name="settings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="settingsBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="settingsBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="settings.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="settingsBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 7.5pt, style=Bold</value>
   </data>
-  <data name="settings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="settingsBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="settings.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="settingsBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>72, 420</value>
   </data>
-  <data name="settings.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="settingsBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 17</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="settings.TabIndex" type="System.Int32, mscorlib">
+  <data name="settingsBtn.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="settings.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="settingsBtn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;settings.Name" xml:space="preserve">
-    <value>settings</value>
+  <data name="&gt;&gt;settingsBtn.Name" xml:space="preserve">
+    <value>settingsBtn</value>
   </data>
-  <data name="&gt;&gt;settings.Type" xml:space="preserve">
+  <data name="&gt;&gt;settingsBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;settings.Parent" xml:space="preserve">
+  <data name="&gt;&gt;settingsBtn.Parent" xml:space="preserve">
     <value>Sidebar</value>
   </data>
-  <data name="&gt;&gt;settings.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;settingsBtn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="About.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -300,31 +303,31 @@
   <data name="&gt;&gt;Home.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="Logo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Logo.Location" type="System.Drawing.Point, System.Drawing">
     <value>62, 21</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Logo.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 47</value>
   </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="Logo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="Logo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
+  <data name="&gt;&gt;Logo.Name" xml:space="preserve">
+    <value>Logo</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;Logo.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Logo.Parent" xml:space="preserve">
     <value>Sidebar</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Logo.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="Sidebar.Location" type="System.Drawing.Point, System.Drawing">
