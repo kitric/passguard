@@ -20,8 +20,10 @@ namespace PassGuard
         private readonly static string[] Scopes = { DriveService.Scope.DriveAppdata };
         public static DriveService driveService = new DriveService();
 
-        public static UserData Data = new UserData();
+        internal static UserData Data = new UserData();
         private static bool loggedIn = false;
+
+        public static MainScreen Instance;
 
         public MainScreen()
         {
@@ -34,6 +36,8 @@ namespace PassGuard
                     GlobalFunctions.RoundCorners(x);
                 }
             }
+
+            Instance = this;
 
             DisableTabs();
 
@@ -50,7 +54,7 @@ namespace PassGuard
             else
             {
                 // Show the login screen
-                this.Content.Controls.Add(new Login(this) { Dock = DockStyle.Fill });
+                this.Content.Controls.Add(new Login() { Dock = DockStyle.Fill });
             }
 
             SetupTheme();
@@ -91,34 +95,38 @@ namespace PassGuard
                 foreach (Control control in topControl.Controls) { control.Dispose(); }
                 topControl.Dispose();
 
-                Content.Controls.Add(new HomePage(this) { Dock = DockStyle.Fill });
+                Content.Controls.Add(new HomePage() { Dock = DockStyle.Fill });
             }
         }
 
         private void Passwords_Click(object sender, System.EventArgs e)
         {
-            SwitchTo<Passwords>();
+            GlobalFunctions.SwitchTo<Passwords>(this.Content);
         }
 
         private void GeneratePassword_Click(object sender, System.EventArgs e)
         {
-            SwitchTo<PasswordGenerator>(args: new object[] { });
+            GlobalFunctions.SwitchTo<PasswordGenerator>(this.Content, args: new object[] { });
         }
 
         private void About_Click(object sender, System.EventArgs e)
         {
-            SwitchTo<About>(args: new object[] { });
+            GlobalFunctions.SwitchTo<About>(this.Content, args: new object[] { });
         }
 
         private async void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
             await SerializePasswordInfos();
         }
+
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+            GlobalFunctions.SwitchTo<SettingsPage>(this.Content);
+        }
         #endregion
 
 
         #region switch pages
-
         public void SetOrEnterMasterPassword()
         {
 
@@ -147,30 +155,6 @@ namespace PassGuard
             GeneratePassword.Enabled = true;
             About.Enabled = true;
             settingsBtn.Enabled = true;
-        }
-
-        /// <summary>
-        /// Now, you only need one function for switching windows.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="args"></param>
-        public void SwitchTo<T>(object[] args = null) where T : UserControl
-        {
-            Control topControl = Content.Controls[0];
-
-            //Creates a new UserControl from T. 
-            UserControl control = (UserControl)Activator.CreateInstance(typeof(T), args ?? (new object[] { this }));
-            control.Dock = DockStyle.Fill;
-
-            // If the window on the top is different:
-            if (topControl.GetType() != control.GetType())
-            {
-                foreach (Control x in topControl.Controls) { x.Dispose(); }
-                topControl.Dispose();
-
-                Content.Controls.Clear();
-                Content.Controls.Add(control);
-            }
         }
         #endregion
 
@@ -249,7 +233,7 @@ namespace PassGuard
         /// <summary>
         /// Logs in to Google Drive using the token.json file.
         /// </summary>
-        public void LoginAccount()
+        public static void LoginAccount()
         {
             UserCredential credential;
 
@@ -300,6 +284,5 @@ namespace PassGuard
             return null;
         }
         #endregion
-
     }
 }

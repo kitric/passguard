@@ -7,15 +7,12 @@ namespace PassGuard.UserControls
 {
     public partial class Passwords : UserControl
     {
-        readonly MainScreen mainScreen;
 
-        public Passwords(MainScreen ms)
+        public Passwords()
         {
             InitializeComponent();
 
             GlobalFunctions.HideScrollbars(content);
-
-            this.mainScreen = ms;
 
             DeserializeList();
         }
@@ -24,14 +21,14 @@ namespace PassGuard.UserControls
         {
             foreach (PasswordInfo info in MainScreen.Data.passwords)
             {
-                PasswordButton btn = new PasswordButton(info, mainScreen);
+                PasswordButton btn = new PasswordButton(info);
                 content.Controls.Add(btn);
             }
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            mainScreen.SwitchTo<AddPassword>(args: new object[] { });
+            GlobalFunctions.SwitchTo<AddPassword>(MainScreen.Instance.Content);
         }
     }
 }

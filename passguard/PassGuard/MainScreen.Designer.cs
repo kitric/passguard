@@ -31,13 +31,13 @@ namespace PassGuard
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.Sidebar = new System.Windows.Forms.Panel();
-            this.settingsBtn = new System.Windows.Forms.Button();
             this.About = new System.Windows.Forms.Button();
             this.GeneratePassword = new System.Windows.Forms.Button();
             this.Passwords = new System.Windows.Forms.Button();
             this.Home = new System.Windows.Forms.Button();
-            this.Logo = new System.Windows.Forms.PictureBox();
             this.Content = new System.Windows.Forms.Panel();
+            this.settingsBtn = new System.Windows.Forms.Button();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
@@ -53,15 +53,6 @@ namespace PassGuard
             this.Sidebar.Controls.Add(this.Home);
             this.Sidebar.Controls.Add(this.Logo);
             this.Sidebar.Name = "Sidebar";
-            // 
-            // settingsBtn
-            // 
-            resources.ApplyResources(this.settingsBtn, "settingsBtn");
-            this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
-            this.settingsBtn.FlatAppearance.BorderSize = 0;
-            this.settingsBtn.Image = global::PassGuard.Properties.Resources.settings;
-            this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.UseVisualStyleBackColor = false;
             // 
             // About
             // 
@@ -99,18 +90,28 @@ namespace PassGuard
             this.Home.UseVisualStyleBackColor = false;
             this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
+            // Content
+            // 
+            resources.ApplyResources(this.Content, "Content");
+            this.Content.BackColor = System.Drawing.Color.Transparent;
+            this.Content.Name = "Content";
+            // 
+            // settingsBtn
+            // 
+            resources.ApplyResources(this.settingsBtn, "settingsBtn");
+            this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.settingsBtn.FlatAppearance.BorderSize = 0;
+            this.settingsBtn.Image = global::PassGuard.Properties.Resources.settings;
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.UseVisualStyleBackColor = false;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
+            // 
             // Logo
             // 
             this.Logo.Image = global::PassGuard.Properties.Resources.logo_white_small;
             resources.ApplyResources(this.Logo, "Logo");
             this.Logo.Name = "Logo";
             this.Logo.TabStop = false;
-            // 
-            // Content
-            // 
-            resources.ApplyResources(this.Content, "Content");
-            this.Content.BackColor = System.Drawing.Color.Transparent;
-            this.Content.Name = "Content";
             // 
             // MainScreen
             // 
@@ -136,8 +137,8 @@ namespace PassGuard
         private System.Windows.Forms.Button Passwords;
         private System.Windows.Forms.Button About;
         private System.Windows.Forms.Button GeneratePassword;
-        private System.Windows.Forms.Panel Content;
         private System.Windows.Forms.Button settingsBtn;
+        public System.Windows.Forms.Panel Content;
     }
 }
 

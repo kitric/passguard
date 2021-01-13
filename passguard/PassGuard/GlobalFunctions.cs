@@ -39,6 +39,7 @@ namespace PassGuard
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "passguard");
         }
 
+        #region randNumber
         public static int Rand(int minValue, int maxExclusiveValue)
         {
             if (minValue >= maxExclusiveValue)
@@ -66,6 +67,32 @@ namespace PassGuard
             byte[] buffer = new byte[bytesNumber];
             csp.GetBytes(buffer);
             return buffer;
+        }
+        #endregion
+
+
+        /// <summary>
+        /// Now, you only need one function for switching windows.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="args"></param>
+        public static void SwitchTo<T>(Panel Content, object[] args = null) where T : UserControl
+        {
+            Control topControl = Content.Controls[0];
+
+            //Creates a new UserControl from T. 
+            UserControl control = (UserControl)Activator.CreateInstance(typeof(T), args ?? new object[] { });
+            control.Dock = DockStyle.Fill;
+
+            // If the window on the top is different:
+            if (topControl.GetType() != control.GetType())
+            {
+                foreach (Control x in topControl.Controls) { x.Dispose(); }
+                topControl.Dispose();
+
+                Content.Controls.Clear();
+                Content.Controls.Add(control);
+            }
         }
 
         /// <summary>

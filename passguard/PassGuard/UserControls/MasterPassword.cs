@@ -21,7 +21,7 @@ namespace PassGuard.UserControls
             if (MasterPasswordTB.Text == MainScreen.Data.MasterPassword)
             {
                 MainScreen.EnableTabs();
-                MainScreen.SwitchTo<HomePage>();
+                GlobalFunctions.SwitchTo<HomePage>(MainScreen.Instance.Content);
             }
 
             WrongPasswordLB.Visible = !(MasterPasswordTB.Text == MainScreen.Data.MasterPassword);

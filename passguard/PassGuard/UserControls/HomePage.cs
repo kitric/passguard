@@ -5,9 +5,8 @@ namespace PassGuard.UserControls
 {
     public partial class HomePage : UserControl
     {
-        internal static MainScreen mainScreen;
 
-        public HomePage(MainScreen ms)
+        public HomePage()
         {
             InitializeComponent();
 
@@ -17,7 +16,6 @@ namespace PassGuard.UserControls
             Timer.Tick += UpdateTime;
 
             this.Time.Text = DateTime.Now.ToString("t");
-            mainScreen = ms;
         }
 
         private void UpdateTime(object sender, EventArgs e)
@@ -33,12 +31,12 @@ namespace PassGuard.UserControls
 
         private void YourPasswords_Click(object sender, EventArgs e)
         {
-            mainScreen.SwitchTo<Passwords>();
+            GlobalFunctions.SwitchTo<Passwords>(MainScreen.Instance.Content);
         }
 
         private void GenerateAPassword_Click(object sender, EventArgs e)
         {
-            mainScreen.SwitchTo<PasswordGenerator>(args: new object[] { });
+            GlobalFunctions.SwitchTo<PasswordGenerator>(MainScreen.Instance.Content, args: new object[] { });
         }
     }
 }

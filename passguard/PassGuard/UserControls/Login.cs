@@ -5,21 +5,18 @@ namespace PassGuard.UserControls
 {
     public partial class Login : UserControl
     {
-        readonly MainScreen mainScreen;
 
-        public Login(MainScreen ms)
+        public Login()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
 
             GlobalFunctions.RoundCorners(loginButton);
-
-            this.mainScreen = ms;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            mainScreen.LoginAccount();
+            MainScreen.LoginAccount();
         }
     }
 }

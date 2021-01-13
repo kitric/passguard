@@ -21,7 +21,7 @@ namespace PassGuard.UserControls
             {
                 MainScreen.Data.MasterPassword = MasterPasswordTB.Text;
                 MainScreen.EnableTabs();
-                MainScreen.SwitchTo<HomePage>();
+                GlobalFunctions.SwitchTo<HomePage>(MainScreen.Instance.Content);
             }
         }
     }
