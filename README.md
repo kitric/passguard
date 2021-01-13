@@ -1,2 +1,2 @@
 # PassGuard
-A password manager written in C#. 
+An encrypted password manager written in C#. 
