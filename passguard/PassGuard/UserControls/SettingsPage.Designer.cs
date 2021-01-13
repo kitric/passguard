@@ -31,6 +31,8 @@ namespace PassGuard.UserControls
         {
             this.ThemeLB = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ThemeLB
@@ -55,11 +57,31 @@ namespace PassGuard.UserControls
             this.label1.TabIndex = 1;
             this.label1.Text = "Theme:";
             // 
+            // btn1
+            // 
+            this.btn1.Location = new System.Drawing.Point(124, 10);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(35, 23);
+            this.btn1.TabIndex = 2;
+            this.btn1.Text = "button1";
+            this.btn1.UseVisualStyleBackColor = true;
+            // 
+            // btn2
+            // 
+            this.btn2.Location = new System.Drawing.Point(124, 39);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(35, 23);
+            this.btn2.TabIndex = 3;
+            this.btn2.Text = "button1";
+            this.btn2.UseVisualStyleBackColor = true;
+            // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.Controls.Add(this.btn2);
+            this.Controls.Add(this.btn1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ThemeLB);
             this.Name = "SettingsPage";
@@ -73,5 +95,7 @@ namespace PassGuard.UserControls
 
         private System.Windows.Forms.Label ThemeLB;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btn2;
     }
 }
