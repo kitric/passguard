@@ -17,6 +17,7 @@ namespace PassGuard
 {
     public partial class MainScreen : Form
     {
+        #region fields
         private readonly static string[] Scopes = { DriveService.Scope.DriveAppdata };
         public static DriveService driveService = new DriveService();
 
@@ -24,6 +25,7 @@ namespace PassGuard
         private static bool loggedIn = false;
 
         public static MainScreen Instance;
+        #endregion
 
         public MainScreen()
         {
@@ -73,6 +75,7 @@ namespace PassGuard
         /// </summary>
         private void SetupTheme()
         {
+            // No need to add code for the default theme!
             switch (Data.ThemeName)
             {
                 case Theme.DARK: break; // Insert code for dark theme.
