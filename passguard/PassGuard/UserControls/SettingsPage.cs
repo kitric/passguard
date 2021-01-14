@@ -22,17 +22,38 @@ namespace PassGuard.UserControls
         {
             int current = (int)Enum.Parse(typeof(Theme), this.ThemeLB.Text.ToUpper().Replace(" ", "_"));
 
-            if (current == 0) {
-                current = (int)Enum.GetValues(typeof(Theme)).Length - 1;
+            if (current == 0) { 
+                // Select the last element of the enum.
+                current = Enum.GetValues(typeof(Theme)).Length - 1;
             
             } else
             {
-                --current;
+                // Select the theme above the current one.
+                --current; 
             }
 
             Theme temp = (Theme)current;
-
             this.ThemeLB.Text = temp.ToString().ToLower().Replace("_", " ");
+            MainScreen.Data.Theme = temp;
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            int current = (int)Enum.Parse(typeof(Theme), this.ThemeLB.Text.ToUpper().Replace(" ", "_"));
+            
+            if (current == Enum.GetValues(typeof(Theme)).Length - 1) //The last one
+            {
+                current = 0;
+            
+            } else
+            {
+                // Select the theme below the current one.
+                current++;
+            }
+
+            Theme temp = (Theme)current;
+            this.ThemeLB.Text = temp.ToString().ToLower().Replace("_", " ");
+            MainScreen.Data.Theme = temp;
         }
     }
 }

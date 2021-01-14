@@ -75,6 +75,7 @@ namespace PassGuard.UserControls
             this.btn2.TabIndex = 3;
             this.btn2.Text = "button1";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // SettingsPage
             // 
