@@ -5,13 +5,11 @@ using System.Windows.Forms;
 
 namespace PassGuard.UserControls
 {
-    public partial class PasswordScreen : UserControl
+    public partial class PasswordScreen : UserControl, IPage
     {
         // Dictates whether the user can or cannot change the password fields.
         private static bool contentsLocked = true;
         private PasswordInfo Passwd { get; set; }
-
-        #region events
 
         /// <summary>
         /// This constructor is called from somewhere else! :eyes:
@@ -36,9 +34,12 @@ namespace PassGuard.UserControls
 
             this.passwordTB.Text = EncryptionManager.Decrypt(Passwd.PasswordAfterEncrypt, Passwd.Key);
 
+            ApplyTheme();            
             AdjustPasswordNameTBWidth();
         }
 
+
+        #region events
         private void editButton_Click(object sender, EventArgs e)
         {
             contentsLocked = !contentsLocked;
@@ -132,6 +133,30 @@ namespace PassGuard.UserControls
 
             this.PasswordNameTB.Width = rtSize + 2;
 
+        }
+
+        public void ApplyTheme()
+        {
+            switch (MainScreen.Data.Theme)
+            {
+                case Theme.TECHNO_DARK:
+                    this.BackColor = Color.FromArgb(15, 17, 26);
+
+                    this.title.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.showPassword.BackColor = Color.FromArgb(193, 25, 26);
+                    this.changeButton.BackColor = Color.FromArgb(193, 25, 26);
+                    this.saveButton.BackColor = Color.FromArgb(193, 25, 26);
+
+                    this.passwordTB.BackColor = Color.FromArgb(9, 11, 16);
+                    this.urlTB.BackColor = Color.FromArgb(9, 11, 26);
+
+                    this.icon.BackColor = Color.FromArgb(9, 11, 16);
+
+                    break;
+            }
+
+            this.panel2.BackColor = this.passwordTB.BackColor;
+            this.panel3.BackColor = this.passwordTB.BackColor;
         }
     }
 }
