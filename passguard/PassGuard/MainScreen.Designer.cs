@@ -32,10 +32,10 @@ namespace PassGuard
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.Sidebar = new System.Windows.Forms.Panel();
             this.settingsBtn = new System.Windows.Forms.Button();
-            this.About = new System.Windows.Forms.Button();
-            this.GeneratePassword = new System.Windows.Forms.Button();
-            this.Passwords = new System.Windows.Forms.Button();
-            this.Home = new System.Windows.Forms.Button();
+            this.AboutBtn = new System.Windows.Forms.Button();
+            this.GeneratePasswordBtn = new System.Windows.Forms.Button();
+            this.PasswordsBtn = new System.Windows.Forms.Button();
+            this.HomeBtn = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.Content = new System.Windows.Forms.Panel();
             this.Sidebar.SuspendLayout();
@@ -47,10 +47,10 @@ namespace PassGuard
             resources.ApplyResources(this.Sidebar, "Sidebar");
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(69)))));
             this.Sidebar.Controls.Add(this.settingsBtn);
-            this.Sidebar.Controls.Add(this.About);
-            this.Sidebar.Controls.Add(this.GeneratePassword);
-            this.Sidebar.Controls.Add(this.Passwords);
-            this.Sidebar.Controls.Add(this.Home);
+            this.Sidebar.Controls.Add(this.AboutBtn);
+            this.Sidebar.Controls.Add(this.GeneratePasswordBtn);
+            this.Sidebar.Controls.Add(this.PasswordsBtn);
+            this.Sidebar.Controls.Add(this.HomeBtn);
             this.Sidebar.Controls.Add(this.Logo);
             this.Sidebar.Name = "Sidebar";
             // 
@@ -64,44 +64,45 @@ namespace PassGuard
             this.settingsBtn.UseVisualStyleBackColor = false;
             this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
             // 
-            // About
+            // AboutBtn
             // 
-            this.About.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
-            this.About.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.About, "About");
-            this.About.Name = "About";
-            this.About.UseVisualStyleBackColor = false;
-            this.About.Click += new System.EventHandler(this.About_Click);
+            this.AboutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.AboutBtn.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.AboutBtn, "AboutBtn");
+            this.AboutBtn.Name = "AboutBtn";
+            this.AboutBtn.UseVisualStyleBackColor = false;
+            this.AboutBtn.Click += new System.EventHandler(this.About_Click);
             // 
-            // GeneratePassword
+            // GeneratePasswordBtn
             // 
-            this.GeneratePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
-            this.GeneratePassword.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.GeneratePassword, "GeneratePassword");
-            this.GeneratePassword.Name = "GeneratePassword";
-            this.GeneratePassword.UseVisualStyleBackColor = false;
-            this.GeneratePassword.Click += new System.EventHandler(this.GeneratePassword_Click);
+            this.GeneratePasswordBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.GeneratePasswordBtn.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.GeneratePasswordBtn, "GeneratePasswordBtn");
+            this.GeneratePasswordBtn.Name = "GeneratePasswordBtn";
+            this.GeneratePasswordBtn.UseVisualStyleBackColor = false;
+            this.GeneratePasswordBtn.Click += new System.EventHandler(this.GeneratePassword_Click);
             // 
-            // Passwords
+            // PasswordsBtn
             // 
-            this.Passwords.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
-            this.Passwords.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.Passwords, "Passwords");
-            this.Passwords.Name = "Passwords";
-            this.Passwords.UseVisualStyleBackColor = false;
-            this.Passwords.Click += new System.EventHandler(this.Passwords_Click);
+            this.PasswordsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.PasswordsBtn.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.PasswordsBtn, "PasswordsBtn");
+            this.PasswordsBtn.Name = "PasswordsBtn";
+            this.PasswordsBtn.UseVisualStyleBackColor = false;
+            this.PasswordsBtn.Click += new System.EventHandler(this.Passwords_Click);
             // 
-            // Home
+            // HomeBtn
             // 
-            this.Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
-            this.Home.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.Home, "Home");
-            this.Home.Name = "Home";
-            this.Home.UseVisualStyleBackColor = false;
-            this.Home.Click += new System.EventHandler(this.Home_Click);
+            this.HomeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.HomeBtn.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.HomeBtn, "HomeBtn");
+            this.HomeBtn.Name = "HomeBtn";
+            this.HomeBtn.UseVisualStyleBackColor = false;
+            this.HomeBtn.Click += new System.EventHandler(this.Home_Click);
             // 
             // Logo
             // 
+            this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.Image = global::PassGuard.Properties.Resources.logo_white_small;
             resources.ApplyResources(this.Logo, "Logo");
             this.Logo.Name = "Logo";
@@ -133,10 +134,10 @@ namespace PassGuard
 
         private System.Windows.Forms.Panel Sidebar;
         private System.Windows.Forms.PictureBox Logo;
-        private System.Windows.Forms.Button Home;
-        private System.Windows.Forms.Button Passwords;
-        private System.Windows.Forms.Button About;
-        private System.Windows.Forms.Button GeneratePassword;
+        private System.Windows.Forms.Button HomeBtn;
+        private System.Windows.Forms.Button PasswordsBtn;
+        private System.Windows.Forms.Button AboutBtn;
+        private System.Windows.Forms.Button GeneratePasswordBtn;
         private System.Windows.Forms.Button settingsBtn;
         public System.Windows.Forms.Panel Content;
     }

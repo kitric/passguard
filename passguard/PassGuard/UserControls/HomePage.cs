@@ -1,21 +1,24 @@
-﻿using System;
+﻿using PassGuard.Models;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls
 {
-    public partial class HomePage : UserControl
+    public partial class HomePage : UserControl, IPage
     {
 
         public HomePage()
         {
             InitializeComponent();
 
-            GlobalFunctions.RoundCorners(YourPasswords);
-            GlobalFunctions.RoundCorners(GenerateAPassword);
+            GlobalFunctions.RoundCorners(YourPasswordsBtn);
+            GlobalFunctions.RoundCorners(GenerateAPasswordBtn);
 
             Timer.Tick += UpdateTime;
 
             this.Time.Text = DateTime.Now.ToString("t");
+            ApplyTheme();
         }
 
         private void UpdateTime(object sender, EventArgs e)
@@ -37,6 +40,17 @@ namespace PassGuard.UserControls
         private void GenerateAPassword_Click(object sender, EventArgs e)
         {
             GlobalFunctions.SwitchTo<PasswordGenerator>(MainScreen.Instance.Content, args: new object[] { });
+        }
+
+        public void ApplyTheme()
+        {
+            switch (MainScreen.Data.Theme) {
+                case Theme.TECHNO_DARK:    
+                    this.YourPasswordsBtn.BackColor = Color.FromArgb(193, 25, 26); 
+                    this.GenerateAPasswordBtn.BackColor = Color.FromArgb(193, 25, 26); 
+                    this.Time.ForeColor = Color.FromArgb(193, 25, 26);
+                    break;
+        }
         }
     }
 }

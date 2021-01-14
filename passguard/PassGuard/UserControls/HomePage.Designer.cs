@@ -30,45 +30,45 @@ namespace PassGuard.UserControls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.YourPasswords = new System.Windows.Forms.Button();
-            this.GenerateAPassword = new System.Windows.Forms.Button();
+            this.YourPasswordsBtn = new System.Windows.Forms.Button();
+            this.GenerateAPasswordBtn = new System.Windows.Forms.Button();
             this.Time = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.pwtBig = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pwtBig)).BeginInit();
             this.SuspendLayout();
             // 
-            // YourPasswords
+            // YourPasswordsBtn
             // 
-            this.YourPasswords.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.YourPasswords.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
-            this.YourPasswords.FlatAppearance.BorderSize = 0;
-            this.YourPasswords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.YourPasswords.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
-            this.YourPasswords.ForeColor = System.Drawing.Color.White;
-            this.YourPasswords.Location = new System.Drawing.Point(190, 300);
-            this.YourPasswords.Name = "YourPasswords";
-            this.YourPasswords.Size = new System.Drawing.Size(123, 28);
-            this.YourPasswords.TabIndex = 1;
-            this.YourPasswords.Text = "Your Passwords";
-            this.YourPasswords.UseVisualStyleBackColor = false;
-            this.YourPasswords.Click += new System.EventHandler(this.YourPasswords_Click);
+            this.YourPasswordsBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.YourPasswordsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.YourPasswordsBtn.FlatAppearance.BorderSize = 0;
+            this.YourPasswordsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.YourPasswordsBtn.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
+            this.YourPasswordsBtn.ForeColor = System.Drawing.Color.White;
+            this.YourPasswordsBtn.Location = new System.Drawing.Point(190, 300);
+            this.YourPasswordsBtn.Name = "YourPasswordsBtn";
+            this.YourPasswordsBtn.Size = new System.Drawing.Size(123, 28);
+            this.YourPasswordsBtn.TabIndex = 1;
+            this.YourPasswordsBtn.Text = "Your Passwords";
+            this.YourPasswordsBtn.UseVisualStyleBackColor = false;
+            this.YourPasswordsBtn.Click += new System.EventHandler(this.YourPasswords_Click);
             // 
-            // GenerateAPassword
+            // GenerateAPasswordBtn
             // 
-            this.GenerateAPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GenerateAPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
-            this.GenerateAPassword.FlatAppearance.BorderSize = 0;
-            this.GenerateAPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GenerateAPassword.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
-            this.GenerateAPassword.ForeColor = System.Drawing.Color.White;
-            this.GenerateAPassword.Location = new System.Drawing.Point(329, 300);
-            this.GenerateAPassword.Name = "GenerateAPassword";
-            this.GenerateAPassword.Size = new System.Drawing.Size(123, 28);
-            this.GenerateAPassword.TabIndex = 2;
-            this.GenerateAPassword.Text = "Generate a Password";
-            this.GenerateAPassword.UseVisualStyleBackColor = false;
-            this.GenerateAPassword.Click += new System.EventHandler(this.GenerateAPassword_Click);
+            this.GenerateAPasswordBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GenerateAPasswordBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.GenerateAPasswordBtn.FlatAppearance.BorderSize = 0;
+            this.GenerateAPasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GenerateAPasswordBtn.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
+            this.GenerateAPasswordBtn.ForeColor = System.Drawing.Color.White;
+            this.GenerateAPasswordBtn.Location = new System.Drawing.Point(329, 300);
+            this.GenerateAPasswordBtn.Name = "GenerateAPasswordBtn";
+            this.GenerateAPasswordBtn.Size = new System.Drawing.Size(123, 28);
+            this.GenerateAPasswordBtn.TabIndex = 2;
+            this.GenerateAPasswordBtn.Text = "Generate a Password";
+            this.GenerateAPasswordBtn.UseVisualStyleBackColor = false;
+            this.GenerateAPasswordBtn.Click += new System.EventHandler(this.GenerateAPassword_Click);
             // 
             // Time
             // 
@@ -103,10 +103,10 @@ namespace PassGuard.UserControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.Time);
-            this.Controls.Add(this.GenerateAPassword);
-            this.Controls.Add(this.YourPasswords);
+            this.Controls.Add(this.GenerateAPasswordBtn);
+            this.Controls.Add(this.YourPasswordsBtn);
             this.Controls.Add(this.pwtBig);
             this.Name = "HomePage";
             this.Size = new System.Drawing.Size(640, 450);
@@ -118,8 +118,8 @@ namespace PassGuard.UserControls
         #endregion
 
         private System.Windows.Forms.PictureBox pwtBig;
-        private System.Windows.Forms.Button YourPasswords;
-        private System.Windows.Forms.Button GenerateAPassword;
+        private System.Windows.Forms.Button YourPasswordsBtn;
+        private System.Windows.Forms.Button GenerateAPasswordBtn;
         private System.Windows.Forms.Label Time;
         private System.Windows.Forms.Timer Timer;
     }

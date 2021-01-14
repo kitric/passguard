@@ -59,7 +59,7 @@ namespace PassGuard
                 this.Content.Controls.Add(new Login() { Dock = DockStyle.Fill });
             }
 
-            SetupTheme();
+            ApplyTheme();
         }
 
 
@@ -69,18 +69,26 @@ namespace PassGuard
             Directory.CreateDirectory(GlobalFunctions.GetAppdataFolder());
         }
 
-
-        /// <summary>
-        /// This method will take care of changing the look of the app according to the selected theme. 
-        /// </summary>
-        private void SetupTheme()
+        private void ApplyTheme()
         {
-            // No need to add code for the default theme!
             switch (Data.Theme)
             {
+                case Theme.TECHNO_DARK:
+                    this.BackColor = Color.FromArgb(15, 17, 26);
 
-                // Add more themes in the future...
+                    this.HomeBtn.BackColor = Color.FromArgb(193, 25, 26);
+                    this.GeneratePasswordBtn.BackColor = Color.FromArgb(193, 25, 26);
+                    this.AboutBtn.BackColor = Color.FromArgb(193, 25, 26);
+                    this.PasswordsBtn.BackColor = Color.FromArgb(193, 25, 26);
+
+                    this.Sidebar.BackColor = Color.FromArgb(9, 11, 16);
+
+                    break;
             }
+
+            this.settingsBtn.BackColor = Sidebar.BackColor;
+
+
         }
 
         #region events
@@ -141,20 +149,20 @@ namespace PassGuard
         //Turns all the tabs to disabled
         public void DisableTabs()
         {
-            Home.Enabled = false;
-            Passwords.Enabled = false;
-            GeneratePassword.Enabled = false;
-            About.Enabled = false;
+            HomeBtn.Enabled = false;
+            PasswordsBtn.Enabled = false;
+            GeneratePasswordBtn.Enabled = false;
+            AboutBtn.Enabled = false;
             settingsBtn.Enabled = false;
         }
 
         //Turns all the tabs to enabled
         public void EnableTabs()
         {
-            Home.Enabled = true;
-            Passwords.Enabled = true;
-            GeneratePassword.Enabled = true;
-            About.Enabled = true;
+            HomeBtn.Enabled = true;
+            PasswordsBtn.Enabled = true;
+            GeneratePasswordBtn.Enabled = true;
+            AboutBtn.Enabled = true;
             settingsBtn.Enabled = true;
         }
         #endregion

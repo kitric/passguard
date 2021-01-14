@@ -1,9 +1,10 @@
-﻿using System;
+﻿using PassGuard.Models;
+using System;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls
 {
-    public partial class MasterPassword : UserControl
+    public partial class MasterPassword : UserControl, IPage
     {
         private readonly MainScreen MainScreen;
 
@@ -16,6 +17,15 @@ namespace PassGuard.UserControls
             GlobalFunctions.RoundCorners(goButton);
         }
 
+        public void ApplyTheme()
+        {
+            switch (MainScreen.Data.Theme)
+            {
+                case Theme.TECHNO_DARK:
+                    break;
+            }
+        }
+
         private void goButton_Click(object sender, EventArgs e)
         {
             if (MasterPasswordTB.Text == MainScreen.Data.MasterPassword)
@@ -26,5 +36,7 @@ namespace PassGuard.UserControls
 
             WrongPasswordLB.Visible = !(MasterPasswordTB.Text == MainScreen.Data.MasterPassword);
         }
+
+
     }
 }

@@ -59,7 +59,7 @@ namespace PassGuard.UserControls
             // addButton
             // 
             this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.addButton.BackColor = System.Drawing.Color.Transparent;
             this.addButton.BackgroundImage = global::PassGuard.Properties.Resources.add;
             this.addButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.addButton.FlatAppearance.BorderSize = 0;
@@ -78,7 +78,7 @@ namespace PassGuard.UserControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.content);
             this.Controls.Add(this.title);

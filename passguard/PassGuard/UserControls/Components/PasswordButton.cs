@@ -1,4 +1,5 @@
 ﻿using PassGuard.Models;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls.Components
@@ -23,11 +24,25 @@ namespace PassGuard.UserControls.Components
             {
                 icon.LoadAsync(password.ImageURL);
             }
+
+            ApplyTheme();
         }
 
         private void nameBtn_Click(object sender, System.EventArgs e)
         {
             GlobalFunctions.SwitchTo<PasswordScreen>(MainScreen.Instance.Content, args: new object[] { passwordInfo });
+        }
+
+
+        private void ApplyTheme()
+        {
+            switch (MainScreen.Data.Theme)
+            {
+                case Theme.TECHNO_DARK:
+                    this.BackColor = Color.FromArgb(9, 11, 16);
+                    this.nameBtn.BackColor = Color.FromArgb(193, 25, 26);
+                    break;
+            }
         }
     }
 }

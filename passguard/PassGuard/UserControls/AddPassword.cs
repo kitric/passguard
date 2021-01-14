@@ -7,11 +7,13 @@ using System.Windows.Forms;
 
 namespace PassGuard.UserControls
 {
-    public partial class AddPassword : UserControl
+    public partial class AddPassword : UserControl, IPage
     {
         public AddPassword()
         {
             InitializeComponent();
+
+            ApplyTheme();
         }
 
         private void nameTB_MouseClick(object sender, MouseEventArgs e)
@@ -95,6 +97,29 @@ namespace PassGuard.UserControls
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 icon.Image = Image.FromFile(dialog.FileName);
+            }
+        }
+
+        public void ApplyTheme()
+        {
+            switch (MainScreen.Data.Theme)
+            {
+                case Theme.TECHNO_DARK:
+                    this.changeButton.BackColor = Color.FromArgb(193, 25, 26);
+
+                    this.nameTB.BackColor = Color.FromArgb(9, 11, 16);
+                    this.panel1.BackColor = Color.FromArgb(9, 11, 16);
+
+                    this.passwordTB.BackColor = Color.FromArgb(9, 11, 16);
+                    this.panel2.BackColor = Color.FromArgb(9, 11, 16);
+
+                    this.urlTB.BackColor = Color.FromArgb(9, 11, 16);
+                    this.panel3.BackColor = Color.FromArgb(9, 11, 16);
+
+                    this.saveButton.BackColor = Color.FromArgb(193, 25, 26);
+                    this.icon.BackColor = Color.FromArgb(9, 11, 16);
+
+                    break;
             }
         }
     }

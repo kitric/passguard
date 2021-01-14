@@ -79,6 +79,7 @@
     <Compile Include="MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\IPage.cs" />
     <Compile Include="Models\PasswordInfo.cs" />
     <Compile Include="Models\UserData.cs" />
     <Compile Include="PasswordGeneration.cs" />

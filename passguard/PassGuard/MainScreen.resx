@@ -159,148 +159,148 @@
   <data name="&gt;&gt;settingsBtn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="About.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="AboutBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="About.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AboutBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 7.5pt, style=Bold</value>
   </data>
-  <data name="About.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AboutBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="About.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AboutBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 207</value>
   </data>
-  <data name="About.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AboutBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 28</value>
   </data>
-  <data name="About.TabIndex" type="System.Int32, mscorlib">
+  <data name="AboutBtn.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="About.Text" xml:space="preserve">
+  <data name="AboutBtn.Text" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="About.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="AboutBtn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;About.Name" xml:space="preserve">
-    <value>About</value>
+  <data name="&gt;&gt;AboutBtn.Name" xml:space="preserve">
+    <value>AboutBtn</value>
   </data>
-  <data name="&gt;&gt;About.Type" xml:space="preserve">
+  <data name="&gt;&gt;AboutBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;About.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AboutBtn.Parent" xml:space="preserve">
     <value>Sidebar</value>
   </data>
-  <data name="&gt;&gt;About.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AboutBtn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="GeneratePassword.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="GeneratePasswordBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="GeneratePassword.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="GeneratePasswordBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 7.5pt, style=Bold</value>
   </data>
-  <data name="GeneratePassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="GeneratePasswordBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="GeneratePassword.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="GeneratePasswordBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 171</value>
   </data>
-  <data name="GeneratePassword.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="GeneratePasswordBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 28</value>
   </data>
-  <data name="GeneratePassword.TabIndex" type="System.Int32, mscorlib">
+  <data name="GeneratePasswordBtn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="GeneratePassword.Text" xml:space="preserve">
+  <data name="GeneratePasswordBtn.Text" xml:space="preserve">
     <value>Password Generator</value>
   </data>
-  <data name="GeneratePassword.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="GeneratePasswordBtn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;GeneratePassword.Name" xml:space="preserve">
-    <value>GeneratePassword</value>
+  <data name="&gt;&gt;GeneratePasswordBtn.Name" xml:space="preserve">
+    <value>GeneratePasswordBtn</value>
   </data>
-  <data name="&gt;&gt;GeneratePassword.Type" xml:space="preserve">
+  <data name="&gt;&gt;GeneratePasswordBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GeneratePassword.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GeneratePasswordBtn.Parent" xml:space="preserve">
     <value>Sidebar</value>
   </data>
-  <data name="&gt;&gt;GeneratePassword.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GeneratePasswordBtn.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Passwords.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="PasswordsBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Passwords.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="PasswordsBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 7.5pt, style=Bold</value>
   </data>
-  <data name="Passwords.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PasswordsBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Passwords.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PasswordsBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 135</value>
   </data>
-  <data name="Passwords.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PasswordsBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 28</value>
   </data>
-  <data name="Passwords.TabIndex" type="System.Int32, mscorlib">
+  <data name="PasswordsBtn.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="Passwords.Text" xml:space="preserve">
+  <data name="PasswordsBtn.Text" xml:space="preserve">
     <value>Passwords</value>
   </data>
-  <data name="Passwords.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="PasswordsBtn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;Passwords.Name" xml:space="preserve">
-    <value>Passwords</value>
+  <data name="&gt;&gt;PasswordsBtn.Name" xml:space="preserve">
+    <value>PasswordsBtn</value>
   </data>
-  <data name="&gt;&gt;Passwords.Type" xml:space="preserve">
+  <data name="&gt;&gt;PasswordsBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Passwords.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PasswordsBtn.Parent" xml:space="preserve">
     <value>Sidebar</value>
   </data>
-  <data name="&gt;&gt;Passwords.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PasswordsBtn.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="Home.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="HomeBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Home.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="HomeBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 7.5pt, style=Bold</value>
   </data>
-  <data name="Home.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="HomeBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Home.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="HomeBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 99</value>
   </data>
-  <data name="Home.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HomeBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 28</value>
   </data>
-  <data name="Home.TabIndex" type="System.Int32, mscorlib">
+  <data name="HomeBtn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="Home.Text" xml:space="preserve">
+  <data name="HomeBtn.Text" xml:space="preserve">
     <value>Home</value>
   </data>
-  <data name="Home.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="HomeBtn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;Home.Name" xml:space="preserve">
-    <value>Home</value>
+  <data name="&gt;&gt;HomeBtn.Name" xml:space="preserve">
+    <value>HomeBtn</value>
   </data>
-  <data name="&gt;&gt;Home.Type" xml:space="preserve">
+  <data name="&gt;&gt;HomeBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Home.Parent" xml:space="preserve">
+  <data name="&gt;&gt;HomeBtn.Parent" xml:space="preserve">
     <value>Sidebar</value>
   </data>
-  <data name="&gt;&gt;Home.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;HomeBtn.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="Logo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
