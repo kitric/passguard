@@ -10,11 +10,13 @@ namespace PassGuard
     /// Will be used to implement themes in the future.
     /// </summary>
     
-    public struct Theme
+    public enum Theme
     {
-        public const string DEFAULT = "DEFAULT";
-        public const string DARK = "DARK";
-        public const string LIGHT = "LIGHT"; // Might not even add a light theme xD
+        DEFAULT,
+        TECHNO_LIGHT,
+        TECHNO_DARK,
+        CONTRAST_DARK,
+        CONTRAST_LIGHT
 
         // Add custom themes in the future.
     }

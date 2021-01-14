@@ -8,13 +8,13 @@ namespace PassGuard.Models
     {
         public List<PasswordInfo> passwords;
         public string MasterPassword;
-        public string ThemeName;
+        public Theme Theme;
 
         public UserData()
         {
             MasterPassword = "";
             passwords = new List<PasswordInfo>();
-            ThemeName = Theme.DEFAULT;
+            Theme = Theme.DEFAULT;
         }
     }
 }

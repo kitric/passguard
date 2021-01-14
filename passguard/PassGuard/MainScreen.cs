@@ -76,10 +76,8 @@ namespace PassGuard
         private void SetupTheme()
         {
             // No need to add code for the default theme!
-            switch (Data.ThemeName)
+            switch (Data.Theme)
             {
-                case Theme.DARK: break; // Insert code for dark theme.
-                case Theme.LIGHT: break; // Insert code for light theme.
 
                 // Add more themes in the future...
             }
