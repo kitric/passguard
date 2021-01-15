@@ -142,15 +142,19 @@ namespace PassGuard.UserControls
                 case Theme.TECHNO_DARK:
                     this.BackColor = Color.FromArgb(15, 17, 26);
 
+                    this.editButton.BackColor = Color.FromArgb(15, 17, 26);
+
                     this.title.ForeColor = Color.FromArgb(193, 25, 26);
                     this.showPassword.BackColor = Color.FromArgb(193, 25, 26);
                     this.changeButton.BackColor = Color.FromArgb(193, 25, 26);
                     this.saveButton.BackColor = Color.FromArgb(193, 25, 26);
 
+                    this.urlTB.BackColor = Color.FromArgb(9, 11, 16);
                     this.passwordTB.BackColor = Color.FromArgb(9, 11, 16);
-                    this.urlTB.BackColor = Color.FromArgb(9, 11, 26);
 
                     this.icon.BackColor = Color.FromArgb(9, 11, 16);
+
+                    this.PasswordNameTB.BackColor = this.BackColor;
 
                     break;
             }

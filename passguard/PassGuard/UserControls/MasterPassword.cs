@@ -1,5 +1,6 @@
 ﻿using PassGuard.Models;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PassGuard.UserControls
@@ -15,6 +16,8 @@ namespace PassGuard.UserControls
             this.MainScreen = ms;
 
             GlobalFunctions.RoundCorners(goButton);
+
+            ApplyTheme();
         }
 
         public void ApplyTheme()
@@ -22,6 +25,8 @@ namespace PassGuard.UserControls
             switch (MainScreen.Data.Theme)
             {
                 case Theme.TECHNO_DARK:
+                    this.goButton.BackColor = Color.FromArgb(193, 25, 26);
+
                     break;
             }
         }

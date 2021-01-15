@@ -60,6 +60,7 @@ namespace PassGuard
             }
 
             ApplyTheme();
+            Console.WriteLine(Data.MasterPassword);
         }
 
 
@@ -123,9 +124,9 @@ namespace PassGuard
             GlobalFunctions.SwitchTo<About>(this.Content, args: new object[] { });
         }
 
-        private async void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
+        private void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
-            await SerializePasswordInfos();
+            SerializePasswordInfos();
         }
 
         private void settingsBtn_Click(object sender, EventArgs e)
@@ -169,7 +170,7 @@ namespace PassGuard
 
         #region serialization
         // Serializes stuff to a .guard file, of course xD
-        private static async Task SerializePasswordInfos()
+        private static void SerializePasswordInfos()
         {
             string fpath = Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard");
             using (FileStream fs = new FileStream(fpath, FileMode.OpenOrCreate))
@@ -195,7 +196,7 @@ namespace PassGuard
                 {
                     request = driveService.Files.Create(fileMetadata, stream, "application/json");
                     request.Fields = "id";
-                    await request.UploadAsync();
+                    request.Upload();
                 }
 
                 File.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"));
