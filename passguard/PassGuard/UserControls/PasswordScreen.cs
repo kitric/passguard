@@ -49,9 +49,16 @@ namespace PassGuard.UserControls
             this.urlTB.ReadOnly = contentsLocked;
             this.saveButton.Enabled = !contentsLocked;
             this.changeButton.Enabled = !contentsLocked;
+
+            ShowOrHidePW();
         }
 
         private void showPassword_Click(object sender, EventArgs e)
+        {
+            ShowOrHidePW();
+        }
+
+        void ShowOrHidePW()
         {
             if (this.passwordTB.PasswordChar != '\0') // Text hidden
             {
