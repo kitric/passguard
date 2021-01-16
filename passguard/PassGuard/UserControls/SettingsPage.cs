@@ -1,9 +1,12 @@
-﻿using System;
+﻿using PassGuard.Models;
+using PassGuard.Properties;
+using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 namespace PassGuard.UserControls
 {
-    public partial class SettingsPage : UserControl
+    public partial class SettingsPage : UserControl, IPage
     {
         public SettingsPage()
         {
@@ -11,11 +14,12 @@ namespace PassGuard.UserControls
             Dock = DockStyle.Fill;
 
             GlobalFunctions.RoundCorners(logOut);
-            GlobalFunctions.RoundCorners(saveButton);
 
             this.displayName.Text = GlobalFunctions.ToTitleCase(MainScreen.user.DisplayName);
 
             RestoreSettings();
+
+            ApplyTheme();
         }
 
         private void RestoreSettings()
@@ -57,6 +61,47 @@ namespace PassGuard.UserControls
             Directory.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json"), true);
             MainScreen.loggedIn = false;
             Application.Restart();
+        }
+
+        public void ApplyTheme()
+        {
+            switch (MainScreen.Data.Theme)
+            {
+                case Theme.TECHNO_DARK:
+                    this.logOut.BackColor = Color.FromArgb(193, 25, 26);
+                    break;
+                case Theme.TECHNO_LIGHT:
+                    this.logOut.BackColor = Color.FromArgb(193, 25, 26);
+
+                    this.ThemeLB.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.label1.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.label2.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.label3.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.displayName.ForeColor = Color.FromArgb(193, 25, 26);
+
+                    this.left.Image = Resources.leftTheme_dark;
+                    this.right.Image = Resources.rightTheme_dark;
+
+                    break;
+                case Theme.CONTRAST_DARK:
+                    this.logOut.BackColor = Color.White;
+                    this.logOut.ForeColor = Color.Black;
+                    break;
+                case Theme.CONTRAST_LIGHT:
+                    this.logOut.BackColor = Color.Black;
+                    this.logOut.ForeColor = Color.White;
+
+                    this.ThemeLB.ForeColor = Color.Black;
+                    this.label1.ForeColor = Color.Black;
+                    this.label2.ForeColor = Color.Black;
+                    this.label3.ForeColor = Color.Black;
+                    this.displayName.ForeColor = Color.Black;
+
+                    this.left.Image = Resources.leftTheme_dark;
+                    this.right.Image = Resources.rightTheme_dark;
+
+                    break;
+            }
         }
     }
 }

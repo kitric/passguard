@@ -193,6 +193,16 @@ namespace PassGuard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap leftTheme_dark {
+            get {
+                object obj = ResourceManager.GetObject("leftTheme-dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_white {
             get {
                 object obj = ResourceManager.GetObject("logo_white", resourceCulture);
@@ -286,6 +296,16 @@ namespace PassGuard.Properties {
         internal static System.Drawing.Bitmap rightTheme {
             get {
                 object obj = ResourceManager.GetObject("rightTheme", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rightTheme_dark {
+            get {
+                object obj = ResourceManager.GetObject("rightTheme-dark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

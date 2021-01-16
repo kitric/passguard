@@ -35,11 +35,10 @@ namespace PassGuard.UserControls
             this.displayName = new System.Windows.Forms.Label();
             this.logOut = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.saveButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.left = new System.Windows.Forms.PictureBox();
+            this.right = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.left)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.right)).BeginInit();
             this.SuspendLayout();
             // 
             // ThemeLB
@@ -112,49 +111,33 @@ namespace PassGuard.UserControls
             this.label3.TabIndex = 7;
             this.label3.Text = "General";
             // 
-            // pictureBox1
+            // left
             // 
-            this.pictureBox1.Image = global::PassGuard.Properties.Resources.leftTheme;
-            this.pictureBox1.Location = new System.Drawing.Point(204, 246);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(14, 16);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.btn1_Click);
+            this.left.Image = global::PassGuard.Properties.Resources.leftTheme;
+            this.left.Location = new System.Drawing.Point(204, 246);
+            this.left.Name = "left";
+            this.left.Size = new System.Drawing.Size(14, 16);
+            this.left.TabIndex = 8;
+            this.left.TabStop = false;
+            this.left.Click += new System.EventHandler(this.btn1_Click);
             // 
-            // pictureBox2
+            // right
             // 
-            this.pictureBox2.Image = global::PassGuard.Properties.Resources.rightTheme;
-            this.pictureBox2.Location = new System.Drawing.Point(224, 246);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(14, 16);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.btn2_Click);
-            // 
-            // saveButton
-            // 
-            this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
-            this.saveButton.FlatAppearance.BorderSize = 0;
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
-            this.saveButton.ForeColor = System.Drawing.Color.White;
-            this.saveButton.Location = new System.Drawing.Point(30, 398);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(123, 28);
-            this.saveButton.TabIndex = 10;
-            this.saveButton.Text = "Save and Restart";
-            this.saveButton.UseVisualStyleBackColor = false;
+            this.right.Image = global::PassGuard.Properties.Resources.rightTheme;
+            this.right.Location = new System.Drawing.Point(224, 246);
+            this.right.Name = "right";
+            this.right.Size = new System.Drawing.Size(14, 16);
+            this.right.TabIndex = 9;
+            this.right.TabStop = false;
+            this.right.Click += new System.EventHandler(this.btn2_Click);
             // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.right);
+            this.Controls.Add(this.left);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.logOut);
             this.Controls.Add(this.displayName);
@@ -163,8 +146,8 @@ namespace PassGuard.UserControls
             this.Controls.Add(this.ThemeLB);
             this.Name = "SettingsPage";
             this.Size = new System.Drawing.Size(640, 450);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.left)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.right)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,8 +161,7 @@ namespace PassGuard.UserControls
         private System.Windows.Forms.Label displayName;
         private System.Windows.Forms.Button logOut;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.PictureBox left;
+        private System.Windows.Forms.PictureBox right;
     }
 }

@@ -176,9 +176,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer2"
      inkscape:document-units="px"
-     inkscape:cy="3453.1819"
-     inkscape:cx="3104.5434"
-     inkscape:zoom="0.75521345"
+     inkscape:cy="3356.9169"
+     inkscape:cx="3119.0916"
+     inkscape:zoom="2.1360662"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -7358,15 +7358,15 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1382px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.147272"
        x="2633.0344"
-       y="3163.9854"
+       y="3161.9346"
        id="text2205"><tspan
          sodipodi:role="line"
          id="tspan2203"
          x="2633.0344"
-         y="3163.9854"
+         y="3161.9346"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1382px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.147272">Tanveer Najib</tspan></text>
     <g
-       transform="translate(-1.1188669,-13.108208)"
+       transform="translate(-1.1188669,-13.108398)"
        id="g2230">
       <rect
          rx="5"
@@ -7402,31 +7402,32 @@
          id="tspan2233">General</tspan></text>
     <text
        id="text2239"
-       y="3325.0291"
+       y="3323.0291"
        x="2633.0344"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.1382px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.147272"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.1382px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.147272"
-         y="3325.0291"
+         y="3323.0291"
          x="2633.0344"
          id="tspan2237"
          sodipodi:role="line">Theme:</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1382px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.147272;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1382px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.147272"
        x="2693.894"
-       y="3325.0291"
+       y="3323.0291"
        id="text2243"><tspan
          sodipodi:role="line"
          id="tspan2241"
          x="2693.894"
-         y="3325.0291"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.13819981px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.147272;">Default</tspan></text>
+         y="3323.0291"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1382px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.147272">Default</tspan></text>
     <path
-       inkscape:transform-center-x="1.5351718"
-       transform="matrix(0,-0.25149065,0.25149065,0,1944.1602,4041.6115)"
-       inkscape:transform-center-y="-2.8175605e-05"
-       d="m 2873.5063,3308.3462 21.1447,36.6236 -42.2893,0 z"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:transform-center-x="2.3620499"
+       transform="matrix(0,-0.38695081,0.38695081,0,1496.0111,4428.8571)"
+       inkscape:transform-center-y="-7.2922025e-05"
        inkscape:randomized="0"
        inkscape:rounded="0"
        inkscape:flatsided="true"
@@ -7439,8 +7440,11 @@
        sodipodi:sides="3"
        id="path2245"
        style="fill:#ffffff;fill-rule:evenodd;stroke-width:3.806;stroke-linecap:round"
-       sodipodi:type="star" />
+       sodipodi:type="star"
+       d="m 2873.5063,3308.3462 21.1447,36.6236 -42.2893,0 z" />
     <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
        sodipodi:type="star"
        style="fill:#ffffff;fill-rule:evenodd;stroke-width:3.806;stroke-linecap:round"
        id="path2247"
@@ -7454,10 +7458,73 @@
        inkscape:flatsided="true"
        inkscape:rounded="0"
        inkscape:randomized="0"
+       inkscape:transform-center-y="-7.2922025e-05"
+       transform="matrix(0,-0.38695081,-0.38695081,0,4091.989,4428.8571)"
+       inkscape:transform-center-x="-2.3619969"
+       d="m 2873.5063,3308.3462 21.1447,36.6236 -42.2893,0 z" />
+    <g
+       id="g2263">
+      <rect
+         ry="5"
+         y="3483.5498"
+         x="2633.2622"
+         height="28.278109"
+         width="122.62837"
+         id="rect2249"
+         style="fill:#34335f;fill-opacity:1;fill-rule:evenodd;stroke-width:2.12456;stroke-linecap:round"
+         rx="5" />
+      <text
+         id="text2253"
+         y="3501.3337"
+         x="2659.8967"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
+         xml:space="preserve"><tspan
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074"
+           y="3501.3337"
+           x="2659.8967"
+           id="tspan2251"
+           sodipodi:role="line">Save &amp; Restart</tspan></text>
+    </g>
+    <path
        d="m 2873.5063,3308.3462 21.1447,36.6236 -42.2893,0 z"
-       inkscape:transform-center-y="-2.8175605e-05"
-       transform="matrix(0,-0.25149065,-0.25149065,0,3631.3622,4041.6115)"
-       inkscape:transform-center-x="-1.535153" />
+       sodipodi:type="star"
+       style="fill:#000000;fill-rule:evenodd;stroke-width:3.806;stroke-linecap:round"
+       id="path2280"
+       sodipodi:sides="3"
+       sodipodi:cx="2873.5063"
+       sodipodi:cy="3332.762"
+       sodipodi:r1="24.415731"
+       sodipodi:r2="12.207866"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       inkscape:transform-center-y="-7.2922025e-05"
+       transform="matrix(0,-0.38695081,0.38695081,0,2038.2419,4428.8571)"
+       inkscape:transform-center-x="2.3620499"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 2873.5063,3308.3462 21.1447,36.6236 -42.2893,0 z"
+       inkscape:transform-center-x="-2.3619969"
+       transform="matrix(0,-0.38695081,-0.38695081,0,4634.2198,4428.8571)"
+       inkscape:transform-center-y="-7.2922025e-05"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="-0.52359878"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:r2="12.207866"
+       sodipodi:r1="24.415731"
+       sodipodi:cy="3332.762"
+       sodipodi:cx="2873.5063"
+       sodipodi:sides="3"
+       id="path2282"
+       style="fill:#000000;fill-rule:evenodd;stroke-width:3.806;stroke-linecap:round"
+       sodipodi:type="star"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
   <inkscape:templateinfo>
     <inkscape:name>Dark Canvas</inkscape:name>
