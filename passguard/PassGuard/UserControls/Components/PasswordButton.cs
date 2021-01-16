@@ -53,6 +53,12 @@ namespace PassGuard.UserControls.Components
                     this.nameBtn.ForeColor = Color.Black;
 
                     break;
+                case Theme.CONTRAST_LIGHT:
+                    this.BackColor = Color.White;
+                    this.nameBtn.BackColor = Color.Black;
+                    this.nameBtn.ForeColor = Color.White;
+
+                    break;
             }
         }
     }

@@ -56,6 +56,14 @@ namespace PassGuard.UserControls
                     this.title.ForeColor = Color.White;
 
                     break;
+                case Theme.CONTRAST_LIGHT:
+                    this.addButton.BackColor = Color.FromArgb(250, 250, 250);
+
+                    this.title.ForeColor = Color.Black;
+
+                    this.addButton.BackgroundImage = Resources.add_dark;
+
+                    break;
             }
         }
     }

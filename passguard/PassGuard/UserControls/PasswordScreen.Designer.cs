@@ -208,8 +208,8 @@ namespace PassGuard.UserControls
             // 
             this.InvalidNameLB.AutoSize = true;
             this.InvalidNameLB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InvalidNameLB.ForeColor = System.Drawing.Color.Red;
-            this.InvalidNameLB.Location = new System.Drawing.Point(33, 54);
+            this.InvalidNameLB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(100)))));
+            this.InvalidNameLB.Location = new System.Drawing.Point(26, 54);
             this.InvalidNameLB.Name = "InvalidNameLB";
             this.InvalidNameLB.Size = new System.Drawing.Size(81, 16);
             this.InvalidNameLB.TabIndex = 18;

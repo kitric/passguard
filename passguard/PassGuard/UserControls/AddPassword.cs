@@ -162,6 +162,29 @@ namespace PassGuard.UserControls
                     this.icon.BackColor = Color.Black;
 
                     break;
+                case Theme.CONTRAST_LIGHT:
+                    this.changeButton.BackColor = Color.Black;
+                    this.changeButton.ForeColor = Color.White;
+
+                    this.nameTB.BackColor = Color.Black;
+                    this.nameTB.ForeColor = Color.White;
+                    this.panel1.BackColor = Color.Black;
+
+                    this.passwordTB.BackColor = Color.Black;
+                    this.passwordTB.ForeColor = Color.White;
+                    this.panel2.BackColor = Color.Black;
+
+                    this.urlTB.BackColor = Color.Black;
+                    this.urlTB.ForeColor = Color.White;
+                    this.panel3.BackColor = Color.Black;
+
+                    this.saveButton.BackColor = Color.Black;
+                    this.saveButton.ForeColor = Color.White;
+                    this.icon.BackColor = Color.White;
+
+                    this.title.ForeColor = Color.Black;
+
+                    break;
             }
         }
     }

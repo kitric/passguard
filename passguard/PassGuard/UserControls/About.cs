@@ -53,6 +53,18 @@ namespace PassGuard.UserControls
                     this.website.ForeColor = Color.Black;
 
                     break;
+                case Theme.CONTRAST_LIGHT:
+                    this.website.BackColor = Color.Black;
+                    this.website.ForeColor = Color.White;
+
+                    this.info.ForeColor = Color.Black;
+
+                    this.crxssed.Image = Resources.crxssed_dark;
+                    this.nordic.Image = Resources.nordic_dark;
+                    this.kilogo.Image = Resources.kitric_dark;
+                    this.pgtext.Image = Resources.pg_dark;
+
+                    break;
             }
         }
 

@@ -207,6 +207,30 @@ namespace PassGuard.UserControls
                     this.PasswordNameTB.BackColor = Color.FromArgb(5, 5, 5);
 
                     break;
+                case Theme.CONTRAST_LIGHT:
+                    this.editButton.BackColor = Color.FromArgb(250, 250, 250);
+                    this.editButton.BackgroundImage = Resources.edit_dark;
+
+                    this.showPassword.BackColor = Color.Black;
+                    this.showPassword.ForeColor = Color.White;
+                    this.changeButton.BackColor = Color.Black;
+                    this.changeButton.ForeColor = Color.White;
+                    this.saveButton.BackColor = Color.Black;
+                    this.saveButton.ForeColor = Color.White;
+
+                    this.urlTB.BackColor = Color.Black;
+                    this.passwordTB.BackColor = Color.Black;
+
+                    this.urlTB.ForeColor = Color.White;
+                    this.passwordTB.ForeColor = Color.White;
+
+                    this.icon.BackColor = Color.White;
+
+                    this.PasswordNameTB.BackColor = Color.FromArgb(250, 250, 250);
+                    this.PasswordNameTB.ForeColor = Color.Black;
+                    this.title.ForeColor = Color.Black;
+
+                    break;
             }
 
             this.panel2.BackColor = this.passwordTB.BackColor;
