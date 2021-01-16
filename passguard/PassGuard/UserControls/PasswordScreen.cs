@@ -1,4 +1,5 @@
 ﻿using PassGuard.Models;
+using PassGuard.Properties;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -147,7 +148,6 @@ namespace PassGuard.UserControls
             switch (MainScreen.Data.Theme)
             {
                 case Theme.TECHNO_DARK:
-                    this.BackColor = Color.FromArgb(15, 17, 26);
 
                     this.editButton.BackColor = Color.FromArgb(15, 17, 26);
 
@@ -161,7 +161,29 @@ namespace PassGuard.UserControls
 
                     this.icon.BackColor = Color.FromArgb(9, 11, 16);
 
-                    this.PasswordNameTB.BackColor = this.BackColor;
+                    this.PasswordNameTB.BackColor = Color.FromArgb(15, 17, 26);
+
+                    break;
+                case Theme.TECHNO_LIGHT:
+
+                    this.editButton.BackColor = Color.FromArgb(242, 242, 242);
+                    this.editButton.BackgroundImage = Resources.edit_dark;
+
+                    this.title.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.showPassword.BackColor = Color.FromArgb(193, 25, 26);
+                    this.changeButton.BackColor = Color.FromArgb(193, 25, 26);
+                    this.saveButton.BackColor = Color.FromArgb(193, 25, 26);
+
+                    this.urlTB.BackColor = Color.FromArgb(200, 255, 255);
+                    this.passwordTB.BackColor = Color.FromArgb(200, 255, 255);
+                    
+                    this.urlTB.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.passwordTB.ForeColor = Color.FromArgb(193, 25, 26);
+
+                    this.icon.BackColor = Color.FromArgb(200, 255, 255);
+
+                    this.PasswordNameTB.BackColor = Color.FromArgb(242, 242, 242);
+                    this.PasswordNameTB.ForeColor = Color.FromArgb(193, 25, 26);
 
                     break;
             }

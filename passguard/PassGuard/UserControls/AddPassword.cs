@@ -120,6 +120,27 @@ namespace PassGuard.UserControls
                     this.icon.BackColor = Color.FromArgb(9, 11, 16);
 
                     break;
+                case Theme.TECHNO_LIGHT:
+                    this.changeButton.BackColor = Color.FromArgb(193, 25, 26);
+
+                    this.nameTB.BackColor = Color.FromArgb(200, 255, 255);
+                    this.nameTB.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.panel1.BackColor = Color.FromArgb(200, 255, 255);
+
+                    this.passwordTB.BackColor = Color.FromArgb(200, 255, 255);
+                    this.passwordTB.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.panel2.BackColor = Color.FromArgb(200, 255, 255);
+
+                    this.urlTB.BackColor = Color.FromArgb(200, 255, 255);
+                    this.urlTB.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.panel3.BackColor = Color.FromArgb(200, 255, 255);
+
+                    this.saveButton.BackColor = Color.FromArgb(193, 25, 26);
+                    this.icon.BackColor = Color.FromArgb(200, 255, 255);
+
+                    this.title.ForeColor = Color.FromArgb(193, 25, 26);
+
+                    break;
             }
         }
     }

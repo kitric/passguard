@@ -3,6 +3,7 @@ using Google.Apis.Drive.v3;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using PassGuard.Models;
+using PassGuard.Properties;
 using PassGuard.UserControls;
 using System;
 using System.Collections.Generic;
@@ -83,6 +84,20 @@ namespace PassGuard
                     this.PasswordsBtn.BackColor = Color.FromArgb(193, 25, 26);
 
                     this.Sidebar.BackColor = Color.FromArgb(9, 11, 16);
+
+                    break;
+                case Theme.TECHNO_LIGHT:
+                    this.BackColor = Color.FromArgb(242, 242, 242);
+
+                    this.HomeBtn.BackColor = Color.FromArgb(193, 25, 26);
+                    this.GeneratePasswordBtn.BackColor = Color.FromArgb(193, 25, 26);
+                    this.AboutBtn.BackColor = Color.FromArgb(193, 25, 26);
+                    this.PasswordsBtn.BackColor = Color.FromArgb(193, 25, 26);
+
+                    this.Logo.Image = Resources.icon_dark;
+                    this.settingsBtn.Image = Resources.settings_dark;
+
+                    this.Sidebar.BackColor = Color.FromArgb(200, 255, 255);
 
                     break;
             }

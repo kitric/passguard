@@ -1,4 +1,5 @@
 ﻿using PassGuard.Models;
+using PassGuard.Properties;
 using PassGuard.UserControls.Components;
 using System;
 using System.Drawing;
@@ -40,6 +41,13 @@ namespace PassGuard.UserControls
             {
                 case Theme.TECHNO_DARK:
                     this.addButton.BackColor = Color.FromArgb(15, 17, 26);
+
+                    break;
+                case Theme.TECHNO_LIGHT:
+                    this.addButton.BackColor = Color.FromArgb(242, 242, 242);
+
+                    this.title.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.addButton.BackgroundImage = Resources.add_dark;
 
                     break;
             }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using PassGuard.Models;
+using PassGuard.Properties;
 
 namespace PassGuard.UserControls
 {
@@ -32,6 +33,20 @@ namespace PassGuard.UserControls
                     this.crxssed.BackColor = Color.FromArgb(15, 17, 26);
                     this.nordic.BackColor = Color.FromArgb(15, 17, 26);
                     this.website.BackColor = Color.FromArgb(15, 17, 26);
+                    break;
+                case Theme.TECHNO_LIGHT:
+                    this.crxssed.BackColor = Color.FromArgb(242, 242, 242);
+                    this.nordic.BackColor = Color.FromArgb(242, 242, 242);
+                    this.website.BackColor = Color.FromArgb(242, 242, 242);
+
+                    this.website.ForeColor = Color.FromArgb(193, 25, 26);
+                    this.info.ForeColor = Color.FromArgb(193, 25, 26);
+
+                    this.crxssed.Image = Resources.crxssed_dark;
+                    this.nordic.Image = Resources.nordic_dark;
+                    this.kilogo.Image = Resources.kitric_dark;
+                    this.pgtext.Image = Resources.pg_dark;
+
                     break;
             }
         }

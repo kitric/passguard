@@ -257,6 +257,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\pg-dark.png" />
+    <None Include="Resources\crxssed-dark.png" />
+    <None Include="Resources\nordic-dark.png" />
+    <None Include="Resources\kitric-dark.png" />
+    <None Include="Resources\edit-dark.png" />
+    <None Include="Resources\genLogo-dark.png" />
+    <None Include="Resources\add-dark.png" />
+    <None Include="Resources\settings-dark.png" />
+    <None Include="Resources\icon-dark.png" />
+    <None Include="Resources\logo-dark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

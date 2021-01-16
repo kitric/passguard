@@ -29,21 +29,11 @@ namespace PassGuard.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.generateBtn = new System.Windows.Forms.Button();
             this.generatedPassTB = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.genLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.genLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::PassGuard.Properties.Resources.password_gen;
-            this.pictureBox1.Location = new System.Drawing.Point(126, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(387, 130);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // generateBtn
             // 
@@ -76,6 +66,16 @@ namespace PassGuard.UserControls
             this.generatedPassTB.Text = "[password]";
             this.generatedPassTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // genLogo
+            // 
+            this.genLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.genLogo.Image = global::PassGuard.Properties.Resources.password_gen;
+            this.genLogo.Location = new System.Drawing.Point(126, 85);
+            this.genLogo.Name = "genLogo";
+            this.genLogo.Size = new System.Drawing.Size(387, 130);
+            this.genLogo.TabIndex = 0;
+            this.genLogo.TabStop = false;
+            // 
             // PasswordGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,10 +83,10 @@ namespace PassGuard.UserControls
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.generatedPassTB);
             this.Controls.Add(this.generateBtn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.genLogo);
             this.Name = "PasswordGenerator";
             this.Size = new System.Drawing.Size(640, 450);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,7 +94,7 @@ namespace PassGuard.UserControls
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox genLogo;
         private System.Windows.Forms.Button generateBtn;
         private System.Windows.Forms.TextBox generatedPassTB;
     }

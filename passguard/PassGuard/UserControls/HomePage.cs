@@ -1,4 +1,5 @@
 ﻿using PassGuard.Models;
+using PassGuard.Properties;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -50,7 +51,15 @@ namespace PassGuard.UserControls
                     this.GenerateAPasswordBtn.BackColor = Color.FromArgb(193, 25, 26); 
                     this.Time.ForeColor = Color.FromArgb(193, 25, 26);
                     break;
-        }
+                case Theme.TECHNO_LIGHT:
+                    this.YourPasswordsBtn.BackColor = Color.FromArgb(193, 25, 26);
+                    this.GenerateAPasswordBtn.BackColor = Color.FromArgb(193, 25, 26);
+                    this.Time.ForeColor = Color.FromArgb(193, 25, 26);
+
+                    this.pwtBig.Image = Resources.homeScreenImage_dark;
+
+                    break;
+            }
         }
     }
 }

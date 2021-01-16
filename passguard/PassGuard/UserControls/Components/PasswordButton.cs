@@ -42,6 +42,11 @@ namespace PassGuard.UserControls.Components
                     this.BackColor = Color.FromArgb(9, 11, 16);
                     this.nameBtn.BackColor = Color.FromArgb(193, 25, 26);
                     break;
+                case Theme.TECHNO_LIGHT:
+                    this.BackColor = Color.FromArgb(200, 255, 255);
+                    this.nameBtn.BackColor = Color.FromArgb(193, 25, 26);
+
+                    break;
             }
         }
     }

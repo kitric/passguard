@@ -59,7 +59,7 @@ namespace PassGuard.UserControls
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(124, 10);
+            this.btn1.Location = new System.Drawing.Point(180, 10);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(35, 23);
             this.btn1.TabIndex = 2;
@@ -69,7 +69,7 @@ namespace PassGuard.UserControls
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(124, 39);
+            this.btn2.Location = new System.Drawing.Point(180, 39);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(35, 23);
             this.btn2.TabIndex = 3;
