@@ -29,6 +29,7 @@ namespace PassGuard.UserControls
             {
                 // This logo database sucks, we must find a better one later (or should we make our own?).
                 // WE SHOULD MAKE OUR OWN - crxssed
+                // HOW GREAT - nordic
                 string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
                 this.icon.LoadAsync(actualURL);
             }

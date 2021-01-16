@@ -60,7 +60,6 @@ namespace PassGuard
             }
 
             ApplyTheme();
-            Console.WriteLine(Data.MasterPassword);
         }
 
 
@@ -187,7 +186,6 @@ namespace PassGuard
 
         public void SetOrEnterMasterPassword()
         {
-            Console.WriteLine("SetOrEnterMasterPassword");
             this.Content.Controls.Clear();
             UserControl control = string.IsNullOrEmpty(Data.MasterPassword) ? (UserControl)new SetMasterPassword(this) { Dock = DockStyle.Fill } :
                 new MasterPassword(this) { Dock = DockStyle.Fill };
@@ -257,8 +255,6 @@ namespace PassGuard
         // Deserializes stuff from a .guard file, of course xD
         public static void DeserializePasswordInfos()
         {
-            Console.WriteLine("DeserializePasswordInfos");
-
             // Download the file
             if (loggedIn)
             {
@@ -329,8 +325,6 @@ namespace PassGuard
 
             DeserializePasswordInfos();
             Instance.SetOrEnterMasterPassword();
-
-            Console.WriteLine("LoggedIn");
         }
 
         /// <summary>
@@ -347,7 +341,6 @@ namespace PassGuard
             var result = request.Execute();
             foreach (var file in result.Files)
             {
-                Console.WriteLine(file.Name);
                 if (file.Name == fileName)
                 {
                     return file;
