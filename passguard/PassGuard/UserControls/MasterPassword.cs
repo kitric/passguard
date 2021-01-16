@@ -26,6 +26,7 @@ namespace PassGuard.UserControls
             {
                 case Theme.TECHNO_DARK:
                     this.goButton.BackColor = Color.FromArgb(193, 25, 26);
+                    this.MasterPasswordTB.BackColor = Color.FromArgb(9, 11, 16);
 
                     break;
                 case Theme.TECHNO_LIGHT:
