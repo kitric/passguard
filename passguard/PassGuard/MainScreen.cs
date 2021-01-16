@@ -1,4 +1,5 @@
-﻿using Google.Apis.Auth.OAuth2;
+﻿using GitHubUpdate;
+using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
 using Google.Apis.Drive.v3.Data;
 using Google.Apis.Services;
@@ -62,12 +63,28 @@ namespace PassGuard
             ApplyTheme();
         }
 
-
         // Static constructor: used to instantiate static fields and to run code that must be executed ONLY once.
         static MainScreen()
         {
             Directory.CreateDirectory(GlobalFunctions.GetAppdataFolder());
+            UpdateIfNeeded();
         }
+
+        private static async Task UpdateIfNeeded()
+        {
+            var checker = new UpdateChecker("kitric", "passguard");
+
+            if (await checker.CheckUpdate() != UpdateType.None)
+            {
+                var result = new UpdateNotifyDialog(checker).ShowDialog();
+
+                if (result == DialogResult.Yes)
+                {
+                    checker.DownloadAsset("passguard.msi");
+                }
+            }
+        }
+
 
         private void ApplyTheme()
         {

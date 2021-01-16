@@ -31,15 +31,13 @@ namespace PassGuard.UserControls
         private void btn1_Click(object sender, EventArgs e)
         {
             int current = (int)Enum.Parse(typeof(Theme), this.ThemeLB.Text.ToUpper().Replace(" ", "_"));
-
-            
+          
             // If the current theme is the first one select the last one
             // otherwise select the theme above the current one.
             current = current != 0 ? --current : Enum.GetValues(typeof(Theme)).Length - 1;
 
             Theme temp = (Theme)current;
             this.ThemeLB.Text = GlobalFunctions.ToTitleCase(temp.ToString().ToLower().Replace("_", " "));
-            MainScreen.Data.Theme = temp;
         }
 
         private void btn2_Click(object sender, EventArgs e)
@@ -52,7 +50,6 @@ namespace PassGuard.UserControls
 
             Theme temp = (Theme)current;
             this.ThemeLB.Text = GlobalFunctions.ToTitleCase(temp.ToString().ToLower().Replace("_", " "));
-            MainScreen.Data.Theme = temp;
         }
 
         private void logOut_Click(object sender, EventArgs e)
@@ -69,9 +66,12 @@ namespace PassGuard.UserControls
             {
                 case Theme.TECHNO_DARK:
                     this.logOut.BackColor = Color.FromArgb(193, 25, 26);
+                    this.SaveBtn.BackColor = Color.FromArgb(193, 25, 26);
                     break;
+
                 case Theme.TECHNO_LIGHT:
                     this.logOut.BackColor = Color.FromArgb(193, 25, 26);
+                    this.SaveBtn.BackColor = Color.FromArgb(193, 25, 26);
 
                     this.ThemeLB.ForeColor = Color.FromArgb(193, 25, 26);
                     this.label1.ForeColor = Color.FromArgb(193, 25, 26);
@@ -81,15 +81,20 @@ namespace PassGuard.UserControls
 
                     this.left.Image = Resources.leftTheme_dark;
                     this.right.Image = Resources.rightTheme_dark;
-
                     break;
+
                 case Theme.CONTRAST_DARK:
                     this.logOut.BackColor = Color.White;
                     this.logOut.ForeColor = Color.Black;
+                    this.SaveBtn.ForeColor = Color.Black;
+                    this.SaveBtn.ForeColor = Color.Black;
                     break;
+                
                 case Theme.CONTRAST_LIGHT:
                     this.logOut.BackColor = Color.Black;
-                    this.logOut.ForeColor = Color.White;
+                    this.logOut.BackColor = Color.Black;
+                    this.SaveBtn.ForeColor = Color.White;
+                    this.SaveBtn.ForeColor = Color.White;
 
                     this.ThemeLB.ForeColor = Color.Black;
                     this.label1.ForeColor = Color.Black;
@@ -99,8 +104,18 @@ namespace PassGuard.UserControls
 
                     this.left.Image = Resources.leftTheme_dark;
                     this.right.Image = Resources.rightTheme_dark;
-
                     break;
+            }
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Your changes have been saved.\nThe app will now restart.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                Theme temp = (Theme)Enum.Parse(typeof(Theme), this.ThemeLB.Text.ToUpper().Replace(" ", "_"));
+                MainScreen.Data.Theme = temp;
+
+                Application.Restart();
             }
         }
     }

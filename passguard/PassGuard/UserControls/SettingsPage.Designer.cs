@@ -37,6 +37,7 @@ namespace PassGuard.UserControls
             this.label3 = new System.Windows.Forms.Label();
             this.left = new System.Windows.Forms.PictureBox();
             this.right = new System.Windows.Forms.PictureBox();
+            this.SaveBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.right)).BeginInit();
             this.SuspendLayout();
@@ -131,11 +132,29 @@ namespace PassGuard.UserControls
             this.right.TabStop = false;
             this.right.Click += new System.EventHandler(this.btn2_Click);
             // 
+            // SaveBtn
+            // 
+            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.SaveBtn.FlatAppearance.BorderSize = 0;
+            this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBtn.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
+            this.SaveBtn.ForeColor = System.Drawing.Color.White;
+            this.SaveBtn.Location = new System.Drawing.Point(0, 422);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(640, 28);
+            this.SaveBtn.TabIndex = 10;
+            this.SaveBtn.Text = "Save changes";
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.right);
             this.Controls.Add(this.left);
             this.Controls.Add(this.label3);
@@ -163,5 +182,6 @@ namespace PassGuard.UserControls
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox left;
         private System.Windows.Forms.PictureBox right;
+        private System.Windows.Forms.Button SaveBtn;
     }
 }
