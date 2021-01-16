@@ -4,6 +4,7 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace PassGuard
 {
@@ -112,6 +113,12 @@ namespace PassGuard
             uc.AutoScroll = false;
             uc.HorizontalScroll.Visible = false;
             uc.AutoScroll = true;
+        }
+
+        // Returns every word in capital
+        public static string ToTitleCase(string title)
+        {
+            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(title.ToLower());
         }
     }
 }

@@ -257,6 +257,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\rightTheme.png" />
+    <None Include="Resources\leftTheme.png" />
     <None Include="Resources\pg-dark.png" />
     <None Include="Resources\crxssed-dark.png" />
     <None Include="Resources\nordic-dark.png" />

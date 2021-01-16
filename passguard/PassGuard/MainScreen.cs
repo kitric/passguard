@@ -1,5 +1,6 @@
 ﻿using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
+using Google.Apis.Drive.v3.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using PassGuard.Models;
@@ -21,6 +22,7 @@ namespace PassGuard
         #region fields
         private readonly static string[] Scopes = { DriveService.Scope.DriveAppdata };
         public static DriveService driveService = new DriveService();
+        public static User user;
 
         internal static UserData Data = new UserData();
         private static bool loggedIn = false;
@@ -46,7 +48,7 @@ namespace PassGuard
 
             //this.Content.Controls.Add(new HomePage(this) { Dock = DockStyle.Fill });
             //If the user is logged in then load pages normally
-            if (File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json\\Google.Apis.Auth.OAuth2.Responses.TokenResponse-user")))
+            if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json\\Google.Apis.Auth.OAuth2.Responses.TokenResponse-user")))
             {
                 // Already signed in with gdrive
                 LoginAccount();
@@ -171,7 +173,7 @@ namespace PassGuard
 
         private void About_Click(object sender, System.EventArgs e)
         {
-            GlobalFunctions.SwitchTo<About>(this.Content, args: new object[] { });
+            GlobalFunctions.SwitchTo<UserControls.About>(this.Content, args: new object[] { });
         }
 
         private void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
@@ -222,34 +224,37 @@ namespace PassGuard
         // Serializes stuff to a .guard file, of course xD
         private static void SerializePasswordInfos()
         {
-            string fpath = Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard");
-            using (FileStream fs = new FileStream(fpath, FileMode.OpenOrCreate))
+            if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json\\Google.Apis.Auth.OAuth2.Responses.TokenResponse-user")))
             {
-                BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(fs, Data);
-            }
-
-            // if the file exists, upload it.
-            if (File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard")))
-            {
-                //Upload to drive
-                var fileMetadata = new Google.Apis.Drive.v3.Data.File()
+                string fpath = Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard");
+                using (FileStream fs = new FileStream(fpath, FileMode.OpenOrCreate))
                 {
-                    Name = "passwd.guard",
-                    Parents = new List<string>()
-                    {
-                        "appDataFolder"
-                    }
-                };
-                FilesResource.CreateMediaUpload request;
-                using (var stream = new FileStream(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"), FileMode.Open))
-                {
-                    request = driveService.Files.Create(fileMetadata, stream, "application/json");
-                    request.Fields = "id";
-                    request.Upload();
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(fs, Data);
                 }
 
-                File.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"));
+                // if the file exists, upload it.
+                if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard")))
+                {
+                    //Upload to drive
+                    var fileMetadata = new Google.Apis.Drive.v3.Data.File()
+                    {
+                        Name = "passwd.guard",
+                        Parents = new List<string>()
+                        {
+                            "appDataFolder"
+                        }
+                    };
+                    FilesResource.CreateMediaUpload request;
+                    using (var stream = new FileStream(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"), FileMode.Open))
+                    {
+                        request = driveService.Files.Create(fileMetadata, stream, "application/json");
+                        request.Fields = "id";
+                        request.Upload();
+                    }
+
+                    System.IO.File.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"));
+                }
             }
         }
 
@@ -271,7 +276,7 @@ namespace PassGuard
             }
 
             string fpath = Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard");
-            if (File.Exists(fpath))
+            if (System.IO.File.Exists(fpath))
             {
                 using (FileStream fs = new FileStream(fpath, FileMode.Open))
                 {
@@ -317,6 +322,10 @@ namespace PassGuard
                 HttpClientInitializer = credential,
                 ApplicationName = GlobalFunctions.ApplicationName
             });
+
+            var request = driveService.About.Get();
+            request.Fields = "user";
+            user = request.Execute().User;
 
             loggedIn = true;
         }
