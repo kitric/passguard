@@ -25,7 +25,7 @@ namespace PassGuard
         public static User user;
 
         internal static UserData Data = new UserData();
-        private static bool loggedIn = false;
+        public static bool loggedIn = false;
 
         public static MainScreen Instance;
         #endregion
@@ -52,9 +52,6 @@ namespace PassGuard
             {
                 // Already signed in with gdrive
                 LoginAccount();
-                DeserializePasswordInfos();
-
-                SetOrEnterMasterPassword();
             }
             else
             {
@@ -140,8 +137,6 @@ namespace PassGuard
             }
 
             this.settingsBtn.BackColor = Sidebar.BackColor;
-
-
         }
 
         #region events
@@ -189,9 +184,10 @@ namespace PassGuard
 
 
         #region switch pages
+
         public void SetOrEnterMasterPassword()
         {
-
+            Console.WriteLine("SetOrEnterMasterPassword");
             this.Content.Controls.Clear();
             UserControl control = string.IsNullOrEmpty(Data.MasterPassword) ? (UserControl)new SetMasterPassword(this) { Dock = DockStyle.Fill } :
                 new MasterPassword(this) { Dock = DockStyle.Fill };
@@ -222,7 +218,7 @@ namespace PassGuard
 
         #region serialization
         // Serializes stuff to a .guard file, of course xD
-        private static void SerializePasswordInfos()
+        public static void SerializePasswordInfos()
         {
             if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json\\Google.Apis.Auth.OAuth2.Responses.TokenResponse-user")))
             {
@@ -259,8 +255,10 @@ namespace PassGuard
         }
 
         // Deserializes stuff from a .guard file, of course xD
-        private void DeserializePasswordInfos()
+        public static void DeserializePasswordInfos()
         {
+            Console.WriteLine("DeserializePasswordInfos");
+
             // Download the file
             if (loggedIn)
             {
@@ -328,6 +326,11 @@ namespace PassGuard
             user = request.Execute().User;
 
             loggedIn = true;
+
+            DeserializePasswordInfos();
+            Instance.SetOrEnterMasterPassword();
+
+            Console.WriteLine("LoggedIn");
         }
 
         /// <summary>

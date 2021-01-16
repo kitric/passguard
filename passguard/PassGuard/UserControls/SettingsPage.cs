@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 namespace PassGuard.UserControls
 {
@@ -48,6 +49,14 @@ namespace PassGuard.UserControls
             Theme temp = (Theme)current;
             this.ThemeLB.Text = GlobalFunctions.ToTitleCase(temp.ToString().ToLower().Replace("_", " "));
             MainScreen.Data.Theme = temp;
+        }
+
+        private void logOut_Click(object sender, EventArgs e)
+        {
+            MainScreen.SerializePasswordInfos();
+            Directory.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json"), true);
+            MainScreen.loggedIn = false;
+            Application.Restart();
         }
     }
 }

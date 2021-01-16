@@ -99,6 +99,7 @@ namespace PassGuard.UserControls
             this.logOut.TabIndex = 6;
             this.logOut.Text = "Log Out";
             this.logOut.UseVisualStyleBackColor = false;
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
             // label3
             // 
