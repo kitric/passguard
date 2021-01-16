@@ -165,7 +165,7 @@ namespace PassGuard.UserControls
             // editButton
             // 
             this.editButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.editButton.BackColor = System.Drawing.Color.Transparent;
+            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
             this.editButton.BackgroundImage = global::PassGuard.Properties.Resources.edit;
             this.editButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.editButton.FlatAppearance.BorderSize = 0;

@@ -48,6 +48,11 @@ namespace PassGuard.UserControls
                     this.pgtext.Image = Resources.pg_dark;
 
                     break;
+                case Theme.CONTRAST_DARK:
+                    this.website.BackColor = Color.White;
+                    this.website.ForeColor = Color.Black;
+
+                    break;
             }
         }
 

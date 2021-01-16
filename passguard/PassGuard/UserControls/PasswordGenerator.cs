@@ -33,6 +33,12 @@ namespace PassGuard.UserControls
                     this.genLogo.Image = Resources.genLogo_dark;
 
                     break;
+                case Theme.CONTRAST_DARK:
+                    this.generateBtn.BackColor = Color.White;
+                    this.generateBtn.ForeColor = Color.Black;
+                    this.generatedPassTB.BackColor = Color.FromArgb(5, 5, 5);
+
+                    break;
             }
         }
 

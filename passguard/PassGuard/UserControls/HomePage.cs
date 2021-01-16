@@ -59,6 +59,13 @@ namespace PassGuard.UserControls
                     this.pwtBig.Image = Resources.homeScreenImage_dark;
 
                     break;
+                case Theme.CONTRAST_DARK:
+                    this.YourPasswordsBtn.BackColor = Color.White;
+                    this.YourPasswordsBtn.ForeColor = Color.Black;
+                    this.GenerateAPasswordBtn.BackColor = Color.White;
+                    this.GenerateAPasswordBtn.ForeColor = Color.Black;
+
+                    break;
             }
         }
     }

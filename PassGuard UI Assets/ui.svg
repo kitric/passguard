@@ -163,9 +163,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.75521345"
-     inkscape:cx="5620.0384"
-     inkscape:cy="2640.8238"
+     inkscape:zoom="1.0680331"
+     inkscape:cx="3263.5206"
+     inkscape:cy="-64.105974"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
@@ -3738,208 +3738,205 @@
            sodipodi:role="line"
            id="tspan1935">v0.1</tspan></text>
     </g>
-    <g
-       id="g1677">
-      <rect
-         style="fill:#23214b;fill-opacity:1;fill-rule:evenodd;stroke-width:3.806;stroke-linecap:round"
-         id="rect1310"
-         width="800"
-         height="450"
-         x="2446.1294"
-         y="-291.32574"
-         ry="0" />
-      <rect
-         y="-291.32574"
-         x="2446.1294"
-         height="450"
-         width="160"
-         id="rect1312"
-         style="fill:#1e1f45;fill-opacity:1;fill-rule:evenodd;stroke-width:0.885563;stroke-linecap:round" />
-      <rect
-         rx="5"
-         style="opacity:0.5;fill:#23214b;fill-opacity:1;fill-rule:evenodd;stroke-width:2.33154;stroke-linecap:round"
-         id="rect1314"
-         width="147.68533"
-         height="28.278109"
-         x="2452.2866"
-         y="-192.46056"
-         ry="5" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
-         x="2460.937"
+    <rect
+       ry="0"
+       y="-291.32574"
+       x="2446.1294"
+       height="450"
+       width="800"
+       id="rect1310"
+       style="fill:#23214b;fill-opacity:1;fill-rule:evenodd;stroke-width:3.806;stroke-linecap:round" />
+    <rect
+       style="fill:#1e1f45;fill-opacity:1;fill-rule:evenodd;stroke-width:0.885563;stroke-linecap:round"
+       id="rect1312"
+       width="160"
+       height="450"
+       x="2446.1294"
+       y="-291.32574" />
+    <rect
+       ry="5"
+       y="-192.46056"
+       x="2452.2866"
+       height="28.278109"
+       width="147.68533"
+       id="rect1314"
+       style="opacity:0.5;fill:#23214b;fill-opacity:1;fill-rule:evenodd;stroke-width:2.33154;stroke-linecap:round"
+       rx="5" />
+    <text
+       id="text1318"
+       y="-174.76787"
+       x="2460.937"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074"
          y="-174.76787"
-         id="text1318"><tspan
-           sodipodi:role="line"
-           id="tspan1316"
-           x="2460.937"
-           y="-174.76787"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074">Home</tspan></text>
-      <rect
-         rx="5"
-         y="-156.18248"
-         x="2452.2866"
-         height="28.278109"
-         width="147.68533"
-         id="rect1320"
-         style="opacity:0.5;fill:#23214b;fill-opacity:1;fill-rule:evenodd;stroke-width:2.33154;stroke-linecap:round"
-         ry="5" />
-      <text
-         id="text1324"
+         x="2460.937"
+         id="tspan1316"
+         sodipodi:role="line">Home</tspan></text>
+    <rect
+       ry="5"
+       style="opacity:0.5;fill:#23214b;fill-opacity:1;fill-rule:evenodd;stroke-width:2.33154;stroke-linecap:round"
+       id="rect1320"
+       width="147.68533"
+       height="28.278109"
+       x="2452.2866"
+       y="-156.18248"
+       rx="5" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
+       x="2460.937"
+       y="-138.48973"
+       id="text1324"><tspan
+         sodipodi:role="line"
+         id="tspan1322"
+         x="2460.937"
          y="-138.48973"
-         x="2460.937"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
-         xml:space="preserve"><tspan
-           style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074"
-           y="-138.48973"
-           x="2460.937"
-           id="tspan1322"
-           sodipodi:role="line">Passwords</tspan></text>
-      <rect
-         rx="5"
-         style="opacity:0.5;fill:#23214b;fill-opacity:1;fill-rule:evenodd;stroke-width:2.33154;stroke-linecap:round"
-         id="rect1326"
-         width="147.68533"
-         height="28.278109"
-         x="2452.2866"
-         y="-83.626266"
-         ry="5" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
-         x="2460.937"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074">Passwords</tspan></text>
+    <rect
+       ry="5"
+       y="-83.626266"
+       x="2452.2866"
+       height="28.278109"
+       width="147.68533"
+       id="rect1326"
+       style="opacity:0.5;fill:#23214b;fill-opacity:1;fill-rule:evenodd;stroke-width:2.33154;stroke-linecap:round"
+       rx="5" />
+    <text
+       id="text1330"
+       y="-65.933594"
+       x="2460.937"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074"
          y="-65.933594"
-         id="text1330"><tspan
-           sodipodi:role="line"
-           id="tspan1328"
-           x="2460.937"
-           y="-65.933594"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074">About</tspan></text>
-      <rect
-         rx="5"
-         style="opacity:0.5;fill:#23214b;fill-opacity:1;fill-rule:evenodd;stroke-width:2.33154;stroke-linecap:round"
-         id="rect1332"
-         width="147.68533"
-         height="28.278109"
-         x="2452.2866"
-         y="-119.90435"
-         ry="5" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
          x="2460.937"
+         id="tspan1328"
+         sodipodi:role="line">About</tspan></text>
+    <rect
+       ry="5"
+       y="-119.90435"
+       x="2452.2866"
+       height="28.278109"
+       width="147.68533"
+       id="rect1332"
+       style="opacity:0.5;fill:#23214b;fill-opacity:1;fill-rule:evenodd;stroke-width:2.33154;stroke-linecap:round"
+       rx="5" />
+    <text
+       id="text1336"
+       y="-102.2116"
+       x="2460.937"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074"
          y="-102.2116"
-         id="text1336"><tspan
-           sodipodi:role="line"
-           id="tspan1334"
-           x="2460.937"
-           y="-102.2116"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074">Password Generator</tspan></text>
-      <text
-         id="text1340"
-         y="143.91518"
+         x="2460.937"
+         id="tspan1334"
+         sodipodi:role="line">Password Generator</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.42325px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0981585"
+       x="2914.3433"
+       y="143.91518"
+       id="text1340"><tspan
+         sodipodi:role="line"
+         id="tspan1338"
          x="2914.3433"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.42325px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0981585"
-         xml:space="preserve"><tspan
-           style="fill:#ffffff;fill-opacity:1;stroke-width:0.0981585"
-           y="143.91518"
-           x="2914.3433"
-           id="tspan1338"
-           sodipodi:role="line">20:02</tspan></text>
+         y="143.91518"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.0981585">20:02</tspan></text>
+    <path
+       d="m 2525.8231,128.97713 c -0.6623,0.01 -1.4498,0.1248 -1.6419,0.571 -0.2665,0.619 0.1825,1.2946 -0.5229,1.7201 -0.3881,0.2341 -1.1041,0.7897 -1.5634,0.7532 -0.8464,-0.067 -1.2934,-1.0092 -2.0782,-0.1279 -0.4623,0.5191 -1.637,2.1421 -1.2726,2.8858 0.3405,0.6951 1.3523,0.5515 1.3447,1.4818 0,0.4403 0.1519,1.2648 -0.099,1.6392 -0.2953,0.4405 -1.0066,0.4795 -1.2457,0.9635 -0.3866,0.78264 0.9188,2.60754 1.464,3.08894 0.767,0.6772 1.1936,-0.3963 1.9345,-0.3735 0.4474,0.014 1.1331,0.5815 1.5158,0.8124 0.9097,0.5488 -0.054,1.951 1.2404,2.147 0.2806,0.043 0.7424,0.1106 1.2307,0.1355 0.4883,-0.025 0.9501,-0.093 1.2308,-0.1355 1.294,-0.196 0.3306,-1.5982 1.2403,-2.147 0.3827,-0.2309 1.0684,-0.7987 1.5158,-0.8124 0.7409,-0.023 1.1675,1.0507 1.9345,0.3735 0.5452,-0.4814 1.8506,-2.3063 1.464,-3.08894 -0.2391,-0.484 -0.9504,-0.523 -1.2456,-0.9635 -0.251,-0.3744 -0.095,-1.1989 -0.099,-1.6392 -0.01,-0.9303 1.0041,-0.7867 1.3446,-1.4818 0.3644,-0.7437 -0.8103,-2.3667 -1.2726,-2.8858 -0.7848,-0.8813 -1.2318,0.061 -2.0782,0.1279 -0.4593,0.036 -1.1753,-0.5191 -1.5634,-0.7532 -0.7054,-0.4255 -0.2564,-1.1011 -0.5229,-1.7201 -0.1921,-0.4462 -0.9796,-0.5651 -1.6419,-0.571 -0.1072,-7e-4 -0.2088,0 -0.3064,0.01 -0.098,0 -0.1992,-0.01 -0.3064,-0.01 z m 0.3064,5.1898 a 2.6635472,2.6635472 0 0 1 2.6634,2.6637 2.6635472,2.6635472 0 0 1 -2.6634,2.66344 2.6635472,2.6635472 0 0 1 -2.6635,-2.66344 2.6635472,2.6635472 0 0 1 2.6635,-2.6637 z"
+       style="fill:#ffffff;stroke:none;stroke-width:0.112145"
+       id="path1342" />
+    <g
+       id="g1351"
+       transform="matrix(0.27808217,0,0,0.27808217,2599.8304,-530.3836)">
       <path
-         id="path1342"
-         style="fill:#ffffff;stroke:none;stroke-width:0.112145"
-         d="m 2525.8231,128.97713 c -0.6623,0.01 -1.4498,0.1248 -1.6419,0.571 -0.2665,0.619 0.1825,1.2946 -0.5229,1.7201 -0.3881,0.2341 -1.1041,0.7897 -1.5634,0.7532 -0.8464,-0.067 -1.2934,-1.0092 -2.0782,-0.1279 -0.4623,0.5191 -1.637,2.1421 -1.2726,2.8858 0.3405,0.6951 1.3523,0.5515 1.3447,1.4818 0,0.4403 0.1519,1.2648 -0.099,1.6392 -0.2953,0.4405 -1.0066,0.4795 -1.2457,0.9635 -0.3866,0.78264 0.9188,2.60754 1.464,3.08894 0.767,0.6772 1.1936,-0.3963 1.9345,-0.3735 0.4474,0.014 1.1331,0.5815 1.5158,0.8124 0.9097,0.5488 -0.054,1.951 1.2404,2.147 0.2806,0.043 0.7424,0.1106 1.2307,0.1355 0.4883,-0.025 0.9501,-0.093 1.2308,-0.1355 1.294,-0.196 0.3306,-1.5982 1.2403,-2.147 0.3827,-0.2309 1.0684,-0.7987 1.5158,-0.8124 0.7409,-0.023 1.1675,1.0507 1.9345,0.3735 0.5452,-0.4814 1.8506,-2.3063 1.464,-3.08894 -0.2391,-0.484 -0.9504,-0.523 -1.2456,-0.9635 -0.251,-0.3744 -0.095,-1.1989 -0.099,-1.6392 -0.01,-0.9303 1.0041,-0.7867 1.3446,-1.4818 0.3644,-0.7437 -0.8103,-2.3667 -1.2726,-2.8858 -0.7848,-0.8813 -1.2318,0.061 -2.0782,0.1279 -0.4593,0.036 -1.1753,-0.5191 -1.5634,-0.7532 -0.7054,-0.4255 -0.2564,-1.1011 -0.5229,-1.7201 -0.1921,-0.4462 -0.9796,-0.5651 -1.6419,-0.571 -0.1072,-7e-4 -0.2088,0 -0.3064,0.01 -0.098,0 -0.1992,-0.01 -0.3064,-0.01 z m 0.3064,5.1898 a 2.6635472,2.6635472 0 0 1 2.6634,2.6637 2.6635472,2.6635472 0 0 1 -2.6634,2.66344 2.6635472,2.6635472 0 0 1 -2.6635,-2.66344 2.6635472,2.6635472 0 0 1 2.6635,-2.6637 z" />
-      <g
-         transform="matrix(0.27808217,0,0,0.27808217,2599.8304,-530.3836)"
-         id="g1351">
-        <path
-           sodipodi:nodetypes="ccccccccccccccccccc"
-           d="m -265.03484,936.95473 -5.30273,5.30469 -15.33985,15.3418 h -43.61914 v 84.16018 l 64.26172,64.2617 64.26367,-64.2617 v -84.16018 h -43.61719 z m 0,21.21485 14.43359,14.43164 h 34.83008 v 62.94728 l -49.26367,49.2617 -49.26172,-49.2617 v -62.94728 h 34.83203 z"
-           style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
-           id="path1344" />
-        <text
-           id="text1349"
-           y="1056.6062"
-           x="-304.9017"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:62.5666px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.56416;stroke-opacity:1"
-           xml:space="preserve"><tspan
-             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.56416;stroke-opacity:1"
-             y="1056.6062"
-             x="-304.9017"
-             id="tspan1347"
-             sodipodi:role="line">***</tspan></text>
-      </g>
-      <rect
-         rx="5"
-         style="fill:#34335f;fill-opacity:1;fill-rule:evenodd;stroke-width:2.12456;stroke-linecap:round"
-         id="rect1353"
-         width="122.62837"
-         height="28.278109"
-         x="2795.9248"
-         y="8.2402515"
-         ry="5" />
+         id="path1344"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+         d="m -265.03484,936.95473 -5.30273,5.30469 -15.33985,15.3418 h -43.61914 v 84.16018 l 64.26172,64.2617 64.26367,-64.2617 v -84.16018 h -43.61719 z m 0,21.21485 14.43359,14.43164 h 34.83008 v 62.94728 l -49.26367,49.2617 -49.26172,-49.2617 v -62.94728 h 34.83203 z"
+         sodipodi:nodetypes="ccccccccccccccccccc" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
-         x="2819.8381"
-         y="26.024065"
-         id="text1357"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:62.5666px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.56416;stroke-opacity:1"
+         x="-304.9017"
+         y="1056.6062"
+         id="text1349"><tspan
            sodipodi:role="line"
-           id="tspan1355"
-           x="2819.8381"
-           y="26.024065"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074">Your Passwords</tspan></text>
-      <rect
-         rx="5"
-         y="8.2402515"
-         x="2933.7056"
-         height="28.278109"
-         width="122.62837"
-         id="rect1359"
-         style="fill:#34335f;fill-opacity:1;fill-rule:evenodd;stroke-width:2.12456;stroke-linecap:round"
-         ry="5" />
-      <text
-         id="text1363"
-         y="26.00197"
-         x="2942.7415"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
-         xml:space="preserve"><tspan
-           style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074"
-           y="26.00197"
-           x="2942.7415"
-           id="tspan1361"
-           sodipodi:role="line">Generate a Password</tspan></text>
-      <text
-         id="text1367"
-         y="-38.966415"
-         x="2822.2427"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none"
-         xml:space="preserve"><tspan
-           y="-38.966415"
-           x="2822.2427"
-           id="tspan1365"
-           sodipodi:role="line">PassGuard</tspan></text>
-      <g
-         transform="matrix(0.46683133,0,0,0.46683133,3049.8556,-606.56968)"
-         id="g1375">
-        <path
-           sodipodi:nodetypes="ccccccccccccccccccc"
-           d="m -265.03484,936.95473 -5.30273,5.30469 -15.33985,15.3418 h -43.61914 v 84.16018 l 64.26172,64.2617 64.26367,-64.2617 v -84.16018 h -43.61719 z m 0,21.21485 14.43359,14.43164 h 34.83008 v 62.94728 l -49.26367,49.2617 -49.26172,-49.2617 v -62.94728 h 34.83203 z"
-           style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
-           id="path1369" />
-        <text
-           id="text1373"
-           y="1056.6062"
+           id="tspan1347"
            x="-304.9017"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:62.5666px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.56416;stroke-opacity:1"
-           xml:space="preserve"><tspan
-             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.56416;stroke-opacity:1"
-             y="1056.6062"
-             x="-304.9017"
-             id="tspan1371"
-             sodipodi:role="line">***</tspan></text>
-      </g>
+           y="1056.6062"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.56416;stroke-opacity:1">***</tspan></text>
+    </g>
+    <rect
+       ry="5"
+       y="8.2402515"
+       x="2795.9248"
+       height="28.278109"
+       width="122.62837"
+       id="rect1353"
+       style="fill:#34335f;fill-opacity:1;fill-rule:evenodd;stroke-width:2.12456;stroke-linecap:round"
+       rx="5" />
+    <text
+       id="text1357"
+       y="26.024065"
+       x="2819.8381"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074"
+         y="26.024065"
+         x="2819.8381"
+         id="tspan1355"
+         sodipodi:role="line">Your Passwords</tspan></text>
+    <rect
+       ry="5"
+       style="fill:#34335f;fill-opacity:1;fill-rule:evenodd;stroke-width:2.12456;stroke-linecap:round"
+       id="rect1359"
+       width="122.62837"
+       height="28.278109"
+       x="2933.7056"
+       y="8.2402515"
+       rx="5" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0872px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105074"
+       x="2942.7415"
+       y="26.00197"
+       id="text1363"><tspan
+         sodipodi:role="line"
+         id="tspan1361"
+         x="2942.7415"
+         y="26.00197"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.105074">Generate a Password</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none"
+       x="2822.2427"
+       y="-38.966415"
+       id="text1367"><tspan
+         sodipodi:role="line"
+         id="tspan1365"
+         x="2822.2427"
+         y="-38.966415">PassGuard</tspan></text>
+    <g
+       id="g1375"
+       transform="matrix(0.46683133,0,0,0.46683133,3049.8556,-606.56968)">
+      <path
+         id="path1369"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+         d="m -265.03484,936.95473 -5.30273,5.30469 -15.33985,15.3418 h -43.61914 v 84.16018 l 64.26172,64.2617 64.26367,-64.2617 v -84.16018 h -43.61719 z m 0,21.21485 14.43359,14.43164 h 34.83008 v 62.94728 l -49.26367,49.2617 -49.26172,-49.2617 v -62.94728 h 34.83203 z"
+         sodipodi:nodetypes="ccccccccccccccccccc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:62.5666px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.56416;stroke-opacity:1"
+         x="-304.9017"
+         y="1056.6062"
+         id="text1373"><tspan
+           sodipodi:role="line"
+           id="tspan1371"
+           x="-304.9017"
+           y="1056.6062"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.56416;stroke-opacity:1">***</tspan></text>
     </g>
     <text
        xml:space="preserve"

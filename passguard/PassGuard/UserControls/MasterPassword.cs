@@ -36,6 +36,14 @@ namespace PassGuard.UserControls
                     this.label1.ForeColor = Color.FromArgb(193, 25, 26);
 
                     break;
+                case Theme.CONTRAST_DARK:
+                    this.goButton.BackColor = Color.White;
+                    this.goButton.ForeColor = Color.Black;
+                    this.MasterPasswordTB.BackColor = Color.White;
+                    this.MasterPasswordTB.ForeColor = Color.Black;
+                    this.title.ForeColor = Color.White;
+                    this.label1.ForeColor = Color.White;
+                    break;
             }
         }
 

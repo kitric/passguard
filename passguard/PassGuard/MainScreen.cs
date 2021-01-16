@@ -100,6 +100,22 @@ namespace PassGuard
                     this.Sidebar.BackColor = Color.FromArgb(200, 255, 255);
 
                     break;
+                case Theme.CONTRAST_DARK:
+                    this.BackColor = Color.FromArgb(5, 5, 5);
+
+                    this.HomeBtn.BackColor = Color.White;
+                    this.GeneratePasswordBtn.BackColor = Color.White;
+                    this.AboutBtn.BackColor = Color.White;
+                    this.PasswordsBtn.BackColor = Color.White;
+
+                    this.HomeBtn.ForeColor = Color.Black;
+                    this.GeneratePasswordBtn.ForeColor = Color.Black;
+                    this.AboutBtn.ForeColor = Color.Black;
+                    this.PasswordsBtn.ForeColor = Color.Black;
+
+                    this.Sidebar.BackColor = Color.Black;
+
+                    break;
             }
 
             this.settingsBtn.BackColor = Sidebar.BackColor;
