@@ -67,7 +67,7 @@
             this.info.TabIndex = 7;
             this.info.Text = "PassGuard is a simple password manager made for those who want to keep their pass" +
     "words safe.\r\nThe project is open-source and is available\r\non the Kitric Github p" +
-    "age.\r\n\r\nv0.1";
+    "age.\r\n\r\nv";
             this.info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // spacer

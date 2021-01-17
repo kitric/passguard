@@ -22,6 +22,8 @@ namespace PassGuard.UserControls
             GlobalFunctions.HideScrollbars(this);
             GlobalFunctions.RoundCorners(website);
 
+            info.Text += Application.ProductVersion;
+
             ApplyTheme();
         }
 
