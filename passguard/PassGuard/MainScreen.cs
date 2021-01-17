@@ -189,6 +189,7 @@ namespace PassGuard
 
         private void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
+            this.Hide();
             SerializePasswordInfos();
         }
 
