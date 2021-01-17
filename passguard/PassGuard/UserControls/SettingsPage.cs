@@ -67,11 +67,13 @@ namespace PassGuard.UserControls
             {
                 case Theme.TECHNO_DARK:
                     this.logOut.BackColor = Color.FromArgb(193, 25, 26);
+                    this.resetPW.BackColor = Color.FromArgb(193, 25, 26);
                     this.SaveBtn.BackColor = Color.FromArgb(193, 25, 26);
                     break;
 
                 case Theme.TECHNO_LIGHT:
                     this.logOut.BackColor = Color.FromArgb(193, 25, 26);
+                    this.resetPW.BackColor = Color.FromArgb(193, 25, 26);
                     this.SaveBtn.BackColor = Color.FromArgb(193, 25, 26);
 
                     this.ThemeLB.ForeColor = Color.FromArgb(193, 25, 26);
@@ -86,14 +88,18 @@ namespace PassGuard.UserControls
 
                 case Theme.CONTRAST_DARK:
                     this.logOut.BackColor = Color.White;
+                    this.resetPW.BackColor = Color.White;
                     this.logOut.ForeColor = Color.Black;
+                    this.resetPW.ForeColor = Color.Black;
                     this.SaveBtn.ForeColor = Color.Black;
                     this.SaveBtn.BackColor = Color.White;
                     break;
                 
                 case Theme.CONTRAST_LIGHT:
                     this.logOut.BackColor = Color.Black;
+                    this.resetPW.BackColor = Color.Black;
                     this.logOut.BackColor = Color.Black;
+                    this.resetPW.BackColor = Color.Black;
                     this.SaveBtn.ForeColor = Color.White;
                     this.SaveBtn.BackColor = Color.Black;
 
