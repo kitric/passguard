@@ -15,6 +15,7 @@ namespace PassGuard.UserControls
 
             GlobalFunctions.RoundCorners(logOut);
             GlobalFunctions.RoundCorners(resetPW);
+            GlobalFunctions.RoundCorners(deleteData);
 
             this.displayName.Text = GlobalFunctions.ToTitleCase(MainScreen.user.DisplayName);
 
@@ -131,6 +132,17 @@ namespace PassGuard.UserControls
             MainScreen.Data.MasterPassword = "";
             MainScreen.SerializePasswordInfos();
             Application.Restart();
+        }
+
+        private void deleteData_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you really want to delete your data? THIS CANNOT BE UNDONE.", "CAUTION", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                MainScreen.Data.passwords.Clear();
+                MainScreen.Data.Theme = Theme.DEFAULT;
+                MainScreen.SerializePasswordInfos();
+                Application.Restart();
+            }
         }
     }
 }

@@ -39,6 +39,7 @@ namespace PassGuard.UserControls
             this.right = new System.Windows.Forms.PictureBox();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.resetPW = new System.Windows.Forms.Button();
+            this.deleteData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.right)).BeginInit();
             this.SuspendLayout();
@@ -165,11 +166,27 @@ namespace PassGuard.UserControls
             this.resetPW.UseVisualStyleBackColor = false;
             this.resetPW.Click += new System.EventHandler(this.resetPW_Click);
             // 
+            // deleteData
+            // 
+            this.deleteData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.deleteData.FlatAppearance.BorderSize = 0;
+            this.deleteData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteData.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
+            this.deleteData.ForeColor = System.Drawing.Color.White;
+            this.deleteData.Location = new System.Drawing.Point(30, 289);
+            this.deleteData.Name = "deleteData";
+            this.deleteData.Size = new System.Drawing.Size(123, 28);
+            this.deleteData.TabIndex = 12;
+            this.deleteData.Text = "Delete Data";
+            this.deleteData.UseVisualStyleBackColor = false;
+            this.deleteData.Click += new System.EventHandler(this.deleteData_Click);
+            // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.deleteData);
             this.Controls.Add(this.resetPW);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.right);
@@ -201,5 +218,6 @@ namespace PassGuard.UserControls
         private System.Windows.Forms.PictureBox right;
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button resetPW;
+        private System.Windows.Forms.Button deleteData;
     }
 }

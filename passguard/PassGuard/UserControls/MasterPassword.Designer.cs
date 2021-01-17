@@ -95,7 +95,7 @@
             this.WrongPasswordLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.WrongPasswordLB.AutoSize = true;
             this.WrongPasswordLB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WrongPasswordLB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(100)))));
+            this.WrongPasswordLB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.WrongPasswordLB.Location = new System.Drawing.Point(193, 255);
             this.WrongPasswordLB.Name = "WrongPasswordLB";
             this.WrongPasswordLB.Size = new System.Drawing.Size(118, 16);
