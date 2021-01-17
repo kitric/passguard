@@ -67,7 +67,7 @@ namespace PassGuard
         static MainScreen()
         {
             Directory.CreateDirectory(GlobalFunctions.GetAppdataFolder());
-            UpdateIfNeeded();
+            UpdateIfNeeded().Wait();
         }
 
         private static async Task UpdateIfNeeded()

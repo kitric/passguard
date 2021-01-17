@@ -87,14 +87,14 @@ namespace PassGuard.UserControls
                     this.logOut.BackColor = Color.White;
                     this.logOut.ForeColor = Color.Black;
                     this.SaveBtn.ForeColor = Color.Black;
-                    this.SaveBtn.ForeColor = Color.Black;
+                    this.SaveBtn.BackColor = Color.White;
                     break;
                 
                 case Theme.CONTRAST_LIGHT:
                     this.logOut.BackColor = Color.Black;
                     this.logOut.BackColor = Color.Black;
                     this.SaveBtn.ForeColor = Color.White;
-                    this.SaveBtn.ForeColor = Color.White;
+                    this.SaveBtn.BackColor = Color.Black;
 
                     this.ThemeLB.ForeColor = Color.Black;
                     this.label1.ForeColor = Color.Black;
