@@ -38,6 +38,7 @@ namespace PassGuard.UserControls
             this.left = new System.Windows.Forms.PictureBox();
             this.right = new System.Windows.Forms.PictureBox();
             this.SaveBtn = new System.Windows.Forms.Button();
+            this.resetPW = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.right)).BeginInit();
             this.SuspendLayout();
@@ -149,11 +150,27 @@ namespace PassGuard.UserControls
             this.SaveBtn.UseVisualStyleBackColor = false;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
+            // resetPW
+            // 
+            this.resetPW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.resetPW.FlatAppearance.BorderSize = 0;
+            this.resetPW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetPW.Font = new System.Drawing.Font("Century Gothic", 7.5F, System.Drawing.FontStyle.Bold);
+            this.resetPW.ForeColor = System.Drawing.Color.White;
+            this.resetPW.Location = new System.Drawing.Point(159, 131);
+            this.resetPW.Name = "resetPW";
+            this.resetPW.Size = new System.Drawing.Size(123, 28);
+            this.resetPW.TabIndex = 11;
+            this.resetPW.Text = "Reset Password";
+            this.resetPW.UseVisualStyleBackColor = false;
+            this.resetPW.Click += new System.EventHandler(this.resetPW_Click);
+            // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.resetPW);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.right);
             this.Controls.Add(this.left);
@@ -183,5 +200,6 @@ namespace PassGuard.UserControls
         private System.Windows.Forms.PictureBox left;
         private System.Windows.Forms.PictureBox right;
         private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button resetPW;
     }
 }

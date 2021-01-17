@@ -14,6 +14,7 @@ namespace PassGuard.UserControls
             Dock = DockStyle.Fill;
 
             GlobalFunctions.RoundCorners(logOut);
+            GlobalFunctions.RoundCorners(resetPW);
 
             this.displayName.Text = GlobalFunctions.ToTitleCase(MainScreen.user.DisplayName);
 
@@ -117,6 +118,13 @@ namespace PassGuard.UserControls
 
                 Application.Restart();
             }
+        }
+
+        private void resetPW_Click(object sender, EventArgs e)
+        {
+            MainScreen.Data.MasterPassword = "";
+            MainScreen.SerializePasswordInfos();
+            Application.Restart();
         }
     }
 }

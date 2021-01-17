@@ -22,5 +22,14 @@ namespace PassGuard.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("%0k##D44#6L4d1I/")]
+        public string NoReply {
+            get {
+                return ((string)(this["NoReply"]));
+            }
+        }
     }
 }
