@@ -199,7 +199,6 @@ namespace PassGuard
         }
         #endregion
 
-
         #region switch pages
 
         public void SetOrEnterMasterPassword()

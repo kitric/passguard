@@ -10,7 +10,7 @@ namespace PassGuard.Models
 {
     public static class EmailHandler
     {
-        public static void SendEmail(string toName, string toEmail, string content)
+        public static async Task SendEmailAsync(string toName, string toEmail, string content)
         {
             var bodyBuilder = new BodyBuilder();
             bodyBuilder.HtmlBody = content;
@@ -23,10 +23,10 @@ namespace PassGuard.Models
 
             using (var smtpClient = new MailKit.Net.Smtp.SmtpClient())
             {
-                smtpClient.Connect("smtp.gmail.com", 465, true);
-                smtpClient.Authenticate("kitric.noreply@gmail.com", Settings.Default.NoReply);
-                smtpClient.Send(mailMessage);
-                smtpClient.Disconnect(true);
+                await smtpClient.ConnectAsync("smtp.gmail.com", 465, true);
+                await smtpClient.AuthenticateAsync("kitric.noreply@gmail.com", Settings.Default.NoReply);
+                await smtpClient.SendAsync(mailMessage);
+                await smtpClient.DisconnectAsync(true);
             }
         }
     }

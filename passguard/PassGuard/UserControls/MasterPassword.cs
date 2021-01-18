@@ -69,11 +69,16 @@ namespace PassGuard.UserControls
             WrongPasswordLB.Visible = !(MasterPasswordTB.Text == MainScreen.Data.MasterPassword);
         }
 
-        private void remind_Click(object sender, EventArgs e)
+        private async void remind_Click(object sender, EventArgs e)
         {
-            string content = "Hiya, " + MainScreen.user.DisplayName + "<br><br>Here is your PassGuard login info:<br><h1>" + MainScreen.Data.MasterPassword + "</h1><br><br>In the future please remember this, its the best way to keep your PassGuard account safe.<br><br>Thanks,<br>The Kitric Team";
-            EmailHandler.SendEmail(MainScreen.user.DisplayName, MainScreen.user.EmailAddress, content);
-            MessageBox.Show("We have sent you an email with a reminder of your password.", "Email sent");
+            string content = "Hiya, " + MainScreen.user.DisplayName + 
+                "<br><br>Here is your PassGuard login info:<br><h1>" + 
+                MainScreen.Data.MasterPassword + 
+                "</h1><br><br>In the future please remember this, its the best way to keep your PassGuard account safe." +
+                "<br><br>Thanks,<br>The Kitric Team";
+
+            await EmailHandler.SendEmailAsync(MainScreen.user.DisplayName, MainScreen.user.EmailAddress, content);
+            MessageBox.Show("We have sent you an email with a reminder of your password.", "Email sent", MessageBoxButtons.OK);
         }
     }
 }
