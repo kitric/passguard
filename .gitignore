@@ -350,4 +350,4 @@ MigrationBackup/
 .ionide/
 
 # Ignores settings.
-Properties/Settings*
+Properties/
