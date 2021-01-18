@@ -1,9 +1,0 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PassGuard.Properties" GeneratedClassName="Settings">
-  <Profiles />
-  <Settings>
-    <Setting Name="NoReply" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">%0k##D44#6L4d1I/</Value>
-    </Setting>
-  </Settings>
-</SettingsFile>
