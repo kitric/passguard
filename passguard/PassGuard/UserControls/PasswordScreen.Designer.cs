@@ -80,6 +80,7 @@ namespace PassGuard.UserControls
             this.changeButton.Text = "Change";
             this.changeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.changeButton.UseVisualStyleBackColor = false;
+            this.changeButton.Visible = false;
             this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // panel3

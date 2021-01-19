@@ -96,6 +96,8 @@ namespace PassGuard.UserControls
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 icon.Image = Image.FromFile(dialog.FileName);
+
+                Passwd.ImageURL = dialog.FileName;
             }
         }
 
