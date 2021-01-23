@@ -158,18 +158,7 @@ namespace PassGuard
         #region events
         private void Home_Click(object sender, System.EventArgs e)
         {
-            Control topControl = Content.Controls[0];
-
-            if (topControl.GetType() != typeof(HomePage))
-            {
-                Content.Controls.Clear();
-
-                //Disposes all components, in order to boost performance.
-                foreach (Control control in topControl.Controls) { control.Dispose(); }
-                topControl.Dispose();
-
-                Content.Controls.Add(new HomePage() { Dock = DockStyle.Fill });
-            }
+            GlobalFunctions.SwitchTo<HomePage>(this.Content, args: new object[] { });
         }
 
         private void Passwords_Click(object sender, System.EventArgs e)
@@ -256,6 +245,7 @@ namespace PassGuard
                             "appDataFolder"
                         }
                     };
+
                     FilesResource.CreateMediaUpload request;
                     using (var stream = new FileStream(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"), FileMode.Open))
                     {

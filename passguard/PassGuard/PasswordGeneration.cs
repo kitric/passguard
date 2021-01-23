@@ -110,29 +110,33 @@ namespace PassGuard
                         // If the next character is the same as the currently selected one
                         if (passwd[i] == passwd[i + 1])
                         {
+
+                            char ch = '\0';
                             // a-z and A-Z
                             if (char.IsLetter(passwd[i]))
                             {
-                                passwd[i] = LETTERS[GlobalFunctions.Rand(0, LETTERS.Length)];
-
+                                ch = LETTERS[GlobalFunctions.Rand(0, LETTERS.Length)];
                             }
 
                             // 0-9
                             else if (char.IsDigit(passwd[i]))
                             {
-
                                 int rand = GlobalFunctions.Rand(48, 58);
-                                passwd[i] = (char)rand;
+                                ch = (char)rand;
 
                             }
 
                             // Symbols of all kind (+, -, ;, !).
                             else if (char.IsSymbol(passwd[i]) || char.IsPunctuation(passwd[i]))
                             {
-                                passwd[i] = SYMBOLS[GlobalFunctions.Rand(0, SYMBOLS.Length)];
+                                ch = SYMBOLS[GlobalFunctions.Rand(0, SYMBOLS.Length)];
                             }
 
-                            completed = false;
+                            passwd[i] = ch;
+
+                            // If the algo needs to change anything, then it means there's a chance
+                            // there are still repeated letters right next to each other.
+                            completed = false; 
                         }
                     }
                 }
