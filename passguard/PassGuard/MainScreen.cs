@@ -70,6 +70,10 @@ namespace PassGuard
             UpdateIfNeeded().Wait();
         }
 
+        /// <summary>
+        /// This probably doesn't even work xD
+        /// </summary>
+        /// <returns></returns>
         private static async Task UpdateIfNeeded()
         {
             var checker = new UpdateChecker("kitric", "passguard");
