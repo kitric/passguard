@@ -29,6 +29,8 @@ namespace PassGuard
         public static bool loggedIn = false;
 
         public static MainScreen Instance;
+
+        private static bool errored = false;
         #endregion
 
         public MainScreen()
@@ -67,24 +69,35 @@ namespace PassGuard
         static MainScreen()
         {
             Directory.CreateDirectory(GlobalFunctions.GetAppdataFolder());
-            UpdateIfNeeded().Wait();
+            UpdateIfNeeded();
         }
 
         /// <summary>
         /// This probably doesn't even work xD
         /// </summary>
         /// <returns></returns>
-        private static async Task UpdateIfNeeded()
+        private static void UpdateIfNeeded()
         {
-            var checker = new UpdateChecker("kitric", "passguard");
-
-            if (await checker.CheckUpdate() != UpdateType.None)
+            try
             {
-                var result = new UpdateNotifyDialog(checker).ShowDialog();
+                var checker = new UpdateChecker("kitric", "passguard");
 
-                if (result == DialogResult.Yes)
+                if (checker.CheckUpdate().Result != UpdateType.None)
                 {
-                    checker.DownloadAsset("passguard.msi");
+                    var result = new UpdateNotifyDialog(checker).ShowDialog();
+
+                    if (result == DialogResult.Yes)
+                    {
+                        checker.DownloadAsset("passguard.msi");
+                    }
+                }
+            }
+            catch
+            {
+                if (!errored)
+                {
+                    MessageBox.Show("There was an error. Please check your internet connection.", "Error");
+                    errored = true;
                 }
             }
         }
@@ -305,37 +318,48 @@ namespace PassGuard
         /// </summary>
         public static void LoginAccount()
         {
-            UserCredential credential;
-
-            using (var stream = new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+            try
             {
-                // The file token.json stores the user's access and refresh tokens, and is created
-                // automatically when the authorization flow completes for the first time.
-                string credPath = Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json");
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    GoogleClientSecrets.Load(stream).Secrets,
-                    Scopes,
-                    "user",
-                    CancellationToken.None,
-                    new FileDataStore(credPath, true)).Result;
-                Console.WriteLine("Credential file saved to: " + credPath);
+                UserCredential credential;
+
+                using (var stream = new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+                {
+                    // The file token.json stores the user's access and refresh tokens, and is created
+                    // automatically when the authorization flow completes for the first time.
+                    string credPath = Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json");
+                    credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+                        GoogleClientSecrets.Load(stream).Secrets,
+                        Scopes,
+                        "user",
+                        CancellationToken.None,
+                        new FileDataStore(credPath, true)).Result;
+                    Console.WriteLine("Credential file saved to: " + credPath);
+                }
+
+                // Create Drive API service.
+                driveService = new DriveService(new BaseClientService.Initializer()
+                {
+                    HttpClientInitializer = credential,
+                    ApplicationName = GlobalFunctions.ApplicationName
+                });
+
+                var request = driveService.About.Get();
+                request.Fields = "user";
+                user = request.Execute().User;
+
+                loggedIn = true;
+
+                DeserializePasswordInfos();
+                Instance.SetOrEnterMasterPassword();
             }
-
-            // Create Drive API service.
-            driveService = new DriveService(new BaseClientService.Initializer()
+            catch
             {
-                HttpClientInitializer = credential,
-                ApplicationName = GlobalFunctions.ApplicationName
-            });
-
-            var request = driveService.About.Get();
-            request.Fields = "user";
-            user = request.Execute().User;
-
-            loggedIn = true;
-
-            DeserializePasswordInfos();
-            Instance.SetOrEnterMasterPassword();
+                if (!errored)
+                {
+                    MessageBox.Show("There was an error. Please check your internet connection.", "Error");
+                    errored = true;
+                }
+            }
         }
 
         /// <summary>
@@ -360,5 +384,13 @@ namespace PassGuard
             return null;
         }
         #endregion
+
+        private void MainScreen_Load(object sender, EventArgs e)
+        {
+            if (errored)
+            {
+                this.Close();
+            }
+        }
     }
 }

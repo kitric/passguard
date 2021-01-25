@@ -124,6 +124,7 @@ namespace PassGuard
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "MainScreen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainScreen_FormClosed);
+            this.Load += new System.EventHandler(this.MainScreen_Load);
             this.Sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
