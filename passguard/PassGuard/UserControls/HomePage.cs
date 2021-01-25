@@ -45,10 +45,11 @@ namespace PassGuard.UserControls
 
         public void ApplyTheme()
         {
-            switch (MainScreen.Data.Theme) {
-                case Theme.TECHNO_DARK:    
-                    this.YourPasswordsBtn.BackColor = Color.FromArgb(193, 25, 26); 
-                    this.GenerateAPasswordBtn.BackColor = Color.FromArgb(193, 25, 26); 
+            switch (MainScreen.Data.Theme)
+            {
+                case Theme.TECHNO_DARK:
+                    this.YourPasswordsBtn.BackColor = Color.FromArgb(193, 25, 26);
+                    this.GenerateAPasswordBtn.BackColor = Color.FromArgb(193, 25, 26);
                     this.Time.ForeColor = Color.FromArgb(193, 25, 26);
                     break;
                 case Theme.TECHNO_LIGHT:

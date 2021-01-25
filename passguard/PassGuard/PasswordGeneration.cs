@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 namespace PassGuard
 {
@@ -30,7 +29,7 @@ namespace PassGuard
             for (int i = 0; i < passwd.Capacity; i++) //Fills the stringBuilder entirely with letters.
             {
                 int rand = GlobalFunctions.Rand(0, LETTERS.Length);
-                
+
                 // Generate a random number till that number is different than the previous one.
                 while (rand == prev)
                 {
@@ -43,7 +42,7 @@ namespace PassGuard
 
             return passwd;
         }
-        
+
         private static void AddNumbers(StringBuilder passwd)
         {
             //Determines a random number between half of the password length - 3 (inclusive)
@@ -102,7 +101,8 @@ namespace PassGuard
                 bool completed = false;
 
                 // If there are still two (or more) equal characters in a row, keep executing this algorithm.
-                while (!completed) {
+                while (!completed)
+                {
                     completed = true;
 
                     for (int i = 0; i < passwd.Length - 1; i++)
@@ -136,7 +136,7 @@ namespace PassGuard
 
                             // If the algo needs to change anything, then it means there's a chance
                             // there are still repeated letters right next to each other.
-                            completed = false; 
+                            completed = false;
                         }
                     }
                 }

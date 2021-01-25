@@ -71,9 +71,9 @@ namespace PassGuard.UserControls
 
         private async void remind_Click(object sender, EventArgs e)
         {
-            string content = "Hiya, " + MainScreen.user.DisplayName + 
-                "<br><br>Here is your PassGuard login info:<br><h1>" + 
-                MainScreen.Data.MasterPassword + 
+            string content = "Hiya, " + MainScreen.user.DisplayName +
+                "<br><br>Here is your PassGuard login info:<br><h1>" +
+                MainScreen.Data.MasterPassword +
                 "</h1><br><br>In the future please remember this, its the best way to keep your PassGuard account safe." +
                 "<br><br>Thanks,<br>The Kitric Team";
 

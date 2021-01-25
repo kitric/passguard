@@ -33,7 +33,7 @@ namespace PassGuard.UserControls
         private void btn1_Click(object sender, EventArgs e)
         {
             int current = (int)Enum.Parse(typeof(Theme), this.ThemeLB.Text.ToUpper().Replace(" ", "_"));
-          
+
             // If the current theme is the first one select the last one
             // otherwise select the theme above the current one.
             current = current != 0 ? --current : Enum.GetValues(typeof(Theme)).Length - 1;
@@ -95,7 +95,7 @@ namespace PassGuard.UserControls
                     this.SaveBtn.ForeColor = Color.Black;
                     this.SaveBtn.BackColor = Color.White;
                     break;
-                
+
                 case Theme.CONTRAST_LIGHT:
                     this.logOut.BackColor = Color.Black;
                     this.resetPW.BackColor = Color.Black;

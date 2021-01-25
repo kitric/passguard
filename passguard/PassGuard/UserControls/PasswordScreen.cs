@@ -36,7 +36,7 @@ namespace PassGuard.UserControls
 
             this.passwordTB.Text = EncryptionManager.Decrypt(Passwd.PasswordAfterEncrypt, Passwd.Key);
 
-            ApplyTheme();            
+            ApplyTheme();
             AdjustPasswordNameTBWidth();
         }
 
@@ -179,7 +179,7 @@ namespace PassGuard.UserControls
 
                     this.urlTB.BackColor = Color.FromArgb(200, 255, 255);
                     this.passwordTB.BackColor = Color.FromArgb(200, 255, 255);
-                    
+
                     this.urlTB.ForeColor = Color.FromArgb(193, 25, 26);
                     this.passwordTB.ForeColor = Color.FromArgb(193, 25, 26);
 
