@@ -113,8 +113,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
-    <Compile Include="Theme.cs" />
+    <Compile Include="Models\Settings.cs" />
+    <Compile Include="Models\Theme.cs" />
     <Compile Include="UserControls\About.cs">
       <SubType>UserControl</SubType>
     </Compile>
