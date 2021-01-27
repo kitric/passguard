@@ -49,7 +49,6 @@ namespace PassGuard
 
             DisableTabs();
 
-            //this.Content.Controls.Add(new HomePage(this) { Dock = DockStyle.Fill });
             //If the user is logged in then load pages normally
             if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder() + "\\token.json\\Google.Apis.Auth.OAuth2.Responses.TokenResponse-user")))
             {
@@ -250,28 +249,37 @@ namespace PassGuard
                     formatter.Serialize(fs, Data);
                 }
 
-                // if the file exists, upload it.
-                if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard")))
+                try
                 {
-                    //Upload to drive
-                    var fileMetadata = new Google.Apis.Drive.v3.Data.File()
+                    // if the file exists, upload it.
+                    if (System.IO.File.Exists(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard")))
                     {
-                        Name = "passwd.guard",
-                        Parents = new List<string>()
+                        //Upload to drive
+                        var fileMetadata = new Google.Apis.Drive.v3.Data.File()
+                        {
+                            Name = "passwd.guard",
+                            Parents = new List<string>()
                         {
                             "appDataFolder"
                         }
-                    };
+                        };
 
-                    FilesResource.CreateMediaUpload request;
-                    using (var stream = new FileStream(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"), FileMode.Open))
-                    {
-                        request = driveService.Files.Create(fileMetadata, stream, "application/json");
-                        request.Fields = "id";
-                        request.Upload();
+                        FilesResource.CreateMediaUpload request;
+                        using (var stream = new FileStream(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"), FileMode.Open))
+                        {
+                            request = driveService.Files.Create(fileMetadata, stream, "application/json");
+                            request.Fields = "id";
+                            request.Upload();
+                        }
+
+                        System.IO.File.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"));
+
                     }
+                }
+                catch {
+                    MessageBox.Show("There was an error.\nPlease check your internet connection.", "Error", MessageBoxButtons.OK);
 
-                    System.IO.File.Delete(Path.Combine(GlobalFunctions.GetAppdataFolder(), "passwd.guard"));
+                    Application.Exit();
                 }
             }
         }
