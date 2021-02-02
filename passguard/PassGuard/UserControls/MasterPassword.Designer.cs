@@ -34,6 +34,7 @@
             this.goButton = new System.Windows.Forms.Button();
             this.WrongPasswordLB = new System.Windows.Forms.Label();
             this.remind = new System.Windows.Forms.Label();
+            this.lblShowPassword = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MasterPasswordTB
@@ -116,12 +117,26 @@
             this.remind.Text = "Remind me";
             this.remind.Click += new System.EventHandler(this.remind_Click);
             // 
+            // lblShowPassword
+            // 
+            this.lblShowPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblShowPassword.AutoSize = true;
+            this.lblShowPassword.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowPassword.ForeColor = System.Drawing.Color.White;
+            this.lblShowPassword.Location = new System.Drawing.Point(350, 255);
+            this.lblShowPassword.Name = "lblShowPassword";
+            this.lblShowPassword.Size = new System.Drawing.Size(93, 16);
+            this.lblShowPassword.TabIndex = 10;
+            this.lblShowPassword.Text = "Show password";
+            this.lblShowPassword.Click += new System.EventHandler(this.lblShowPassword_Click);
+            // 
             // MasterPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.remind);
+            this.Controls.Add(this.lblShowPassword);
             this.Controls.Add(this.WrongPasswordLB);
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.MasterPasswordTB);
@@ -142,5 +157,6 @@
         private System.Windows.Forms.Button goButton;
         private System.Windows.Forms.Label WrongPasswordLB;
         private System.Windows.Forms.Label remind;
+        private System.Windows.Forms.Label lblShowPassword;
     }
 }
