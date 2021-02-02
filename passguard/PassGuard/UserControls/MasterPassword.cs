@@ -36,7 +36,7 @@ namespace PassGuard.UserControls
                     this.title.ForeColor = Color.FromArgb(193, 25, 26);
                     this.label1.ForeColor = Color.FromArgb(193, 25, 26);
                     this.remind.ForeColor = Color.FromArgb(193, 25, 26);
-
+                    this.lblShowPassword.ForeColor = Color.Black;
                     break;
                 case Theme.CONTRAST_DARK:
                     this.goButton.BackColor = Color.White;
@@ -54,6 +54,7 @@ namespace PassGuard.UserControls
                     this.title.ForeColor = Color.Black;
                     this.label1.ForeColor = Color.Black;
                     this.remind.ForeColor = Color.Black;
+                    this.lblShowPassword.ForeColor = Color.Black;
                     break;
             }
         }
@@ -79,6 +80,18 @@ namespace PassGuard.UserControls
 
             await EmailHandler.SendEmailAsync(MainScreen.user.DisplayName, MainScreen.user.EmailAddress, content);
             MessageBox.Show("We have sent you an email with a reminder of your password.", "Email sent", MessageBoxButtons.OK);
+        }
+
+        private void lblShowPassword_Click(object sender, EventArgs e)
+        {
+            if (MasterPasswordTB.PasswordChar == '*')
+            {
+                MasterPasswordTB.PasswordChar = '\0';
+            }
+            else
+            {
+                MasterPasswordTB.PasswordChar = '*';
+            }
         }
     }
 }
