@@ -13,7 +13,6 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PassGuard
@@ -276,7 +275,8 @@ namespace PassGuard
 
                     }
                 }
-                catch {
+                catch
+                {
                     MessageBox.Show("There was an error.\nPlease check your internet connection.", "Error", MessageBoxButtons.OK);
 
                     Application.Exit();
