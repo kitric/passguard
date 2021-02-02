@@ -16,6 +16,8 @@ namespace PassGuard.UserControls
             ApplyTheme();
         }
 
+        #region events
+
         private void nameTB_MouseClick(object sender, MouseEventArgs e)
         {
             //Name... is the placeholder text for nameTB.
@@ -74,11 +76,37 @@ namespace PassGuard.UserControls
             }
         }
 
+        private void nameTB_Leave(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(nameTB.Text))
+            {
+                nameTB.Text = "Name...";
+                urlTB.ForeColor = Color.WhiteSmoke;
+            }
+        }
+
+        private void passwordTB_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(passwordTB.Text))
+            {
+                passwordTB.Text = "Password...";
+                passwordTB.PasswordChar = '\0';
+                passwordTB.ForeColor = Color.WhiteSmoke;
+            }
+        }
+
         private void urlTB_Leave(object sender, EventArgs e)
         {
-            string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
+            if (!string.IsNullOrEmpty(urlTB.Text))
+            {
+                string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
 
-            icon.LoadAsync(actualURL);
+                icon.LoadAsync(actualURL);
+            
+            } else
+            {
+                urlTB.Text = "URL...";
+                urlTB.ForeColor = Color.WhiteSmoke;
+            }
         }
 
         private void icon_LoadCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
@@ -99,6 +127,8 @@ namespace PassGuard.UserControls
                 icon.Image = Image.FromFile(dialog.FileName);
             }
         }
+
+        #endregion
 
         public void ApplyTheme()
         {

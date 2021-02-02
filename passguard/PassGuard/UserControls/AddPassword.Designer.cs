@@ -81,6 +81,7 @@ namespace PassGuard.UserControls
             this.nameTB.TabIndex = 0;
             this.nameTB.Text = "Name...";
             this.nameTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.nameTB_MouseClick);
+            this.nameTB.Leave += new System.EventHandler(this.nameTB_Leave);
             // 
             // panel2
             // 
@@ -105,6 +106,7 @@ namespace PassGuard.UserControls
             this.passwordTB.TabIndex = 1;
             this.passwordTB.Text = "Password...";
             this.passwordTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.passwordTB_MouseClick);
+            this.passwordTB.Leave += new System.EventHandler(this.passwordTB_Leave);
             // 
             // panel3
             // 
