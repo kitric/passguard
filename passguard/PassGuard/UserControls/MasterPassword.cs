@@ -71,6 +71,7 @@ namespace PassGuard.UserControls
 
         private async void remind_Click(object sender, EventArgs e)
         {
+            this.remind.Enabled = false;
             string content = "Hiya, " + MainScreen.user.DisplayName +
                 "<br><br>Here is your PassGuard login info:<br><h1>" +
                 MainScreen.Data.MasterPassword +
@@ -79,6 +80,7 @@ namespace PassGuard.UserControls
 
             await EmailHandler.SendEmailAsync(MainScreen.user.DisplayName, MainScreen.user.EmailAddress, content);
             MessageBox.Show("We have sent you an email with a reminder of your password.", "Email sent", MessageBoxButtons.OK);
+            this.remind.Enabled = true;
         }
     }
 }
