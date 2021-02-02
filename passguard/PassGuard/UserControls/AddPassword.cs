@@ -76,7 +76,8 @@ namespace PassGuard.UserControls
             }
         }
 
-        private void nameTB_Leave(object sender, EventArgs e) {
+        private void nameTB_Leave(object sender, EventArgs e)
+        {
             if (string.IsNullOrEmpty(nameTB.Text))
             {
                 nameTB.Text = "Name...";
@@ -101,8 +102,9 @@ namespace PassGuard.UserControls
                 string actualURL = $"https://logo.clearbit.com/{urlTB.Text}?size=100";
 
                 icon.LoadAsync(actualURL);
-            
-            } else
+
+            }
+            else
             {
                 urlTB.Text = "URL...";
                 urlTB.ForeColor = Color.WhiteSmoke;
