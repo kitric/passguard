@@ -70,37 +70,6 @@ namespace PassGuard
             UpdateIfNeeded();
         }
 
-        /// <summary>
-        /// This probably doesn't even work xD
-        /// </summary>
-        /// <returns></returns>
-        private static void UpdateIfNeeded()
-        {
-            try
-            {
-                var checker = new UpdateChecker("kitric", "passguard");
-
-                if (checker.CheckUpdate().Result != UpdateType.None)
-                {
-                    var result = new UpdateNotifyDialog(checker).ShowDialog();
-
-                    if (result == DialogResult.Yes)
-                    {
-                        checker.DownloadAsset("passguard.msi");
-                    }
-                }
-            }
-            catch
-            {
-                if (!errored)
-                {
-                    MessageBox.Show("There was an error. Please check your internet connection.", "Error");
-                    errored = true;
-                }
-            }
-        }
-
-
         private void ApplyTheme()
         {
             switch (Data.Theme)
@@ -191,15 +160,47 @@ namespace PassGuard
             GlobalFunctions.SwitchTo<UserControls.About>(this.Content, args: new object[] { });
         }
 
-        private void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Hide();
-            SerializePasswordInfos();
-        }
-
         private void settingsBtn_Click(object sender, EventArgs e)
         {
             GlobalFunctions.SwitchTo<SettingsPage>(this.Content);
+        }
+
+        private void MainScreen_Load(object sender, EventArgs e)
+        {
+            if (errored)
+            {
+                this.Close();
+            }
+        }
+
+        private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            SerializePasswordInfos();
+
+            // Cancels the event: The app is not closed.
+            e.Cancel = true;
+        }
+
+
+        private void STrayManager_MouseDown(object sender, MouseEventArgs e)
+        {
+            switch (e.Button) {
+                case MouseButtons.Left:
+                    // Calling Hide() is the same as setting Visible to false.
+                    if (!this.Visible)
+                    {
+                        this.Show();
+                    }
+                    break;
+
+                    // This is when the contextMenu should appear. appears.
+                case MouseButtons.Right:
+                    STrayManager.ContextMenu = GetSystemTrayMenu();
+                    break;
+            }
+
+            
         }
         #endregion
 
@@ -393,12 +394,112 @@ namespace PassGuard
         }
         #endregion
 
-        private void MainScreen_Load(object sender, EventArgs e)
+
+        #region Helper Functions
+        /// <summary>
+        /// This probably doesn't even work xD
+        /// </summary>
+        /// <returns></returns>
+        private static void UpdateIfNeeded()
         {
-            if (errored)
+            try
             {
-                this.Close();
+                var checker = new UpdateChecker("kitric", "passguard");
+
+                if (checker.CheckUpdate().Result != UpdateType.None)
+                {
+                    var result = new UpdateNotifyDialog(checker).ShowDialog();
+
+                    if (result == DialogResult.Yes)
+                    {
+                        checker.DownloadAsset("passguard.msi");
+                    }
+                }
+            }
+            catch
+            {
+                if (!errored)
+                {
+                    MessageBox.Show("There was an error. Please check your internet connection.", "Error");
+                    errored = true;
+                }
             }
         }
+
+        public ContextMenu GetSystemTrayMenu()
+        {
+            ContextMenu menu = new ContextMenu();
+
+            MenuItem viewPasswords = new MenuItem("View Passwords");
+            viewPasswords.Click += ViewPasswords_Click;
+            menu.MenuItems.Add(viewPasswords);
+
+            MenuItem addPassword = new MenuItem("Add Password");
+            addPassword.Click += AddPassword_Click;
+            menu.MenuItems.Add(addPassword);
+
+            MenuItem settings = new MenuItem("Settings");
+            settings.Click += Settings_Click;
+            menu.MenuItems.Add(settings);
+
+            MenuItem exit = new MenuItem("Quit Passguard");
+            exit.Click += Exit_Click;
+            menu.MenuItems.Add(exit);
+
+            return menu;
+        }
+        #endregion
+
+        // I know this code is too repetitive, but I'm too lazy to actually fix it today.
+        #region SystemTrayMenuEvents
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.STrayManager.Visible = false;
+            SerializePasswordInfos();
+            Environment.Exit(0);
+        }
+
+        private void AddPassword_Click(object sender, EventArgs e)
+        {
+            if (!this.Visible)
+            {
+                this.Show();
+            }
+
+            // Only if masterPassword has been entered.
+            if (GlobalFunctions.Validated)
+            {
+                GlobalFunctions.SwitchTo<AddPassword>(Content);
+            } 
+        }
+
+        private void ViewPasswords_Click(object sender, EventArgs e)
+        {
+            if (!this.Visible)
+            {
+                this.Show();
+            }
+
+            if (GlobalFunctions.Validated)
+            {
+                GlobalFunctions.SwitchTo<Passwords>(Content);
+            }
+        }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            if (!this.Visible)
+            {
+                this.Show();
+            }
+
+            if (GlobalFunctions.Validated)
+            {
+                GlobalFunctions.SwitchTo<SettingsPage>(Content);
+            }
+        }
+
+        #endregion
     }
 }

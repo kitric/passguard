@@ -11,9 +11,12 @@ namespace PassGuard
     public static class GlobalFunctions
     {
         public const int ROUND_DIAMETER = 15;
-        public const string ApplicationName = "Rocketeer";
         private static readonly RNGCryptoServiceProvider csp = new RNGCryptoServiceProvider();
 
+        public const string ApplicationName = "Passguard";
+
+        // Checks whether MasterPassword has been entered or not.
+        internal static bool Validated = false;
 
         /// <summary>
         /// Round all them corners boi

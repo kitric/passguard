@@ -29,6 +29,7 @@ namespace PassGuard
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.Sidebar = new System.Windows.Forms.Panel();
             this.settingsBtn = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@ namespace PassGuard
             this.HomeBtn = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.Content = new System.Windows.Forms.Panel();
+            this.STrayManager = new System.Windows.Forms.NotifyIcon(this.components);
             this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
@@ -114,6 +116,11 @@ namespace PassGuard
             this.Content.BackColor = System.Drawing.Color.Transparent;
             this.Content.Name = "Content";
             // 
+            // STrayManager
+            // 
+            resources.ApplyResources(this.STrayManager, "STrayManager");
+            this.STrayManager.MouseDown += new System.Windows.Forms.MouseEventHandler(this.STrayManager_MouseDown);
+            // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
@@ -123,7 +130,7 @@ namespace PassGuard
             this.Controls.Add(this.Sidebar);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "MainScreen";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainScreen_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreen_FormClosing);
             this.Load += new System.EventHandler(this.MainScreen_Load);
             this.Sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
@@ -141,6 +148,7 @@ namespace PassGuard
         private System.Windows.Forms.Button GeneratePasswordBtn;
         private System.Windows.Forms.Button settingsBtn;
         public System.Windows.Forms.Panel Content;
+        private System.Windows.Forms.NotifyIcon STrayManager;
     }
 }
 

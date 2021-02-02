@@ -63,6 +63,7 @@ namespace PassGuard.UserControls
         {
             if (MasterPasswordTB.Text == MainScreen.Data.MasterPassword)
             {
+                GlobalFunctions.Validated = true;
                 MainScreen.EnableTabs();
                 GlobalFunctions.SwitchTo<HomePage>(MainScreen.Instance.Content);
             }

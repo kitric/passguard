@@ -16,8 +16,6 @@ namespace PassGuard.UserControls
             GlobalFunctions.RoundCorners(YourPasswordsBtn);
             GlobalFunctions.RoundCorners(GenerateAPasswordBtn);
 
-            Timer.Tick += UpdateTime;
-
             this.Time.Text = DateTime.Now.ToString("t");
             ApplyTheme();
         }

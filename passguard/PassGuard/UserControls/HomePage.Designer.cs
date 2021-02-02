@@ -87,6 +87,7 @@ namespace PassGuard.UserControls
             // 
             this.Timer.Enabled = true;
             this.Timer.Interval = 800;
+            this.Timer.Tick += new System.EventHandler(this.UpdateTime);
             // 
             // pwtBig
             // 
