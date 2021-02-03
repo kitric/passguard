@@ -185,7 +185,8 @@ namespace PassGuard
 
         private void STrayManager_MouseDown(object sender, MouseEventArgs e)
         {
-            switch (e.Button) {
+            switch (e.Button)
+            {
                 case MouseButtons.Left:
                     // Calling Hide() is the same as setting Visible to false.
                     if (!this.Visible)
@@ -194,13 +195,13 @@ namespace PassGuard
                     }
                     break;
 
-                    // This is when the contextMenu should appear. appears.
+                // This is when the contextMenu should appear. appears.
                 case MouseButtons.Right:
                     STrayManager.ContextMenu = GetSystemTrayMenu();
                     break;
             }
 
-            
+
         }
         #endregion
 
@@ -472,7 +473,7 @@ namespace PassGuard
             if (GlobalFunctions.Validated)
             {
                 GlobalFunctions.SwitchTo<AddPassword>(Content);
-            } 
+            }
         }
 
         private void ViewPasswords_Click(object sender, EventArgs e)
