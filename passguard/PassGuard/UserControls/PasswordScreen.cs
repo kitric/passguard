@@ -50,6 +50,7 @@ namespace PassGuard.UserControls
             this.passwordTB.ReadOnly = contentsLocked;
             this.urlTB.ReadOnly = contentsLocked;
             this.saveButton.Enabled = !contentsLocked;
+            this.DeleteBtn.Enabled = !contentsLocked;
             this.changeButton.Enabled = !contentsLocked;
 
             ShowOrHidePW();
@@ -158,6 +159,7 @@ namespace PassGuard.UserControls
                     this.showPassword.BackColor = Color.FromArgb(193, 25, 26);
                     this.changeButton.BackColor = Color.FromArgb(193, 25, 26);
                     this.saveButton.BackColor = Color.FromArgb(193, 25, 26);
+                    this.DeleteBtn.BackColor = Color.FromArgb(193, 25, 26);
 
                     this.urlTB.BackColor = Color.FromArgb(9, 11, 16);
                     this.passwordTB.BackColor = Color.FromArgb(9, 11, 16);
@@ -176,6 +178,7 @@ namespace PassGuard.UserControls
                     this.showPassword.BackColor = Color.FromArgb(193, 25, 26);
                     this.changeButton.BackColor = Color.FromArgb(193, 25, 26);
                     this.saveButton.BackColor = Color.FromArgb(193, 25, 26);
+                    this.DeleteBtn.BackColor = Color.FromArgb(193, 25, 26);
 
                     this.urlTB.BackColor = Color.FromArgb(200, 255, 255);
                     this.passwordTB.BackColor = Color.FromArgb(200, 255, 255);
@@ -197,7 +200,9 @@ namespace PassGuard.UserControls
                     this.changeButton.BackColor = Color.White;
                     this.changeButton.ForeColor = Color.Black;
                     this.saveButton.BackColor = Color.White;
+                    this.DeleteBtn.BackColor = Color.White;
                     this.saveButton.ForeColor = Color.Black;
+                    this.DeleteBtn.ForeColor = Color.Black;
 
                     this.urlTB.BackColor = Color.White;
                     this.passwordTB.BackColor = Color.White;
@@ -219,7 +224,9 @@ namespace PassGuard.UserControls
                     this.changeButton.BackColor = Color.Black;
                     this.changeButton.ForeColor = Color.White;
                     this.saveButton.BackColor = Color.Black;
+                    this.DeleteBtn.BackColor = Color.Black;
                     this.saveButton.ForeColor = Color.White;
+                    this.DeleteBtn.ForeColor = Color.White;
 
                     this.urlTB.BackColor = Color.Black;
                     this.passwordTB.BackColor = Color.Black;
@@ -238,6 +245,12 @@ namespace PassGuard.UserControls
 
             this.panel2.BackColor = this.passwordTB.BackColor;
             this.panel3.BackColor = this.passwordTB.BackColor;
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            MainScreen.Data.passwords.Remove(Passwd);
+            GlobalFunctions.SwitchTo<Passwords>(MainScreen.Instance.Content);
         }
     }
 }

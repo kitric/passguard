@@ -41,6 +41,7 @@ namespace PassGuard.UserControls
             this.icon = new System.Windows.Forms.PictureBox();
             this.PasswordNameTB = new System.Windows.Forms.TextBox();
             this.InvalidNameLB = new System.Windows.Forms.Label();
+            this.DeleteBtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
@@ -217,11 +218,30 @@ namespace PassGuard.UserControls
             this.InvalidNameLB.Text = "Invalid name";
             this.InvalidNameLB.Visible = false;
             // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(95)))));
+            this.DeleteBtn.Enabled = false;
+            this.DeleteBtn.FlatAppearance.BorderSize = 0;
+            this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBtn.ForeColor = System.Drawing.Color.White;
+            this.DeleteBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DeleteBtn.Location = new System.Drawing.Point(134, 397);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(79, 28);
+            this.DeleteBtn.TabIndex = 19;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
             // PasswordScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.InvalidNameLB);
             this.Controls.Add(this.PasswordNameTB);
             this.Controls.Add(this.editButton);
@@ -258,5 +278,6 @@ namespace PassGuard.UserControls
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.TextBox PasswordNameTB;
         private System.Windows.Forms.Label InvalidNameLB;
+        private System.Windows.Forms.Button DeleteBtn;
     }
 }

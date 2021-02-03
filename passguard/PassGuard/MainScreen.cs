@@ -426,7 +426,7 @@ namespace PassGuard
             }
         }
 
-        public ContextMenu GetSystemTrayMenu()
+        internal ContextMenu GetSystemTrayMenu()
         {
             ContextMenu menu = new ContextMenu();
 
@@ -448,6 +448,7 @@ namespace PassGuard
 
             return menu;
         }
+
         #endregion
 
         // I know this code is too repetitive, but I'm too lazy to actually fix it today.
