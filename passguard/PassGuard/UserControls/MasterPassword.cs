@@ -59,7 +59,7 @@ namespace PassGuard.UserControls
             }
         }
 
-        private void goButton_Click(object sender, EventArgs e)
+        private void ValidadeMasterPassword()
         {
             if (MasterPasswordTB.Text == MainScreen.Data.MasterPassword)
             {
@@ -69,6 +69,12 @@ namespace PassGuard.UserControls
             }
 
             WrongPasswordLB.Visible = !(MasterPasswordTB.Text == MainScreen.Data.MasterPassword);
+        }
+
+        #region events
+        private void goButton_Click(object sender, EventArgs e)
+        {
+            ValidadeMasterPassword();
         }
 
         private async void remind_Click(object sender, EventArgs e)
@@ -87,14 +93,18 @@ namespace PassGuard.UserControls
 
         private void lblShowPassword_Click(object sender, EventArgs e)
         {
-            if (MasterPasswordTB.PasswordChar == '*')
+            MasterPasswordTB.PasswordChar = (MasterPasswordTB.PasswordChar == '*' ? '\0' : '*');
+        }
+
+        private void MasterPasswordTB_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch(e.KeyCode)
             {
-                MasterPasswordTB.PasswordChar = '\0';
-            }
-            else
-            {
-                MasterPasswordTB.PasswordChar = '*';
+                case Keys.Enter:
+                    ValidadeMasterPassword();
+                    break;
             }
         }
+        #endregion
     }
 }

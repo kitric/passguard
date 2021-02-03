@@ -50,6 +50,7 @@
             this.MasterPasswordTB.Size = new System.Drawing.Size(242, 16);
             this.MasterPasswordTB.TabIndex = 8;
             this.MasterPasswordTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MasterPasswordTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MasterPasswordTB_KeyDown);
             // 
             // label1
             // 
