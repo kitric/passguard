@@ -68,7 +68,7 @@ namespace PassGuard.UserControls
                 GlobalFunctions.SwitchTo<HomePage>(MainScreen.Instance.Content);
             }
 
-            WrongPasswordLB.Visible = !(MasterPasswordTB.Text == MainScreen.Data.MasterPassword);
+            WrongPasswordLB.Visible = MasterPasswordTB.Text != MainScreen.Data.MasterPassword;
         }
 
         #region events
