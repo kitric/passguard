@@ -123,6 +123,7 @@ namespace PassGuard.UserControls
                 Theme temp = (Theme)Enum.Parse(typeof(Theme), this.ThemeLB.Text.ToUpper().Replace(" ", "_"));
                 MainScreen.Data.Theme = temp;
 
+                GlobalFunctions.Close = true;
                 Application.Restart();
             }
         }

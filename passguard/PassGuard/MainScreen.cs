@@ -179,7 +179,7 @@ namespace PassGuard
             SerializePasswordInfos();
 
             // Cancels the event: The app is not closed.
-            e.Cancel = true;
+            e.Cancel = !GlobalFunctions.Close;
         }
 
 
@@ -452,7 +452,7 @@ namespace PassGuard
 
         #endregion
 
-        // I know this code is too repetitive, but I'm too lazy to actually fix it today.
+        // I know this code is too repetitive
         #region SystemTrayMenuEvents
         private void Exit_Click(object sender, EventArgs e)
         {

@@ -18,6 +18,8 @@ namespace PassGuard
         // Checks whether MasterPassword has been entered or not.
         internal static bool Validated = false;
 
+        internal static bool Close = false;
+
         /// <summary>
         /// Round all them corners boi
         /// </summary>
