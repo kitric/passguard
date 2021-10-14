@@ -1,4 +1,6 @@
 # PassGuard
 An encrypted password manager written in C#. 
-<br>
+
+![Logo](passguard.png)
+
 [Learn more](https://kitric.github.io/projects/passguard.html)
